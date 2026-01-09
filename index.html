@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>Mariba Media Commercial Solar | Urban Holdings Solar Partnership | Save 70% on Energy</title>
-    <meta name="description" content="Mariba Media Commercial Solar in partnership with Urban Holdings Solar helps businesses achieve 70% electricity savings. No upfront costs with our financing solutions.">
+    <title>CommercialSolar | End Loadshedding & 70% Electricity Bills for Shopping Complexes, Student Housing & Warehouses</title>
+    <meta name="description" content="Guaranteed 70% electricity reduction for commercial properties. Zero upfront cost financing, complete project management, and compliance solutions for shopping centers, student accommodations, and warehouses.">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Mariba Media Commercial Solar | Urban Holdings Solar Partnership">
-    <meta property="og:description" content="Save 70% on energy costs with our commercial solar solutions. No upfront costs, 30-day installation.">
+    <meta property="og:title" content="CommercialSolar | Stop Loadshedding & Cut Electricity Bills by 70%">
+    <meta property="og:description" content="Guaranteed electricity cost reduction with dedicated financing. Free comprehensive energy audit for commercial properties.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
-    <meta property="og:url" content="https://yourusername.github.io/repository-name">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://commercialsolar.co.za">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/96/000000/solar-panel.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/000000/solar-panel.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/16/000000/solar-panel.png">
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiTWFyaWJhIE1lZGlhIFNvbGFyIiwiZGVzY3JpcHRpb24iOiJDb21tZXJjaWFsIFNvbGFyIFNvbHV0aW9ucyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwic3RhcnRfdXJsIjoiLyJ9">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,22 +26,27 @@
           extend: {
             colors: {
               primary: {
-                50: '#f0f7ff',
-                100: '#e0effe',
-                200: '#bae0fd',
-                300: '#7cc4fa',
-                400: '#36a5f3',
-                500: '#0d8ae3',
-                600: '#0067c2',
-                700: '#0052a0',
-                800: '#003d7d',
-                900: '#002a5a',
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
               },
-              accent: {
+              secondary: {
                 50: '#f8fafc',
                 100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
                 500: '#64748b',
+                600: '#475569',
                 700: '#334155',
+                800: '#1e293b',
                 900: '#0f172a',
               }
             },
@@ -53,12 +54,11 @@
               sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
             },
             animation: {
-              'fade-in': 'fadeIn 0.5s ease-in',
-              'slide-up': 'slideUp 0.6s ease-out',
+              'fade-in': 'fadeIn 0.6s ease-in',
+              'slide-up': 'slideUp 0.7s ease-out',
               'pulse-subtle': 'pulseSubtle 3s infinite',
-              'float': 'float 3s ease-in-out infinite',
-              'gradient': 'gradient 8s ease infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'gradient': 'gradient 15s ease infinite',
             },
             keyframes: {
               fadeIn: {
@@ -66,24 +66,20 @@
                 '100%': { opacity: '1' },
               },
               slideUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
                 '100%': { transform: 'translateY(0)', opacity: '1' },
               },
               pulseSubtle: {
                 '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0.8' },
+                '50%': { opacity: '0.85' },
               },
               float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-15px)' },
               },
               gradient: {
                 '0%, 100%': { backgroundPosition: '0% 50%' },
                 '50%': { backgroundPosition: '100% 50%' },
-              },
-              pulse: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '.5' },
               }
             }
           }
@@ -101,75 +97,51 @@
       body {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         overflow-x: hidden;
-        background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
       }
       
       .glass-effect {
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
       }
       
       .gradient-bg {
-        background: linear-gradient(-45deg, #f0f7ff, #ffffff, #e0effe, #ffffff);
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #f8fafc 50%, #e0f2fe 75%, #f0f9ff 100%);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
       }
       
-      .hero-gradient {
-        background: linear-gradient(135deg, #0033a0 0%, #0056cc 50%, #0077ff 100%);
-      }
-      
       .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
       }
       
       .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 51, 160, 0.1);
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.15);
       }
       
       .text-gradient {
-        background: linear-gradient(135deg, #0033a0 0%, #0056cc 100%);
+        background: linear-gradient(135deg, #0284c7 0%, #075985 50%, #0c4a6e 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
       
       .border-gradient {
-        position: relative;
         border: 2px solid transparent;
         background: linear-gradient(white, white) padding-box,
-                    linear-gradient(135deg, #0033a0, #0056cc) border-box;
+                    linear-gradient(135deg, #0284c7, #0c4a6e) border-box;
       }
       
-      .touch-target {
-        min-height: 44px;
-        min-width: 44px;
+      .whatsapp-button {
+        background: linear-gradient(135deg, #25D366, #128C7E);
       }
       
-      .hover-lift:hover {
-        transform: translateY(-2px);
-      }
-      
-      @media (max-width: 768px) {
-        .mobile-stack {
-          flex-direction: column;
-        }
-        
-        .mobile-center {
-          text-align: center;
-        }
-        
-        .mobile-full {
-          width: 100%;
-        }
-        
-        .mobile-padding {
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
+      .whatsapp-button:hover {
+        background: linear-gradient(135deg, #128C7E, #0E6E5E);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(18, 140, 126, 0.3);
       }
       
       .section-padding {
@@ -186,7 +158,7 @@
       
       .nav-link {
         position: relative;
-        padding-bottom: 4px;
+        padding-bottom: 6px;
       }
       
       .nav-link::after {
@@ -195,9 +167,9 @@
         bottom: 0;
         left: 0;
         width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, #0033a0, #0056cc);
-        transition: width 0.3s ease;
+        height: 3px;
+        background: linear-gradient(90deg, #0284c7, #0c4a6e);
+        transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
       }
       
       .nav-link:hover::after {
@@ -206,8 +178,8 @@
       
       .animate-on-scroll {
         opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease-out;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
       }
       
       .animate-on-scroll.visible {
@@ -220,16 +192,7 @@
       }
       
       .sun-glow {
-        filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.3));
-      }
-      
-      .whatsapp-button {
-        background: linear-gradient(135deg, #25D366, #128C7E);
-      }
-      
-      .whatsapp-button:hover {
-        background: linear-gradient(135deg, #128C7E, #0E6E5E);
-        transform: translateY(-2px);
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
       }
       
       .image-hover-zoom {
@@ -238,78 +201,101 @@
       }
       
       .image-hover-zoom img {
-        transition: transform 0.5s ease;
+        transition: transform 0.7s ease;
       }
       
       .image-hover-zoom:hover img {
-        transform: scale(1.05);
+        transform: scale(1.08);
       }
       
-      .image-overlay {
+      .faq-item {
+        transition: all 0.3s ease;
+      }
+      
+      .faq-item:hover {
+        border-color: #0284c7;
+      }
+      
+      .highlight-box {
         position: relative;
+        overflow: hidden;
       }
       
-      .image-overlay::after {
+      .highlight-box::before {
         content: '';
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(0, 51, 160, 0.1), rgba(0, 51, 160, 0.3));
-        border-radius: 1rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.1), transparent);
+        transition: left 0.7s ease;
       }
       
-      .image-overlay:hover::after {
-        opacity: 1;
+      .highlight-box:hover::before {
+        left: 100%;
       }
       
-      .animation-delay-2000 {
-        animation-delay: 2s;
+      .timeline-dot {
+        width: 20px;
+        height: 20px;
+        border: 4px solid white;
+        box-shadow: 0 0 0 3px #0284c7;
+      }
+      
+      .stagger-delay-1 { animation-delay: 0.1s; }
+      .stagger-delay-2 { animation-delay: 0.2s; }
+      .stagger-delay-3 { animation-delay: 0.3s; }
+      .stagger-delay-4 { animation-delay: 0.4s; }
+      .stagger-delay-5 { animation-delay: 0.5s; }
+      
+      @media (max-width: 768px) {
+        .mobile-stack {
+          flex-direction: column;
+        }
+        
+        .mobile-center {
+          text-align: center;
+        }
+        
+        .mobile-full {
+          width: 100%;
+        }
       }
     </style>
 </head>
-<body class="text-accent-900 antialiased">
+<body class="text-secondary-900 antialiased">
     <!-- Navigation -->
-    <nav class="fixed w-full glass-effect z-50 shadow-sm">
+    <nav class="fixed w-full glass-effect z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
                     <div>
-                        <span class="text-lg font-bold text-primary-800 group-hover:text-primary-600 transition-colors">Mariba Media</span>
-                        <span class="block text-xs text-accent-500">Commercial Solar</span>
+                        <span class="text-xl font-black text-primary-800 group-hover:text-primary-600 transition-colors">CommercialSolar</span>
+                        <span class="block text-xs font-medium text-secondary-600">Shopping Complexes • Student Housing • Warehouses</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#hero" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Home</a>
-                    <a href="#hardware" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Hardware</a>
-                    <a href="#finance" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Finance</a>
-                    <a href="#solutions" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Solutions</a>
-                    <a href="#about" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">About</a>
-                    <a href="#contact" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Contact</a>
-                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                        </svg>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="https://wa.me/27766473499" target="_blank" class="whatsapp-button text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:shadow-lg transition-all shadow-md hover-lift">
-                        Get Quote
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="#problems" class="nav-link text-sm font-semibold text-secondary-700 hover:text-primary-600 transition-colors">The Problems</a>
+                    <a href="#solutions" class="nav-link text-sm font-semibold text-secondary-700 hover:text-primary-600 transition-colors">Our Solutions</a>
+                    <a href="#financing" class="nav-link text-sm font-semibold text-secondary-700 hover:text-primary-600 transition-colors">Financing</a>
+                    <a href="#process" class="nav-link text-sm font-semibold text-secondary-700 hover:text-primary-600 transition-colors">Our Process</a>
+                    <a href="#faq" class="nav-link text-sm font-semibold text-secondary-700 hover:text-primary-600 transition-colors">FAQ</a>
+                    <a href="https://wa.me/27766473499" target="_blank" class="whatsapp-button text-white px-6 py-3 rounded-lg font-bold text-sm hover:shadow-lg transition-all shadow-md">
+                        Free Energy Audit →
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden touch-target p-2 text-accent-700 hover:bg-accent-100 rounded-lg transition-colors">
+                <button id="mobile-menu-btn" class="lg:hidden p-3 text-secondary-700 hover:bg-secondary-100 rounded-xl transition-colors">
                     <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -321,695 +307,724 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-white border-t border-accent-100 hidden shadow-xl">
-            <div class="px-4 py-6 flex flex-col gap-1">
-                <a href="#hero" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Home</a>
-                <a href="#hardware" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Hardware</a>
-                <a href="#finance" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Finance</a>
-                <a href="#solutions" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Solutions</a>
-                <a href="#about" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">About</a>
-                <a href="#contact" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Contact</a>
-                <div class="pt-4 mt-2 border-t border-accent-100">
-                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                        </svg>
-                        <span>WhatsApp: +27766473499</span>
-                    </a>
-                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        <span>victor@maribamedia.co.za</span>
-                    </a>
-                    <a href="tel:+27766473499" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                        <span>Call: +27766473499</span>
-                    </a>
-                </div>
-                <a href="https://wa.me/27766473499" target="_blank" class="mt-4 whatsapp-button text-white py-3.5 rounded-lg text-center font-semibold shadow-md hover:shadow-lg transition-all">
-                    Get Quote on WhatsApp
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-secondary-100 hidden shadow-2xl">
+            <div class="px-4 py-8 flex flex-col gap-2">
+                <a href="#problems" class="py-4 px-6 text-secondary-700 font-semibold text-lg rounded-xl hover:bg-secondary-50 transition-colors">The Problems</a>
+                <a href="#solutions" class="py-4 px-6 text-secondary-700 font-semibold text-lg rounded-xl hover:bg-secondary-50 transition-colors">Our Solutions</a>
+                <a href="#financing" class="py-4 px-6 text-secondary-700 font-semibold text-lg rounded-xl hover:bg-secondary-50 transition-colors">Financing</a>
+                <a href="#process" class="py-4 px-6 text-secondary-700 font-semibold text-lg rounded-xl hover:bg-secondary-50 transition-colors">Our Process</a>
+                <a href="#faq" class="py-4 px-6 text-secondary-700 font-semibold text-lg rounded-xl hover:bg-secondary-50 transition-colors">FAQ</a>
+                <a href="https://wa.me/27766473499" target="_blank" class="mt-6 whatsapp-button text-white py-4 rounded-xl text-center font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+                    Get Free Energy Audit
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 -z-10 overflow-hidden">
-            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
-            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow animation-delay-2000"></div>
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-primary-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float animation-delay-2000"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto text-center">
-                <!-- Partnership Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-primary-100 mb-8 animate-slide-up">
-                    <span class="w-2 h-2 rounded-full bg-primary-500 animate-ping"></span>
-                    <span class="text-sm font-medium text-primary-700">Strategic Partnership</span>
-                    <span class="text-sm text-accent-600">• Mariba Media + Urban Holdings Solar</span>
+            <div class="max-w-6xl mx-auto">
+                <!-- Guarantee Badge -->
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 mb-8 animate-slide-up">
+                    <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                    <span class="font-black text-green-800 text-sm uppercase tracking-wide">Guaranteed Solution • Up to 70% Electricity Bill Reduction</span>
                 </div>
                 
                 <!-- Main Headline -->
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    <span class="block text-accent-900">Harness the Power</span>
-                    <span class="block text-gradient mt-2">of the Sun</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-slide-up">
+                    <span class="block text-secondary-900">End Loadshedding &</span>
+                    <span class="block text-gradient mt-4">Skyrocketing Electricity Bills</span>
                 </h1>
                 
                 <!-- Subheadline -->
-                <p class="text-xl md:text-2xl text-accent-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Powering a greener future with commercial, residential, and agricultural solar solutions
+                <p class="text-2xl md:text-3xl text-secondary-600 mb-12 max-w-4xl leading-relaxed animate-slide-up stagger-delay-1">
+                    Complete solar solutions for <span class="font-bold text-primary-700">shopping complexes, student accommodations, and warehouses</span> across South Africa
                 </p>
+
+                <!-- VSL Video Embed -->
+                <div class="mb-16 max-w-5xl mx-auto animate-fade-in stagger-delay-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-primary-900 to-primary-700">
+                            <!-- Replace with your actual YouTube embed code -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="CommercialSolar Complete Solution Explained"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                class="w-full h-[500px]"
+                            >
+                            </iframe>
+                        </div>
+                        <div class="absolute inset-0 border-4 border-white/20 pointer-events-none rounded-2xl"></div>
+                    </div>
+                </div>
 
                 <!-- Stats Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
-                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2 stat-counter" data-target="70">70%</div>
-                        <div class="text-sm font-medium text-accent-700">Energy Cost Savings</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-primary-100 card-hover highlight-box">
+                        <div class="text-4xl md:text-5xl font-black text-primary-700 mb-3 stat-counter">70%</div>
+                        <div class="text-sm font-bold text-secondary-800 uppercase tracking-wide">Electricity Bill Reduction</div>
+                        <div class="text-xs text-secondary-500 mt-2">Guaranteed minimum savings</div>
                     </div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
-                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">0%</div>
-                        <div class="text-sm font-medium text-accent-700">Upfront Costs</div>
+                    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-primary-100 card-hover highlight-box">
+                        <div class="text-4xl md:text-5xl font-black text-primary-700 mb-3">R0</div>
+                        <div class="text-sm font-bold text-secondary-800 uppercase tracking-wide">Upfront Cost</div>
+                        <div class="text-xs text-secondary-500 mt-2">With our dedicated financing</div>
                     </div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
-                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">30</div>
-                        <div class="text-sm font-medium text-accent-700">Day Installation</div>
+                    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-primary-100 card-hover highlight-box">
+                        <div class="text-4xl md:text-5xl font-black text-primary-700 mb-3">100%</div>
+                        <div class="text-sm font-bold text-secondary-800 uppercase tracking-wide">Project Management</div>
+                        <div class="text-xs text-secondary-500 mt-2">From design to compliance</div>
                     </div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
-                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">25</div>
-                        <div class="text-sm font-medium text-accent-700">Year Warranty</div>
+                    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-primary-100 card-hover highlight-box">
+                        <div class="text-4xl md:text-5xl font-black text-primary-700 mb-3">25</div>
+                        <div class="text-sm font-bold text-secondary-800 uppercase tracking-wide">Year Warranty</div>
+                        <div class="text-xs text-secondary-500 mt-2">Premium tier-1 equipment</div>
                     </div>
                 </div>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20to%20get%20a%20quote%20for%20solar%20solutions" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 whatsapp-button text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover-lift group">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
+                <!-- Primary CTA -->
+                <div class="text-center animate-fade-in stagger-delay-3">
+                    <a href="https://wa.me/27766473499?text=Hi%20CommercialSolar,%20I'd%20like%20a%20COMPREHENSIVE%20FREE%20Energy%20Audit%20for%20my%20commercial%20property" 
+                       target="_blank" 
+                       class="inline-flex items-center justify-center gap-4 whatsapp-button text-white px-12 py-6 rounded-2xl font-black text-xl transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                         </svg>
-                        <span>Get Quote on WhatsApp</span>
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        <span>GET YOUR FREE COMPREHENSIVE ENERGY AUDIT</span>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
-                    <a href="#solutions" class="touch-target inline-flex items-center justify-center gap-3 bg-white text-primary-700 px-8 py-4 rounded-xl font-semibold hover:bg-accent-50 transition-all shadow-lg hover:shadow-xl hover-lift border border-primary-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                        <span>Explore Solutions</span>
-                    </a>
+                    <p class="mt-6 text-secondary-600 text-lg font-medium">
+                        Includes detailed savings analysis, ROI calculation, and custom financing proposal
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hardware Showcase Section -->
-    <section id="hardware" class="py-16 md:py-24 bg-white">
+    <!-- ICP Specific Pain Points Section -->
+    <section id="problems" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
-                    Premium <span class="text-gradient">Solar Hardware</span>
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-secondary-900 mb-6">
+                    The <span class="text-gradient">Costly Reality</span> Facing Commercial Properties
                 </h2>
-                <p class="text-lg text-accent-600">
-                    World-class solar equipment from leading global manufacturers
+                <p class="text-xl text-secondary-600 leading-relaxed">
+                    Each commercial property type faces unique challenges that directly impact profitability, tenant satisfaction, and operational continuity
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-on-scroll">
-                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden shadow-2xl">
-                        <img 
-                            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                            alt="Premium Solar Panels Installation" 
-                            class="w-full h-[500px] object-cover"
-                            loading="lazy"
-                        >
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
-                            <h3 class="text-2xl font-bold text-white mb-2">High-Efficiency Solar Panels</h3>
-                            <p class="text-white/90">Industry-leading efficiency with 25-year performance warranty</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="animate-on-scroll">
-                    <h3 class="text-2xl font-bold text-accent-900 mb-6">World-Class Hardware Partners</h3>
-                    <p class="text-lg text-accent-600 mb-6 leading-relaxed">
-                        We partner with global leaders in solar technology to deliver reliable, high-performance systems that maximize your return on investment.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="bg-primary-50 p-4 rounded-xl border border-primary-100">
-                            <div class="text-lg font-bold text-primary-700 mb-1">Tier-1 Panels</div>
-                            <p class="text-accent-600 text-sm">Highest quality solar panels from leading manufacturers</p>
-                        </div>
-                        <div class="bg-primary-50 p-4 rounded-xl border border-primary-100">
-                            <div class="text-lg font-bold text-primary-700 mb-1">Smart Inverters</div>
-                            <p class="text-accent-600 text-sm">Advanced inverters with remote monitoring capabilities</p>
-                        </div>
-                        <div class="bg-primary-50 p-4 rounded-xl border border-primary-100">
-                            <div class="text-lg font-bold text-primary-700 mb-1">Li-ion Batteries</div>
-                            <p class="text-accent-600 text-sm">Reliable energy storage for uninterrupted power supply</p>
-                        </div>
-                        <div class="bg-primary-50 p-4 rounded-xl border border-primary-100">
-                            <div class="text-lg font-bold text-primary-700 mb-1">25-Year Warranty</div>
-                            <p class="text-accent-600 text-sm">Comprehensive warranty on all installed systems</p>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20to%20learn%20more%20about%20your%20solar%20hardware%20partners" target="_blank" class="touch-target inline-flex items-center gap-3 whatsapp-button text-white px-6 py-3.5 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                        </svg>
-                        <span>Discuss Hardware Options</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Hardware Partners Logos -->
-            <div class="mt-16 bg-primary-50 rounded-2xl p-8">
-                <h4 class="text-center text-xl font-bold text-accent-900 mb-8">Our Hardware Partners</h4>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-xl flex items-center justify-center shadow-sm">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-primary-700 mb-2">Jinko</div>
-                            <div class="text-xs text-accent-600">Solar Panels</div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex items-center justify-center shadow-sm">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-primary-700 mb-2">LG</div>
-                            <div class="text-xs text-accent-600">Solar Solutions</div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex items-center justify-center shadow-sm">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-primary-700 mb-2">Sungrow</div>
-                            <div class="text-xs text-accent-600">Inverters</div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex items-center justify-center shadow-sm">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-primary-700 mb-2">BYD</div>
-                            <div class="text-xs text-accent-600">Batteries</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Finance Showcase Section -->
-    <section id="finance" class="py-16 md:py-24 bg-accent-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
-                    Flexible <span class="text-gradient">Financing Solutions</span>
-                </h2>
-                <p class="text-lg text-accent-600">
-                    Zero upfront costs with multiple payment options tailored to your business
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-on-scroll order-2 md:order-1">
-                    <h3 class="text-2xl font-bold text-accent-900 mb-6">Custom Financial Packages</h3>
-                    <p class="text-lg text-accent-600 mb-6 leading-relaxed">
-                        Our partnership with leading financial institutions enables us to offer innovative financing solutions that make solar accessible to every business.
-                    </p>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Rent-to-Own Program</h4>
-                                <p class="text-accent-600">Gradual ownership with immediate savings, starting from R500,000</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Power Purchase Agreement</h4>
-                                <p class="text-accent-600">Pay only for the energy you use, no installation costs</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Asset Financing</h4>
-                                <p class="text-accent-600">Flexible payment terms with competitive interest rates</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl border border-primary-100 mb-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary-700 mb-2">Minimum R500K</div>
-                            <div class="text-accent-600">Project value for financing eligibility</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20to%20discuss%20financing%20options%20for%20a%20solar%20project" target="_blank" class="touch-target inline-flex items-center gap-3 whatsapp-button text-white px-6 py-3.5 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                        </svg>
-                        <span>Get Financing Quote</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="animate-on-scroll order-1 md:order-2">
-                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden shadow-2xl">
-                        <img 
-                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                            alt="Solar Financing Solutions" 
-                            class="w-full h-[500px] object-cover"
-                            loading="lazy"
-                        >
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
-                            <h3 class="text-2xl font-bold text-white mb-2">Flexible Payment Plans</h3>
-                            <p class="text-white/90">Tailored financing options for businesses of all sizes</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Finance Benefits -->
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-accent-100 card-hover text-center">
-                    <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-accent-900 mb-4">No Upfront Costs</h4>
-                    <p class="text-accent-600">Start your solar journey without initial capital investment</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-accent-100 card-hover text-center">
-                    <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-accent-900 mb-4">Immediate Savings</h4>
-                    <p class="text-accent-600">Reduce energy costs by up to 70% from day one</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-accent-100 card-hover text-center">
-                    <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-accent-900 mb-4">Flexible Terms</h4>
-                    <p class="text-accent-600">Payment plans from 3 to 7 years tailored to your cash flow</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnership Banner -->
-    <section class="py-6 hero-gradient text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="font-bold">Strategic Solar Partnership</p>
-                        <p class="text-sm text-white/90">Mariba Media Commercial Solar + Urban Holdings Solar</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-6 text-sm">
-                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-2 hover:text-white/80 transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                        </svg>
-                        <span>WhatsApp Quote</span>
-                    </a>
-                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-2 hover:text-white/80 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        <span>victor@maribamedia.co.za</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-on-scroll">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-6">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Our Aim</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-6">
-                        Leading the way in <span class="text-gradient">sustainable energy</span> solutions
-                    </h2>
-                    <p class="text-lg text-accent-600 mb-6 leading-relaxed">
-                        At Urban Holdings Solar, we are committed to transforming the energy landscape by providing innovative solar solutions that power a sustainable future.
-                    </p>
-                    <p class="text-accent-600 mb-8 leading-relaxed">
-                        Through strong partnerships with trusted funders and world-leading suppliers, we deliver high-quality solar systems at competitive prices. Whether for residential, commercial, or agricultural projects, our holistic approach ensures cost-effective and reliable energy solutions.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20to%20learn%20more%20about%20your%20solar%20solutions" target="_blank" class="touch-target inline-flex items-center gap-2 whatsapp-button text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                            </svg>
-                            <span>Get Quote</span>
-                        </a>
-                        <a href="#contact" class="touch-target inline-flex items-center gap-2 bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-accent-50 transition-colors border border-primary-200">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <span>Contact Us</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-6 animate-on-scroll">
-                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mb-4 sun-glow">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-accent-900 mb-2">Environmental Impact</h3>
-                        <p class="text-sm text-accent-600">Reduce carbon footprint and contribute to a cleaner future</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-accent-900 mb-2">Cost Savings</h3>
-                        <p class="text-sm text-accent-600">Save up to 70% on energy costs with solar power</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-accent-900 mb-2">Energy Independence</h3>
-                        <p class="text-sm text-accent-600">Freedom from Eskom uncertainty and rising tariffs</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-white p-6 rounded-2xl border border-primary-100 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-accent-900 mb-2">Reliable Power</h3>
-                        <p class="text-sm text-accent-600">Continuous operations with backup solar solutions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solar Solutions -->
-    <section id="solutions" class="section-padding bg-accent-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
-                    Comprehensive <span class="text-gradient">Solar Solutions</span>
-                </h2>
-                <p class="text-lg text-accent-600">
-                    Tailored solar systems for every sector, maximizing efficiency and savings
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Commercial -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-accent-100 card-hover animate-on-scroll">
-                    <div class="p-8">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Shopping Complexes -->
+                <div class="bg-gradient-to-b from-red-50 to-white rounded-2xl p-8 border-2 border-red-100 card-hover animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white shadow-lg">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-accent-900 mb-4">Commercial Solar</h3>
-                        <p class="text-accent-600 mb-6">
-                            Transform your business with customised solar systems designed to maximise energy efficiency and reduce operational costs.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Office buildings & shopping centers</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Factories & industrial parks</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Reduce costs by up to 70%</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20a%20quote%20for%20COMMERCIAL%20solar%20solutions" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                            </svg>
-                            <span>Get Commercial Quote</span>
-                        </a>
+                        <div>
+                            <h3 class="text-2xl font-black text-secondary-900">Shopping Complexes</h3>
+                            <div class="text-sm font-medium text-red-600 mt-1">Retail & Commercial Centers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-red-50">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Tenant Dissatisfaction & Turnover</h4>
+                                <p class="text-secondary-600 text-sm">Retailers lose business during loadshedding, leading to complaints, lease cancellations, and vacancy rates increase of 15-25%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-red-50">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Escalating Common Area Costs</h4>
+                                <p class="text-secondary-600 text-sm">Lighting, escalators, HVAC systems, and security consume 40-60% of total electricity, with costs increasing 15-20% annually</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-red-50">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Security & Liability Risks</h4>
+                                <p class="text-secondary-600 text-sm">Dark corridors, disabled CCTV, and inoperative access control systems create security vulnerabilities and insurance premium increases</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-red-100">
+                        <div class="text-center p-4 bg-red-50 rounded-xl">
+                            <p class="text-red-700 font-bold">
+                                Average electricity cost increase: <span class="text-2xl">R120k - R500k+</span> annually
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Residential -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-accent-100 card-hover animate-on-scroll">
-                    <div class="p-8">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                <!-- Student Accommodations -->
+                <div class="bg-gradient-to-b from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-100 card-hover animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-lg">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-accent-900 mb-4">Residential Solutions</h3>
-                        <p class="text-accent-600 mb-6">
-                            Empower your home with renewable energy through our residential solar solutions. Reduce electricity bills and minimize carbon footprint.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Homes & residential complexes</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Energy independence</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Load shedding protection</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20a%20quote%20for%20RESIDENTIAL%20solar%20solutions" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                            </svg>
-                            <span>Get Residential Quote</span>
-                        </a>
+                        <div>
+                            <h3 class="text-2xl font-black text-secondary-900">Student Housing</h3>
+                            <div class="text-sm font-medium text-blue-600 mt-1">University Accommodations & Residences</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-50">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">24/7 Power Demand</h4>
+                                <p class="text-secondary-600 text-sm">Study areas, kitchens, laundry rooms, and common areas operate around the clock, creating massive baseline electricity consumption</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-50">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Academic Impact & Complaints</h4>
+                                <p class="text-secondary-600 text-sm">Power outages disrupt study schedules, research, and online learning, leading to student dissatisfaction and 20-30% higher turnover</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-50">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Competitive Disadvantage</h4>
+                                <p class="text-secondary-600 text-sm">Properties without reliable power lose premium tenants to competitors offering uninterrupted electricity, affecting occupancy rates</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-blue-100">
+                        <div class="text-center p-4 bg-blue-50 rounded-xl">
+                            <p class="text-blue-700 font-bold">
+                                Typical annual electricity spend: <span class="text-2xl">R80k - R300k+</span> per building
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Agricultural -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-accent-100 card-hover animate-on-scroll">
-                    <div class="p-8">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                <!-- Warehouses -->
+                <div class="bg-gradient-to-b from-amber-50 to-white rounded-2xl p-8 border-2 border-amber-100 card-hover animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white shadow-lg">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-accent-900 mb-4">Agricultural Solar</h3>
-                        <p class="text-accent-600 mb-6">
-                            Boost productivity and sustainability on your farm with solar systems that power irrigation, farm equipment, and more.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Farms & irrigation systems</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Eliminate diesel costs</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-accent-700">Continuous operations</span>
-                            </li>
-                        </ul>
-                        <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20a%20quote%20for%20AGRICULTURAL%20solar%20solutions" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                            </svg>
-                            <span>Get Agricultural Quote</span>
-                        </a>
+                        <div>
+                            <h3 class="text-2xl font-black text-secondary-900">Warehouses</h3>
+                            <div class="text-sm font-medium text-amber-600 mt-1">Logistics & Storage Facilities</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-amber-50">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Operational Shutdown Costs</h4>
+                                <p class="text-secondary-600 text-sm">Loading bays, conveyor systems, and cold storage failures halt operations, costing R5k-R20k per hour in lost productivity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-amber-50">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">High-Bay Lighting Consumption</h4>
+                                <p class="text-secondary-600 text-sm">Industrial lighting systems operating 16-24 hours daily consume 60-70% of total electricity in warehouse facilities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-amber-50">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 flex-shrink-0 mt-1">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary-900 mb-1">Inventory & Equipment Damage</h4>
+                                <p class="text-secondary-600 text-sm">Temperature-sensitive goods spoil, automated systems fail, and security breaches occur during extended power outages</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-amber-100">
+                        <div class="text-center p-4 bg-amber-50 rounded-xl">
+                            <p class="text-amber-700 font-bold">
+                                Monthly electricity impact: <span class="text-2xl">R50k - R250k+</span> operational losses
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Impact Summary -->
+            <div class="mt-16 bg-gradient-to-r from-secondary-900 to-primary-900 rounded-2xl p-10 text-white">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-3xl font-black mb-6">The Combined Financial Impact</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-black text-primary-300 mb-2">15-25%</div>
+                            <p class="text-white/90">Annual electricity cost increase without solar</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-black text-primary-300 mb-2">40-60%</div>
+                            <p class="text-white/90">Tenant dissatisfaction & turnover increase during loadshedding</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-black text-primary-300 mb-2">R100k-R1M+</div>
+                            <p class="text-white/90">Annual losses per property from power disruptions</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white">
+    <!-- Comprehensive Solution Section -->
+    <section id="solutions" class="section-padding bg-gradient-to-b from-primary-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
-                    Ready to Go <span class="text-gradient">Solar?</span>
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-primary-200 shadow-lg mb-8">
+                    <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                    <span class="font-black text-primary-800 uppercase tracking-wider text-sm">Guaranteed Comprehensive Solution</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-secondary-900 mb-6">
+                    Your <span class="text-gradient">Complete Solar Ecosystem</span>
                 </h2>
-                <p class="text-lg text-accent-600">
-                    Contact us for an obligation-free quote and start your journey to energy independence
+                <p class="text-xl text-secondary-600 leading-relaxed">
+                    We don't just install solar panels - we deliver a complete energy transformation with guaranteed results
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Contact Info -->
-                <div class="bg-white p-8 rounded-2xl border border-accent-100 shadow-lg animate-on-scroll">
-                    <h3 class="text-2xl font-bold text-accent-900 mb-8">Get in Touch</h3>
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                                </svg>
+            <!-- Core Solutions -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <div class="animate-on-scroll">
+                    <div class="bg-white rounded-2xl p-10 border-2 border-primary-100 shadow-xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                                <div class="text-3xl font-black text-white">70%</div>
                             </div>
                             <div>
-                                <h4 class="font-bold text-accent-900 mb-1">WhatsApp Quote</h4>
-                                <a href="https://wa.me/27766473499" target="_blank" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
-                                    +27766473499
-                                </a>
-                                <p class="text-accent-500 text-sm mt-1">Click to start WhatsApp conversation</p>
+                                <h3 class="text-2xl font-black text-secondary-900 mb-2">Guaranteed 70% Electricity Bill Reduction</h3>
+                                <div class="text-primary-600 font-bold">Minimum Savings Guarantee</div>
                             </div>
                         </div>
                         
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-primary-50 rounded-xl">
+                                <h4 class="font-bold text-secondary-900 mb-3 text-lg">How We Guarantee Your Savings:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-secondary-700"><strong>Comprehensive Energy Audit:</strong> We analyze 12 months of bills to establish your exact baseline</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-secondary-700"><strong>Performance Modeling:</strong> Advanced simulation of your system's output based on location, orientation, and usage patterns</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-secondary-700"><strong>Contractual Guarantee:</strong> Your savings are contractually guaranteed with clear performance metrics</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gradient-to-br from-green-50 to-white p-4 rounded-xl border border-green-100 text-center">
+                                    <div class="text-2xl font-black text-green-700 mb-1">R500k - R5M</div>
+                                    <div class="text-sm text-secondary-600">Potential 5-year savings</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-xl border border-blue-100 text-center">
+                                    <div class="text-2xl font-black text-blue-700 mb-1">3-5 Years</div>
+                                    <div class="text-sm text-secondary-600">Typical ROI period</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="bg-white rounded-2xl p-10 border-2 border-primary-100 shadow-xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Email Address</h4>
-                                <a href="mailto:victor@maribamedia.co.za" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
-                                    victor@maribamedia.co.za
-                                </a>
-                                <p class="text-accent-500 text-sm mt-1">Primary contact for solar inquiries</p>
+                                <h3 class="text-2xl font-black text-secondary-900 mb-2">Dedicated Financing Solutions</h3>
+                                <div class="text-primary-600 font-bold">Zero Upfront Investment Required</div>
                             </div>
                         </div>
                         
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-primary-50 rounded-xl">
+                                <h4 class="font-bold text-secondary-900 mb-3 text-lg">Our Financial Models:</h4>
+                                <div class="space-y-4">
+                                    <div class="p-4 bg-white rounded-lg border border-primary-100">
+                                        <div class="font-bold text-primary-700 mb-1">Rent-to-Own Program</div>
+                                        <p class="text-sm text-secondary-600">Gradual ownership while enjoying immediate savings. Perfect for properties with limited capital.</p>
+                                    </div>
+                                    <div class="p-4 bg-white rounded-lg border border-primary-100">
+                                        <div class="font-bold text-primary-700 mb-1">Power Purchase Agreement (PPA)</div>
+                                        <p class="text-sm text-secondary-600">Pay only for the solar energy you use. No installation costs, just predictable energy rates.</p>
+                                    </div>
+                                    <div class="p-4 bg-white rounded-lg border border-primary-100">
+                                        <div class="font-bold text-primary-700 mb-1">Asset Financing</div>
+                                        <p class="text-sm text-secondary-600">3-7 year terms with competitive rates. Full ownership from day one with tax benefits.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Phone Number</h4>
-                                <a href="tel:+27766473499" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
-                                    +27766473499
-                                </a>
-                                <p class="text-accent-500 text-sm mt-1">Available during business hours</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-accent-900 mb-1">Office Location</h4>
-                                <p class="text-accent-700">
-                                    Suite 51, Block A, First Floor<br>
-                                    Northlands Shopping Centre
+                            
+                            <div class="bg-gradient-to-r from-primary-600 to-primary-800 p-6 rounded-xl text-white">
+                                <div class="text-center font-bold text-lg mb-2">The Financial Advantage</div>
+                                <p class="text-white/90 text-center">
+                                    Your monthly solar payment will ALWAYS be less than your electricity savings
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Quick CTA -->
-                <div class="animate-on-scroll">
-                    <div class="bg-gradient-to-br from-primary-600 to-primary-800 p-8 rounded-2xl text-white mb-8">
-                        <h3 class="text-2xl font-bold mb-6">Free Energy Audit</h3>
-                        <p class="text-white/90 mb-8">
-                            Identify how much you can save with solar power. Our experts will analyze your energy consumption and provide a customized savings estimate.
+            </div>
+
+            <!-- Complete Project Management -->
+            <div class="bg-gradient-to-r from-primary-900 to-primary-800 rounded-2xl p-10 text-white shadow-2xl mb-12">
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+                        <div>
+                            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-bold">Complete Turnkey Solution</span>
+                            </div>
+                            <h3 class="text-3xl font-black mb-6">Full Project Management & Compliance</h3>
+                            <p class="text-white/90 text-lg leading-relaxed mb-8">
+                                We handle every aspect from initial assessment to final commissioning, including all municipal approvals, engineering designs, and compliance certifications.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-6 h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-white/95">Municipal Approval</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-6 h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-white/95">Structural Engineering</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-6 h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-white/95">Electrical Compliance</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <svg class="w-6 h-6 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-white/95">Ongoing Maintenance</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                                <div class="text-5xl font-black text-primary-300 mb-2">100%</div>
+                                <div class="text-white font-bold">Hands-Off for You</div>
+                                <p class="text-white/80 text-sm mt-2">We manage the entire process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Desktop Proposal -->
+            <div class="bg-white rounded-2xl p-10 border-2 border-primary-100 shadow-xl">
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-3xl font-black text-secondary-900 mb-6">Complete Desktop Proposal</h3>
+                        <p class="text-secondary-600 text-lg leading-relaxed mb-8">
+                            Before any commitment, you receive a comprehensive 40+ page proposal detailing exactly what to expect, including:
                         </p>
-                        <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Media%20Commercial%20Solar,%20I'd%20like%20to%20schedule%20a%20FREE%20energy%20audit" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 whatsapp-button text-white w-full py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl">
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-6 bg-primary-50 rounded-xl">
+                                <div class="font-bold text-secondary-900 mb-3">Financial Analysis</div>
+                                <ul class="space-y-2 text-sm text-secondary-600">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>Detailed ROI calculation</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>Cash flow projections</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>Tax benefit analysis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-6 bg-primary-50 rounded-xl">
+                                <div class="font-bold text-secondary-900 mb-3">Technical Specifications</div>
+                                <ul class="space-y-2 text-sm text-secondary-600">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>System design & layout</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>Equipment specifications</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>Performance guarantees</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/3 text-center">
+                        <div class="bg-gradient-to-br from-primary-50 to-white p-10 rounded-2xl border-2 border-primary-100">
+                            <div class="text-6xl font-black text-primary-700 mb-4">✓</div>
+                            <div class="font-black text-secondary-900 text-xl mb-2">No Obligation</div>
+                            <p class="text-secondary-600">
+                                Your comprehensive proposal is completely free with no commitment required
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Deep Dive Section -->
+    <section id="financing" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-secondary-900 mb-6">
+                    <span class="text-gradient">Financial Models</span> Explained
+                </h2>
+                <p class="text-xl text-secondary-600 leading-relaxed">
+                    Choose the financing option that best aligns with your property's financial strategy
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Option 1 -->
+                <div class="bg-gradient-to-b from-white to-green-50 rounded-2xl p-8 border-2 border-green-100 card-hover">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-secondary-900 mb-2">Rent-to-Own</h3>
+                        <div class="text-green-600 font-bold">Gradual Ownership</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-white rounded-xl border border-green-100">
+                            <div class="font-bold text-secondary-900 mb-1">How It Works</div>
+                            <p class="text-sm text-secondary-600">Pay fixed monthly rentals that contribute toward eventual ownership after 5-7 years.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-xl border border-green-100">
+                            <div class="font-bold text-secondary-900 mb-1">Best For</div>
+                            <ul class="text-sm text-secondary-600 space-y-1">
+                                <li>• Properties with limited capital</li>
+                                <li>• Long-term ownership goals</li>
+                                <li>• Immediate savings needs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-xl">
+                            <div class="font-bold text-green-800 mb-1">Financial Benefit</div>
+                            <p class="text-sm text-green-700">Immediate savings exceed rental payments from day one.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-green-100">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-green-700 mb-1">0%</div>
+                            <div class="text-sm text-secondary-600">Upfront cost</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-8 border-2 border-blue-100 card-hover">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-secondary-900 mb-2">Power Purchase Agreement</h3>
+                        <div class="text-blue-600 font-bold">Pay-Per-Use Model</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-white rounded-xl border border-blue-100">
+                            <div class="font-bold text-secondary-900 mb-1">How It Works</div>
+                            <p class="text-sm text-secondary-600">Pay only for the solar energy you consume at a fixed rate lower than Eskom tariffs.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-xl border border-blue-100">
+                            <div class="font-bold text-secondary-900 mb-1">Best For</div>
+                            <ul class="text-sm text-secondary-600 space-y-1">
+                                <li>• Properties wanting no capital outlay</li>
+                                <li>• Short-term occupancy situations</li>
+                                <li>• Risk-averse owners</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-xl">
+                            <div class="font-bold text-blue-800 mb-1">Financial Benefit</div>
+                            <p class="text-sm text-blue-700">Predictable energy costs with zero maintenance responsibility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-blue-100">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-blue-700 mb-1">R0</div>
+                            <div class="text-sm text-secondary-600">Installation cost</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="bg-gradient-to-b from-white to-purple-50 rounded-2xl p-8 border-2 border-purple-100 card-hover">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-secondary-900 mb-2">Asset Financing</h3>
+                        <div class="text-purple-600 font-bold">Immediate Ownership</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-white rounded-xl border border-purple-100">
+                            <div class="font-bold text-secondary-900 mb-1">How It Works</div>
+                            <p class="text-sm text-secondary-600">Finance the system over 3-7 years with immediate ownership and asset depreciation benefits.</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-xl border border-purple-100">
+                            <div class="font-bold text-secondary-900 mb-1">Best For</div>
+                            <ul class="text-sm text-secondary-600 space-y-1">
+                                <li>• Properties with tax benefits</li>
+                                <li>• Long-term asset accumulation</li>
+                                <li>• Balance sheet enhancement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <div class="font-bold text-purple-800 mb-1">Financial Benefit</div>
+                            <p class="text-sm text-purple-700">Tax deductions, asset appreciation, and immediate equity building.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-purple-100">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-purple-700 mb-1">5-9%</div>
+                            <div class="text-sm text-secondary-600">Interest rates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Comparison -->
+            <div class="bg-gradient-to-r from-secondary-900 to-primary-900 rounded-2xl p-10 text-white">
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-3xl font-black text-center mb-10">The Financial Advantage</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-10">
+                        <div class="text-center p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+                            <div class="text-5xl font-black text-primary-300 mb-2">1.3x - 1.8x</div>
+                            <div class="text-white font-bold mb-2">Savings Multiplier</div>
+                            <p class="text-white/80 text-sm">Every R1 spent on solar generates R1.3-R1.8 in electricity savings</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+                            <div class="text-5xl font-black text-primary-300 mb-2">20-25%</div>
+                            <div class="text-white font-bold mb-2">Property Value Increase</div>
+                            <p class="text-white/80 text-sm">Solar installations increase commercial property values significantly</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+                            <div class="text-5xl font-black text-primary-300 mb-2">3-5 Years</div>
+                            <div class="text-white font-bold mb-2">ROI Period</div>
+                            <p class="text-white/80 text-sm">Most properties recover their investment within 3-5 years</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="https://wa.me/27766473499?text=Hi%20CommercialSolar,%20I%20need%20a%20detailed%20financial%20analysis%20for%20my%20property" 
+                           target="_blank" 
+                           class="whatsapp-button text-white px-10 py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-3">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                             </svg>
-                            <span>Schedule Free Audit</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
+                            Get Custom Financial Analysis
                         </a>
                     </div>
                 </div>
@@ -1017,59 +1032,436 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-accent-900 text-white py-12">
+    <!-- Process Section -->
+    <section id="process" class="section-padding bg-gradient-to-b from-primary-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <div class="text-2xl font-bold mb-4">
-                        <span class="text-primary-400">Mariba Media</span>
-                        <span> Commercial Solar</span>
-                    </div>
-                    <p class="mb-4">
-                        In strategic partnership with Urban Holdings Solar to deliver comprehensive solar solutions across South Africa.
-                    </p>
-                    <div class="space-y-2">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <span>084 730 0177</span>
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-secondary-900 mb-6">
+                    Our <span class="text-gradient">8-Step Process</span>
+                </h2>
+                <p class="text-xl text-secondary-600 leading-relaxed">
+                    From initial contact to ongoing support - a seamless, transparent journey
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-400 to-primary-600 hidden lg:block"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col lg:flex-row items-center mb-16 lg:mb-24 animate-on-scroll">
+                    <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 lg:text-right">
+                        <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 shadow-lg">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
+                                    <span class="text-2xl font-black">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-black text-secondary-900">Comprehensive Energy Audit</h3>
+                                    <div class="text-primary-600 font-bold">Free & No Obligation</div>
+                                </div>
+                            </div>
+                            <p class="text-secondary-600">
+                                We analyze 12-24 months of electricity bills, conduct a site assessment, and evaluate your specific consumption patterns to establish an exact baseline.
+                            </p>
+                            <div class="mt-6 p-4 bg-primary-50 rounded-xl">
+                                <div class="font-bold text-primary-800 mb-2">Deliverables:</div>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• Detailed consumption analysis report</li>
+                                    <li>• Peak demand identification</li>
+                                    <li>• Load profile assessment</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                            <span>info@urbanholdingssolar.co.za</span>
+                    </div>
+                    
+                    <div class="lg:w-1/2 lg:pl-12">
+                        <div class="relative">
+                            <div class="hidden lg:block absolute -left-6 top-1/2 transform -translate-y-1/2">
+                                <div class="timeline-dot rounded-full"></div>
+                            </div>
+                            <div class="bg-primary-100 rounded-xl p-6">
+                                <div class="text-primary-800 font-bold mb-2">Duration: 3-5 Days</div>
+                                <p class="text-primary-700">Complete analysis with no disruption to your operations</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <div class="grid grid-cols-2 gap-2">
-                        <a href="#about" class="hover:text-primary-300 transition-colors">About Us</a>
-                        <a href="#hardware" class="hover:text-primary-300 transition-colors">Hardware</a>
-                        <a href="#finance" class="hover:text-primary-300 transition-colors">Finance</a>
-                        <a href="#solutions" class="hover:text-primary-300 transition-colors">Solar Solutions</a>
-                        <a href="#contact" class="hover:text-primary-300 transition-colors">Contact</a>
-                        <a href="https://urbanholdingssolar.co.za/" target="_blank" class="hover:text-primary-300 transition-colors">Our Partner</a>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col lg:flex-row items-center mb-16 lg:mb-24 animate-on-scroll">
+                    <div class="lg:w-1/2 lg:pl-12 order-2 lg:order-1">
+                        <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 shadow-lg">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
+                                    <span class="text-2xl font-black">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-black text-secondary-900">Complete Desktop Proposal</h3>
+                                    <div class="text-primary-600 font-bold">40+ Page Detailed Report</div>
+                                </div>
+                            </div>
+                            <p class="text-secondary-600">
+                                You receive a comprehensive proposal including system design, financial projections, ROI calculations, and implementation timeline.
+                            </p>
+                            <div class="mt-6 p-4 bg-primary-50 rounded-xl">
+                                <div class="font-bold text-primary-800 mb-2">Included:</div>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• 3D system visualization</li>
+                                    <li>• Financial modeling (5-10 year projections)</li>
+                                    <li>• Equipment specifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 lg:pr-12 order-1 lg:order-2 mb-8 lg:mb-0">
+                        <div class="relative">
+                            <div class="hidden lg:block absolute -right-6 top-1/2 transform -translate-y-1/2">
+                                <div class="timeline-dot rounded-full"></div>
+                            </div>
+                            <div class="bg-primary-100 rounded-xl p-6 text-right">
+                                <div class="text-primary-800 font-bold mb-2">Duration: 5-7 Days</div>
+                                <p class="text-primary-700">Presented in-person or via detailed video conference</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steps 3-8 Summary -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll">
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">3</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Financing Approval</h4>
+                        <p class="text-secondary-600">We secure financing through our partner institutions with competitive rates and terms.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 7-10 Days</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">4</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Design & Engineering</h4>
+                        <p class="text-secondary-600">Professional engineers create detailed designs and secure municipal approvals.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 10-14 Days</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">5</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Equipment Procurement</h4>
+                        <p class="text-secondary-600">We source premium Tier-1 equipment from global manufacturers with full warranties.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 7-14 Days</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">6</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Professional Installation</h4>
+                        <p class="text-secondary-600">Certified installers complete the installation with minimal disruption to operations.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 7-21 Days</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">7</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Commissioning & Testing</h4>
+                        <p class="text-secondary-600">Complete system testing, staff training, and performance verification.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 3-5 Days</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 border-2 border-primary-100 card-hover">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mb-6">
+                            <span class="text-xl font-black">8</span>
+                        </div>
+                        <h4 class="text-xl font-black text-secondary-900 mb-4">Ongoing Support</h4>
+                        <p class="text-secondary-600">24/7 monitoring, maintenance, and performance optimization for 25+ years.</p>
+                        <div class="mt-4 text-sm text-primary-700 font-bold">Duration: 25 Years</div>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="font-bold mb-4">Address</h4>
-                    <p>
-                        Suite 51, Block A, First Floor<br>
-                        Northlands Shopping Centre<br>
-                        South Africa
-                    </p>
+                <!-- Total Timeline -->
+                <div class="mt-16 bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-10 text-white text-center">
+                    <h3 class="text-3xl font-black mb-4">Total Project Timeline</h3>
+                    <div class="text-5xl font-black mb-2">45-75 Days</div>
+                    <p class="text-white/90 text-lg">From initial audit to operational solar system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-secondary-900 mb-6">
+                    Frequently Asked <span class="text-gradient">Questions</span>
+                </h2>
+                <p class="text-xl text-secondary-600 leading-relaxed">
+                    Everything you need to know about commercial solar solutions
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">How is the 70% electricity bill reduction guaranteed?</h3>
+                                <p class="text-secondary-600">
+                                    We conduct a comprehensive energy audit analyzing 12-24 months of your electricity bills. Using advanced simulation software, we model your system's performance based on your location, roof orientation, and consumption patterns. The 70% reduction is contractually guaranteed based on this detailed analysis, with performance metrics and reporting provided monthly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">What happens during loadshedding with a solar system?</h3>
+                                <p class="text-secondary-600">
+                                    Our commercial systems include battery storage specifically sized for your critical loads. During loadshedding, essential systems (lighting, security, refrigeration, etc.) automatically switch to battery power without interruption. The system is designed to prioritize critical circuits to ensure business continuity throughout power outages.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">How long does the installation process take?</h3>
+                                <p class="text-secondary-600">
+                                    Most commercial installations are completed within 45-75 days from contract signing. This includes: design and engineering (10-14 days), municipal approvals (7-14 days), equipment procurement (7-14 days), and installation (7-21 days). We work around your business hours to minimize disruption, often completing installations during weekends or after hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">What maintenance is required for the solar system?</h3>
+                                <p class="text-secondary-600">
+                                    Solar systems require minimal maintenance. Our comprehensive package includes: bi-annual professional cleaning and inspection, 24/7 remote monitoring, and immediate response to any performance issues. All maintenance is included in our service agreement, and we provide monthly performance reports showing your actual savings versus projections.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">What financing options are available with zero upfront cost?</h3>
+                                <p class="text-secondary-600">
+                                    We offer three primary financing models: 1) <strong>Rent-to-Own</strong> - fixed monthly payments leading to ownership; 2) <strong>Power Purchase Agreement</strong> - pay only for solar energy used; 3) <strong>Asset Financing</strong> - traditional loan with immediate ownership. All options require zero capital investment upfront, and we guarantee your monthly payment will be less than your electricity savings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">How does solar affect my property value?</h3>
+                                <p class="text-secondary-600">
+                                    Commercial properties with solar systems typically see a 20-25% increase in valuation. This is due to: 1) Reduced operating expenses (increased NOI), 2) Energy independence during loadshedding, 3) Attractive feature for environmentally-conscious tenants, 4) Protection against future electricity price increases. The system becomes a revenue-generating asset on your balance sheet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">What happens if my electricity consumption changes?</h3>
+                                <p class="text-secondary-600">
+                                    Our systems are designed with scalability in mind. If your consumption increases (new tenants, equipment additions, expansion), we can easily add additional panels and battery capacity. Conversely, if consumption decreases, you can redirect excess energy back to the grid through net metering arrangements with your municipality, potentially generating additional revenue.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white rounded-2xl p-8 border-2 border-secondary-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="font-bold">Q</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-secondary-900 mb-4">What warranties and guarantees do you provide?</h3>
+                                <p class="text-secondary-600">
+                                    We provide comprehensive guarantees: 1) <strong>Performance Guarantee</strong> - 70% electricity reduction or we compensate the difference; 2) <strong>Equipment Warranty</strong> - 25 years on panels, 10 years on inverters; 3) <strong>Workmanship Warranty</strong> - 10 years on installation; 4) <strong>Service Guarantee</strong> - 24/7 support with 48-hour response time. All backed by insurance and manufacturer guarantees.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions -->
+            <div class="mt-16 bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-12 text-white text-center">
+                <h3 class="text-3xl font-black mb-6">Still Have Questions?</h3>
+                <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                    Our solar consultants are available to answer any specific questions about your property
+                </p>
+                <a href="https://wa.me/27766473499?text=Hi%20CommercialSolar,%20I%20have%20some%20specific%20questions%20about%20solar%20for%20my%20commercial%20property" 
+                   target="_blank" 
+                   class="whatsapp-button text-white px-12 py-5 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-4">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    Chat with a Solar Expert
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-secondary-900 to-primary-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                Ready to Eliminate Loadshedding &<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-blue-300">Reduce Electricity Costs by 70%?</span>
+            </h2>
+            
+            <p class="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Join hundreds of commercial property owners across South Africa who have transformed their energy costs and gained independence from Eskom uncertainty
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-4xl font-black text-primary-300 mb-2">✓</div>
+                    <div class="font-bold text-lg mb-2">Free Comprehensive Audit</div>
+                    <p class="text-white/80">Detailed analysis of your property's energy usage</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-4xl font-black text-primary-300 mb-2">✓</div>
+                    <div class="font-bold text-lg mb-2">Custom Financing Proposal</div>
+                    <p class="text-white/80">Zero upfront cost options tailored to your needs</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-4xl font-black text-primary-300 mb-2">✓</div>
+                    <div class="font-bold text-lg mb-2">Performance Guarantee</div>
+                    <p class="text-white/80">70% reduction guaranteed or we compensate the difference</p>
                 </div>
             </div>
             
-            <div class="pt-8 border-t border-accent-800 text-center">
-                <p class="text-white/80">
-                    All rights reserved © 2024 by Mariba Media Commercial Solar in partnership with Urban Holdings Solar
+            <a href="https://wa.me/27766473499?text=Hi%20CommercialSolar,%20I%20want%20to%20schedule%20a%20FREE%20Comprehensive%20Energy%20Audit%20for%20my%20commercial%20property%20and%20get%20the%2040-page%20proposal" 
+               target="_blank" 
+               class="whatsapp-button text-white px-14 py-6 rounded-2xl font-black text-2xl inline-flex items-center justify-center gap-4 hover:scale-105 transform transition-all shadow-2xl hover:shadow-3xl">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+                GET YOUR FREE COMPREHENSIVE AUDIT
+            </a>
+            
+            <p class="mt-8 text-white/80">
+                Limited slots available each month • Response within 30 minutes during business hours
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-black mb-6">
+                        <span class="text-primary-400">CommercialSolar</span>
+                    </div>
+                    <p class="text-white/80 mb-6">
+                        Specializing in comprehensive solar solutions for shopping complexes, student accommodations, and warehouses across South Africa.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.1.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-bold">WhatsApp</div>
+                            <a href="https://wa.me/27766473499" target="_blank" class="text-white/90 hover:text-primary-300 transition-colors">+27 76 647 3499</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Commercial Specializations</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/80 hover:text-primary-300 transition-colors">Shopping Complexes</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-primary-300 transition-colors">Student Accommodations</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-primary-300 transition-colors">Warehouses & Logistics</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-primary-300 transition-colors">Office Buildings</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-primary-300 transition-colors">Industrial Facilities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Our Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#solutions" class="text-white/80 hover:text-primary-300 transition-colors">Guaranteed 70% Reduction</a></li>
+                        <li><a href="#financing" class="text-white/80 hover:text-primary-300 transition-colors">Zero Upfront Financing</a></li>
+                        <li><a href="#process" class="text-white/80 hover:text-primary-300 transition-colors">Complete Project Management</a></li>
+                        <li><a href="#process" class="text-white/80 hover:text-primary-300 transition-colors">Compliance & Approvals</a></li>
+                        <li><a href="#faq" class="text-white/80 hover:text-primary-300 transition-colors">Ongoing Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact Details</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="font-bold mb-1">Email</div>
+                            <a href="mailto:victor@maribamedia.co.za" class="text-white/80 hover:text-primary-300 transition-colors">victor@maribamedia.co.za</a>
+                        </div>
+                        <div>
+                            <div class="font-bold mb-1">Phone</div>
+                            <a href="tel:+27766473499" class="text-white/80 hover:text-primary-300 transition-colors">+27 76 647 3499</a>
+                        </div>
+                        <div>
+                            <div class="font-bold mb-1">Business Hours</div>
+                            <div class="text-white/80">Mon-Fri: 8AM-6PM</div>
+                            <div class="text-white/80">Sat: 9AM-1PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/20 text-center">
+                <p class="text-white/70">
+                    © 2024 CommercialSolar. All rights reserved. Specializing in solar solutions for commercial properties across South Africa.
                 </p>
             </div>
         </div>
@@ -1144,7 +1536,7 @@
                     
                     // Scroll to element
                     window.scrollTo({
-                        top: targetElement.offsetTop - headerHeight - 20,
+                        top: targetElement.offsetTop - headerHeight - 30,
                         behavior: 'smooth'
                     });
                 }
@@ -1154,7 +1546,7 @@
         // Scroll animation observer
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1189,33 +1581,46 @@
         const statObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const counter = entry.target.querySelector('.stat-counter');
-                    if (counter && counter.textContent.includes('%')) {
-                        const target = parseInt(counter.textContent);
-                        animateCounter(counter, target, 2000);
-                    }
+                    const counters = entry.target.querySelectorAll('.stat-counter');
+                    counters.forEach(counter => {
+                        if (counter && counter.textContent.includes('%')) {
+                            const target = parseInt(counter.textContent);
+                            animateCounter(counter, target, 1500);
+                        }
+                    });
                 }
             });
         }, { threshold: 0.5 });
 
         // Observe stat elements
-        document.querySelectorAll('.bg-white\\/80').forEach(stat => {
+        document.querySelectorAll('.bg-white\\/90').forEach(stat => {
             statObserver.observe(stat);
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
         });
 
         // Add hover effects to cards
         document.querySelectorAll('.card-hover').forEach(element => {
             element.addEventListener('mouseenter', function() {
-                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1)';
             });
         });
 
         // Back to top button
         const backToTop = document.createElement('button');
-        backToTop.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>';
-        backToTop.className = 'fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors z-40 hidden items-center justify-center text-xl';
+        backToTop.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            </svg>
+        `;
+        backToTop.className = 'fixed bottom-8 right-8 w-14 h-14 bg-primary-600 text-white rounded-full shadow-2xl hover:bg-primary-700 transition-all z-40 hidden items-center justify-center';
         backToTop.style.transform = 'translateY(100px)';
-        backToTop.style.transition = 'transform 0.3s ease';
+        backToTop.style.transition = 'transform 0.4s ease';
         document.body.appendChild(backToTop);
 
         backToTop.addEventListener('click', () => {
@@ -1223,45 +1628,53 @@
         });
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
+            if (window.scrollY > 800) {
                 backToTop.classList.remove('hidden');
                 backToTop.style.transform = 'translateY(0)';
             } else {
                 backToTop.style.transform = 'translateY(100px)';
                 setTimeout(() => {
-                    if (window.scrollY <= 500) {
+                    if (window.scrollY <= 800) {
                         backToTop.classList.add('hidden');
                     }
-                }, 300);
+                }, 400);
             }
         });
 
         // WhatsApp button enhancement
-        const whatsappButtons = document.querySelectorAll('a[href*="whatsapp"], a[href*="wa.me"]');
+        const whatsappButtons = document.querySelectorAll('.whatsapp-button');
         whatsappButtons.forEach(button => {
             button.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
+                this.style.transform = 'translateY(-3px)';
             });
             button.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
             });
         });
 
-        // Image hover effects
-        const imageZoomElements = document.querySelectorAll('.image-hover-zoom');
-        imageZoomElements.forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                const img = this.querySelector('img');
-                if (img) {
-                    img.style.transform = 'scale(1.05)';
-                }
+        // Parallax effect for background elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.animate-float');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.3 + (index * 0.1);
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
             });
-            element.addEventListener('mouseleave', function() {
-                const img = this.querySelector('img');
-                if (img) {
-                    img.style.transform = 'scale(1)';
-                }
-            });
+        });
+
+        // Initialize animation on load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            
+            // Trigger initial animations
+            setTimeout(() => {
+                document.querySelectorAll('.animate-slide-up, .animate-fade-in').forEach(element => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                });
+            }, 100);
         });
     </script>
 </body>
