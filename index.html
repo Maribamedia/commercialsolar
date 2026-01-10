@@ -203,13 +203,6 @@
         left: 100%;
       }
       
-      .timeline-dot {
-        width: 20px;
-        height: 20px;
-        border: 4px solid white;
-        box-shadow: 0 0 0 2px #000000;
-      }
-      
       .stagger-delay-1 { animation-delay: 0.1s; }
       .stagger-delay-2 { animation-delay: 0.2s; }
       .stagger-delay-3 { animation-delay: 0.3s; }
@@ -468,7 +461,6 @@
                             >
                             </iframe>
                         </div>
-                        <div class="absolute inset-0 border-2 border-white/20 pointer-events-none rounded-2xl"></div>
                     </div>
                 </div>
 
@@ -1212,9 +1204,6 @@
 
             <!-- Timeline -->
             <div class="relative">
-                <!-- Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300 hidden lg:block"></div>
-                
                 <!-- Step 1 -->
                 <div class="flex flex-col lg:flex-row items-center mb-16 lg:mb-24 animate-on-scroll">
                     <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 lg:text-right">
@@ -1244,9 +1233,6 @@
                     
                     <div class="lg:w-1/2 lg:pl-12">
                         <div class="relative">
-                            <div class="hidden lg:block absolute -left-6 top-1/2 transform -translate-y-1/2">
-                                <div class="timeline-dot rounded-full"></div>
-                            </div>
                             <div class="bg-gray-100 rounded-xl p-6">
                                 <div class="text-black font-bold mb-2">Duration: 3-5 Days</div>
                                 <p class="text-gray-700">Complete analysis with no disruption to your operations</p>
@@ -1284,9 +1270,6 @@
                     
                     <div class="lg:w-1/2 lg:pr-12 order-1 lg:order-2 mb-8 lg:mb-0">
                         <div class="relative">
-                            <div class="hidden lg:block absolute -right-6 top-1/2 transform -translate-y-1/2">
-                                <div class="timeline-dot rounded-full"></div>
-                            </div>
                             <div class="bg-gray-100 rounded-xl p-6 text-right">
                                 <div class="text-black font-bold mb-2">Duration: 5-7 Days</div>
                                 <p class="text-gray-700">Presented in-person or via detailed video conference</p>
