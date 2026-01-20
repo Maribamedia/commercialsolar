@@ -9,7 +9,7 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Commercial Solar Connector | 80% Savings Guaranteed | C&I Solar Solutions">
     <meta property="og:description" content="Comprehensive solar solutions for commercial & industrial applications with guaranteed 80% electricity savings. Nationwide service.">
-    <meta property="og:image" content="slides/slides1.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides1.jpg">
     <meta property="og:url" content="https://commercialsolarconnector.co.za">
     
     <!-- Favicon -->
@@ -220,9 +220,10 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.8s ease-in-out;
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
       }
       
       .slide.active {
@@ -536,26 +537,11 @@
                 <!-- Picture Slideshow - Commercial Solar Installations -->
                 <div class="mb-16">
                     <div class="slideshow-container">
-                        <!-- Slide 1 -->
-                        <div class="slide active" style="background-image: url('slides/slides1.jpg');"></div>
-                        <!-- Slide 2 -->
-                        <div class="slide" style="background-image: url('slides/slides2.jpg');"></div>
-                        <!-- Slide 3 -->
-                        <div class="slide" style="background-image: url('slides/slides3.jpg');"></div>
-                        <!-- Slide 4 -->
-                        <div class="slide" style="background-image: url('slides/slides4.jpg');"></div>
-                        <!-- Slide 5 -->
-                        <div class="slide" style="background-image: url('slides/slides5.jpg');"></div>
-                        <!-- Slide 6 -->
-                        <div class="slide" style="background-image: url('slides/slides6.jpg');"></div>
+                        <!-- Slides will be dynamically inserted here -->
+                        <div id="slides-container"></div>
                         
-                        <div class="slide-dots">
-                            <div class="slide-dot active" onclick="currentSlide(0)"></div>
-                            <div class="slide-dot" onclick="currentSlide(1)"></div>
-                            <div class="slide-dot" onclick="currentSlide(2)"></div>
-                            <div class="slide-dot" onclick="currentSlide(3)"></div>
-                            <div class="slide-dot" onclick="currentSlide(4)"></div>
-                            <div class="slide-dot" onclick="currentSlide(5)"></div>
+                        <div class="slide-dots" id="slide-dots-container">
+                            <!-- Dots will be dynamically inserted here -->
                         </div>
                     </div>
                     <p class="text-gray-600 text-center text-sm mt-4">
@@ -1299,7 +1285,7 @@
                     
                     <div>
                         <label class="block text-sm font-bold mb-2">Company Name *</label>
-                        <input type="text" name="company" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="Your Business Name">
+                            <input type="text" name="company" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="Your Business Name">
                     </div>
                     
                     <div>
@@ -1525,11 +1511,44 @@
         });
 
         // Picture Slideshow Functionality
+        const slideImages = [
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides1.jpg',
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides2.jpg',
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides3.jpg',
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides4.jpg',
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides5.jpg',
+            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slides6.jpg'
+        ];
+
         let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slide-dot');
+        const slidesContainer = document.getElementById('slides-container');
+        const dotsContainer = document.getElementById('slide-dots-container');
+        
+        // Initialize slideshow
+        function initializeSlideshow() {
+            // Create slides
+            slideImages.forEach((src, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.style.backgroundImage = `url('${src}')`;
+                slidesContainer.appendChild(slide);
+                
+                // Create dot
+                const dot = document.createElement('div');
+                dot.className = 'slide-dot';
+                if (index === 0) dot.classList.add('active');
+                dot.onclick = () => currentSlide(index);
+                dotsContainer.appendChild(dot);
+            });
+            
+            // Show first slide
+            showSlide(0);
+        }
         
         function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slide-dot');
+            
             slideIndex = n;
             if (slideIndex >= slides.length) slideIndex = 0;
             if (slideIndex < 0) slideIndex = slides.length - 1;
@@ -1549,11 +1568,21 @@
             showSlide(slideIndex + 1);
         }
         
-        // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
+        // Auto-advance slides every 3 seconds (3000ms)
+        let slideInterval = setInterval(nextSlide, 3000);
         
-        // Initialize slideshow
-        showSlide(0);
+        // Pause slideshow on hover
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        slideshowContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slideshowContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 3000);
+        });
+        
+        // Initialize slideshow on page load
+        initializeSlideshow();
 
         // Formspree Form Submission
         document.getElementById('audit-form').addEventListener('submit', async function(e) {
@@ -1660,25 +1689,8 @@
             lastScroll = currentScroll;
         });
 
-        // Add loading="lazy" to all images
+        // Preload slideshow images
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (!img.hasAttribute('loading')) {
-                    img.setAttribute('loading', 'lazy');
-                }
-            });
-            
-            // Preload slideshow images
-            const slideImages = [
-                'slides/slides1.jpg',
-                'slides/slides2.jpg',
-                'slides/slides3.jpg',
-                'slides/slides4.jpg',
-                'slides/slides5.jpg',
-                'slides/slides6.jpg'
-            ];
-            
             slideImages.forEach(src => {
                 const img = new Image();
                 img.src = src;
