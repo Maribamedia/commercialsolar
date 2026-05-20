@@ -1,1904 +1,564 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>Commercial Solar Connector | 80% Electricity Savings Guaranteed | Nationwide C&I Solar Solutions</title>
-    <meta name="description" content="Guaranteed 80% electricity reduction for commercial & industrial properties. Custom solar installations, BESS, financing, and complete EPC compliance solutions nationwide.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+  <title>Commercial Solar Connector | 80% Savings Guaranteed | C&I Solar</title>
+  <meta name="description" content="Commercial & industrial solar solutions with 80% electricity savings guarantee. Custom solar, BESS, financing & EPC compliance nationwide.">
+  <meta property="og:title" content="Commercial Solar Connector | 80% Savings Guaranteed">
+  <meta property="og:description" content="Custom solar & BESS for businesses. 80% savings guaranteed, 25-year warranty, nationwide service.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide1.jpg">
+  <meta property="og:url" content="https://commercialsolarconnector.co.za">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/32/000000/solar-panel.png">
+  
+  <!-- Google Fonts & Minimal CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* Typography scale (responsive) */
+    h1, .h1-like { font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.2; font-weight: 900; }
+    h2 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; }
+    h3 { font-size: clamp(1.4rem, 4vw, 1.8rem); font-weight: 700; }
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Commercial Solar Connector | 80% Savings Guaranteed | C&I Solar Solutions">
-    <meta property="og:description" content="Comprehensive solar solutions for commercial & industrial applications with guaranteed 80% electricity savings. Nationwide service.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide1.jpg">
-    <meta property="og:url" content="https://commercialsolarconnector.co.za">
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 1rem; }
+    }
+
+    /* Utility classes */
+    .text-primary { color: #16a34a; }
+    .bg-primary { background: #16a34a; }
+    .bg-black-soft { background: #111111; }
+    .border-black { border-color: #000000; }
+    .shadow-card { box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.02); transition: all 0.25s ease; }
+    .shadow-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12); }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #16a34a;
+      z-index: 1000;
+      transition: transform 0.2s;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .logo-icon { background: black; padding: 8px; border-radius: 14px; display: inline-flex; align-items: center; }
+    .logo-icon svg { width: 28px; height: 28px; color: #16a34a; }
+    .logo-text { font-weight: 900; font-size: 1.25rem; }
+    @media (min-width: 768px) { .logo-text { font-size: 1.6rem; } }
+    .nav-links { display: none; gap: 2rem; align-items: center; }
+    @media (min-width: 1024px) { .nav-links { display: flex; } }
+    .nav-link { font-weight: 600; text-decoration: none; color: #111; transition: color 0.2s; }
+    .nav-link:hover { color: #16a34a; }
+    .cta-small { background: black; color: white; padding: 0.5rem 1.2rem; border-radius: 40px; font-weight: 700; text-decoration: none; border: 1px solid black; transition: 0.2s; }
+    .cta-small:hover { background: #222; transform: scale(0.98); }
+    .menu-toggle { display: block; background: white; border: 2px solid black; border-radius: 12px; padding: 6px 10px; cursor: pointer; }
+    @media (min-width: 1024px) { .menu-toggle { display: none; } }
+
+    /* Mobile menu panel */
+    .mobile-menu-panel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: white;
+      border-left: 2px solid black;
+      z-index: 1100;
+      transition: right 0.3s ease;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .mobile-menu-panel.open { right: 0; }
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1050;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s;
+    }
+    .mobile-overlay.active { opacity: 1; visibility: visible; }
+    .mobile-link { font-weight: 700; font-size: 1.2rem; text-decoration: none; color: black; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/000000/solar-panel.png">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: '#f0fdf4',
-                100: '#dcfce7',
-                500: '#22c55e',
-                600: '#16a34a',
-                700: '#15803d',
-                800: '#166534',
-                900: '#14532d',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            },
-            animation: {
-              'fade-in': 'fadeIn 0.5s ease-in',
-              'slide-up': 'slideUp 0.6s ease-out',
-              'pulse-subtle': 'pulseSubtle 3s infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'guarantee-pulse': 'guaranteePulse 2s infinite',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-              slideUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              },
-              pulseSubtle: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0.8' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              guaranteePulse: {
-                '0%, 100%': { 
-                  transform: 'scale(1)',
-                  boxShadow: '0 0 0 0 rgba(34, 197, 94, 0.7)'
-                },
-                '50%': { 
-                  transform: 'scale(1.05)',
-                  boxShadow: '0 0 0 10px rgba(34, 197, 94, 0)'
-                },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    
-    <style>
-      html {
-        scroll-behavior: smooth;
-        -webkit-text-size-adjust: 100%;
-      }
-      
-      body {
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background-color: #FFFFFF;
-        color: #000000;
-        overflow-x: hidden;
-      }
-      
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 2px solid #22c55e;
-      }
-      
-      .card-hover {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
-      }
-      
-      .guarantee-badge {
-        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-        color: #FFFFFF;
-        animation: guaranteePulse 2s infinite;
-      }
-      
-      .primary-gradient {
-        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-      }
-      
-      .primary-gradient-reverse {
-        background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-      }
-      
-      .section-divider {
-        height: 2px;
-        background: linear-gradient(90deg, #22c55e, #16a34a, #22c55e);
-      }
-      
-      .feature-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
-        border: 2px solid #000000;
-        background: #FFFFFF;
-      }
-      
-      .benefit-card {
-        background: #FFFFFF;
-        border: 2px solid #000000;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .benefit-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #22c55e, #16a34a);
-      }
-      
-      .warranty-card {
-        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-        color: white;
-        border-radius: 1rem;
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .warranty-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #22c55e, #16a34a);
-      }
-      
-      .solution-card {
-        border: 3px solid #000000;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        background: #FFFFFF;
-        position: relative;
-        height: 100%;
-      }
-      
-      .solution-card.featured {
-        border-color: #22c55e;
-        transform: scale(1.05);
-        z-index: 10;
-      }
-      
-      .solution-card.featured::after {
-        content: 'MOST POPULAR';
-        position: absolute;
-        top: 15px;
-        right: -35px;
-        background: #22c55e;
-        color: #FFFFFF;
-        font-size: 11px;
-        font-weight: 900;
-        letter-spacing: 1px;
-        padding: 5px 35px;
-        transform: rotate(45deg);
-        z-index: 20;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      }
-      
-      /* Slideshow Styles */
-      .slideshow-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        border-radius: 1rem;
-        border: 3px solid #000000;
-        overflow: hidden;
-      }
-      
-      @media (min-width: 768px) {
-        .slideshow-container {
-          height: 400px;
-        }
-      }
-      
-      .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      
-      .slide.active {
-        opacity: 1;
-      }
-      
-      .slide-dots {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-        z-index: 10;
-      }
-      
-      .slide-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        border: 2px solid #000000;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      
-      .slide-dot.active {
-        background: #22c55e;
-        transform: scale(1.2);
-      }
-      
-      /* WhatsApp Widget Styles */
-      .whatsapp-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        transition: all 0.3s ease;
-      }
-      
-      @media (min-width: 768px) {
-        .whatsapp-widget {
-          bottom: 30px;
-          right: 30px;
-        }
-      }
-      
-      .whatsapp-button {
-        width: 56px;
-        height: 56px;
-        background-color: #25D366;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        border: 2px solid #000000;
-      }
-      
-      @media (min-width: 768px) {
-        .whatsapp-button {
-          width: 60px;
-          height: 60px;
-        }
-      }
-      
-      .whatsapp-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-        background-color: #128C7E;
-      }
-      
-      .whatsapp-button svg {
-        width: 28px;
-        height: 28px;
-        fill: white;
-      }
-      
-      @media (min-width: 768px) {
-        .whatsapp-button svg {
-          width: 32px;
-          height: 32px;
-        }
-      }
-      
-      .whatsapp-pulse {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: #25D366;
-        animation: whatsappPulse 2s infinite;
-        z-index: -1;
-      }
-      
-      @keyframes whatsappPulse {
-        0% {
-          transform: scale(1);
-          opacity: 0.8;
-        }
-        70% {
-          transform: scale(1.4);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0;
-        }
-      }
-      
-      /* Map Styles */
-      .service-area-map {
-        width: 100%;
-        height: 300px;
-        border-radius: 1rem;
-        border: 3px solid #000000;
-        overflow: hidden;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      }
-      
-      @media (min-width: 768px) {
-        .service-area-map {
-          height: 400px;
-        }
-      }
-      
-      .service-area-item {
-        padding: 0.75rem;
-        border-bottom: 1px solid #e5e7eb;
-        transition: all 0.3s ease;
-      }
-      
-      .service-area-item:hover {
-        background-color: #f8f9fa;
-        transform: translateX(5px);
-      }
-      
-      .service-area-item:last-child {
-        border-bottom: none;
-      }
-      
-      .guarantee-highlight {
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .guarantee-highlight::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, transparent 0%, rgba(34, 197, 94, 0.1) 50%, transparent 100%);
-        z-index: 0;
-      }
-      
-      /* Form Success Message */
-      .form-success {
-        display: none;
-        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-        color: white;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        text-align: center;
-        border: 2px solid #000000;
-      }
-      
-      @media (min-width: 768px) {
-        .form-success {
-          padding: 2rem;
-        }
-      }
-      
-      .form-success.show {
-        display: block;
-        animation: fadeIn 0.5s ease-in;
-      }
-      
-      /* Mobile Optimizations */
-      @media (max-width: 640px) {
-        .solution-card.featured {
-          transform: scale(1);
-        }
-        
-        .solution-card.featured::after {
-          font-size: 9px;
-          padding: 4px 30px;
-          right: -30px;
-          top: 12px;
-        }
-        
-        .hero-headline {
-          font-size: 2.5rem !important;
-          line-height: 1.2 !important;
-        }
-        
-        .section-heading {
-          font-size: 2rem !important;
-        }
-        
-        .cta-button {
-          font-size: 0.9rem !important;
-          padding: 0.75rem 1rem !important;
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .mobile-stack {
-          flex-direction: column;
-        }
-        
-        .mobile-center {
-          text-align: center;
-        }
-        
-        .mobile-full-width {
-          width: 100%;
-        }
-        
-        .mobile-mt-4 {
-          margin-top: 1rem;
-        }
-        
-        .mobile-p-4 {
-          padding: 1rem;
-        }
-        
-        .mobile-text-sm {
-          font-size: 0.875rem;
-        }
-        
-        .mobile-text-lg {
-          font-size: 1.125rem;
-        }
-      }
-      
-      /* Touch-friendly improvements */
-      button, 
-      a, 
-      input, 
-      select {
-        touch-action: manipulation;
-      }
-      
-      input, 
-      select {
-        font-size: 16px !important; /* Prevents zoom on iOS */
-      }
-    </style>
+    /* Grid & cards */
+    .grid-2 { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+    .grid-4 { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .grid-2 { grid-template-columns: repeat(2,1fr); } .grid-4 { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 1024px) { .grid-4 { grid-template-columns: repeat(4,1fr); } }
+
+    .card {
+      background: white;
+      border: 2px solid black;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      transition: all 0.2s;
+    }
+    .card-featured {
+      border-color: #16a34a;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-featured::after {
+      content: "MOST POPULAR";
+      position: absolute;
+      top: 18px;
+      right: -28px;
+      background: #16a34a;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.2rem 2rem;
+      transform: rotate(45deg);
+      letter-spacing: 1px;
+    }
+
+    /* Guarantee badge */
+    .guarantee-badge {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 800;
+      animation: pulse-subtle 2s infinite;
+    }
+    @keyframes pulse-subtle {
+      0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4);}
+      70% { box-shadow: 0 0 0 10px rgba(34,197,94,0);}
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0);}
+    }
+
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      border-radius: 1.5rem;
+      border: 3px solid black;
+      overflow: hidden;
+      background: #f5f5f5;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+    }
+    .slide-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out;
+    }
+    .slide.active { opacity: 1; }
+    .dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      z-index: 5;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .dot.active { background: #16a34a; transform: scale(1.2); }
+
+    /* WhatsApp widget */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1200;
+    }
+    .wa-button {
+      background: #25D366;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 2px solid black;
+      transition: 0.2s;
+    }
+    .wa-button:hover { transform: scale(1.08); background: #128C7E; }
+
+    /* Form & success */
+    .form-success-card {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.9rem;
+      border: 2px solid black;
+      border-radius: 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      background: white;
+    }
+    button { cursor: pointer; }
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      font-weight: 800;
+      padding: 1rem 1.8rem;
+      border-radius: 2rem;
+      border: 2px solid black;
+      transition: 0.2s;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .btn-primary:hover { filter: brightness(0.95); transform: scale(1.01); }
+    footer a { text-decoration: none; color: #ccc; transition: 0.2s; }
+    footer a:hover { color: #22c55e; }
+
+    /* responsive touches */
+    @media (max-width: 640px) {
+      .card { padding: 1.2rem; }
+      .btn-primary { padding: 0.8rem; }
+    }
+  </style>
 </head>
-<body class="text-black antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full glass-effect z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-2 md:gap-3 group">
-                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-black flex items-center justify-center">
-                        <svg class="w-6 h-6 md:w-7 md:h-7 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L3 12H6V22H18V12H21L12 2Z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <span class="text-xl md:text-2xl font-black group-hover:opacity-80 transition-opacity">Commercial Solar Connector</span>
-                        <span class="hidden md:block text-sm text-gray-600 font-medium">Comprehensive C&I Solar Solutions Nationwide</span>
-                    </div>
-                </a>
+<body>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center gap-6">
-                    <a href="#solutions" class="text-sm font-semibold hover:text-primary-500 transition-colors">Solutions</a>
-                    <a href="#services" class="text-sm font-semibold hover:text-primary-500 transition-colors">Services</a>
-                    <a href="#financing" class="text-sm font-semibold hover:text-primary-500 transition-colors">Financing</a>
-                    <a href="#nationwide" class="text-sm font-semibold hover:text-primary-500 transition-colors">Nationwide</a>
-                    <a href="#warranty" class="text-sm font-semibold hover:text-primary-500 transition-colors">Warranty</a>
-                </div>
-
-                <!-- Main CTA Button -->
-                <div class="flex items-center gap-3">
-                    <a href="#audit" 
-                       class="bg-black text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-xs md:text-sm font-bold hover:bg-gray-900 transition-all duration-300 shadow-md border-2 border-black whitespace-nowrap mobile-text-sm">
-                        <span class="flex items-center gap-1 md:gap-2">
-                            <span>⚡</span>
-                            <span>FREE ASSESSMENT</span>
-                        </span>
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-button lg:hidden w-9 h-9 md:w-10 md:h-10 flex items-center justify-center border-2 border-black rounded-lg bg-white hover:bg-gray-50 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-40 hidden lg:hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-50" onclick="closeMobileMenu()"></div>
-        <div class="absolute top-0 right-0 w-64 h-full bg-white shadow-lg border-l-2 border-black">
-            <div class="p-4">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-lg font-black">Menu</h3>
-                    <button onclick="closeMobileMenu()" class="w-8 h-8 flex items-center justify-center border border-black rounded">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="space-y-3">
-                    <a href="#solutions" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Solutions</a>
-                    <a href="#services" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Services</a>
-                    <a href="#financing" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Financing</a>
-                    <a href="#nationwide" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Nationwide</a>
-                    <a href="#warranty" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Warranty</a>
-                    <a href="#audit" onclick="closeMobileMenu()" class="block py-3 px-4 bg-black text-white rounded-lg font-bold text-center hover:bg-gray-900 mobile-mt-4">FREE ENERGY ASSESSMENT</a>
-                </div>
-            </div>
-        </div>
+<!-- FIXED NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 12H6V22H18V12H21L12 2Z"/></svg>
+      </div>
+      <span class="logo-text">Commercial Solar Connector</span>
+    </a>
+    <div class="nav-links">
+      <a href="#solutions" class="nav-link">Solutions</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#financing" class="nav-link">Financing</a>
+      <a href="#nationwide" class="nav-link">Nationwide</a>
+      <a href="#warranty" class="nav-link">Warranty</a>
+      <a href="#audit" class="cta-small">⚡ FREE ASSESSMENT</a>
     </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</div>
 
-    <!-- Hero Section with Slideshow -->
-    <section id="hero" class="pt-24 pb-16 md:pt-40 md:pb-32 bg-white border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
-                <!-- Guarantee Badge -->
-                <div class="inline-flex items-center gap-2 md:gap-3 px-4 py-2 md:px-6 md:py-3.5 rounded-full guarantee-badge mb-8 md:mb-10 animate-slide-up">
-                    <span class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-ping"></span>
-                    <span class="text-xs md:text-sm font-black uppercase tracking-wider">80% SAVINGS GUARANTEED • NATIONWIDE</span>
-                </div>
-                
-                <!-- Main Headline -->
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight hero-headline">
-                    <span class="block">Comprehensive Solar Solutions</span>
-                    <span class="block text-primary-500">for Commercial & Industrial</span>
-                    <span class="block text-primary-500">With Guaranteed 80% Savings</span>
-                </h1>
-                
-                <!-- Subheadline -->
-                <p class="text-lg md:text-2xl lg:text-3xl text-gray-800 mb-8 md:mb-12 max-w-5xl leading-relaxed mobile-text-lg">
-                    Transform your business energy costs with custom solar installations, BESS, financing, and complete EPC compliance solutions nationwide.
-                </p>
+<!-- Mobile menu panel -->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+<div id="mobileMenuPanel" class="mobile-menu-panel">
+  <a href="#solutions" class="mobile-link">Solutions</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#financing" class="mobile-link">Financing</a>
+  <a href="#nationwide" class="mobile-link">Nationwide</a>
+  <a href="#warranty" class="mobile-link">Warranty</a>
+  <a href="#audit" class="cta-small" style="background:black; color:white; text-align:center;">FREE ASSESSMENT</a>
+  <button style="margin-top:auto; background:none; border:1px solid #ccc; padding:0.5rem;" id="closeMobileMenu">Close</button>
+</div>
 
-                <!-- Key Benefits -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
-                    <div class="benefit-card card-hover">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-primary-500">80%+</div>
-                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Electricity Savings</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Guaranteed minimum savings for C&I operations</div>
-                    </div>
-                    
-                    <div class="benefit-card card-hover">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-primary-500">R0</div>
-                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Upfront Cost Options</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Prepaid & financing solutions available</div>
-                    </div>
-                    
-                    <div class="benefit-card card-hover">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-primary-500">100%</div>
-                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">EPC Compliance</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Full regulatory compliance guarantee</div>
-                    </div>
-                    
-                    <div class="benefit-card card-hover">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-primary-500">25</div>
-                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Year Warranty</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Performance guarantee for long-term reliability</div>
-                    </div>
-                </div>
+<main>
+  <!-- Hero Section -->
+  <section style="padding-top: 6rem; padding-bottom: 3rem; background: white; border-bottom: 2px solid black;">
+    <div class="container">
+      <div class="guarantee-badge" style="margin-bottom: 1.5rem;">
+        <span>⚡</span> <span>80% SAVINGS GUARANTEED • NATIONWIDE</span>
+      </div>
+      <h1 class="h1-like">Comprehensive Solar Solutions <span class="text-primary">for Commercial & Industrial</span> <span class="text-primary">With Guaranteed 80% Savings</span></h1>
+      <p style="font-size: clamp(1rem, 4vw, 1.5rem); margin: 1.5rem 0 2rem 0; max-width: 800px; color: #2d2d2d;">Transform your energy costs with custom solar, BESS, financing, and full EPC compliance – nationwide.</p>
+      
+      <!-- stats row -->
+      <div class="grid-2" style="grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); margin-bottom: 2rem;">
+        <div class="card" style="text-align:center;"><div style="font-size: 2.8rem; font-weight: 900; color:#16a34a;">80%+</div><div style="font-weight:800;">Electricity Savings</div><small>Guaranteed minimum</small></div>
+        <div class="card" style="text-align:center;"><div style="font-size: 2.8rem; font-weight: 900; color:#16a34a;">R0</div><div style="font-weight:800;">Upfront Options</div><small>Prepaid & financing</small></div>
+        <div class="card" style="text-align:center;"><div style="font-size: 2.8rem; font-weight: 900; color:#16a34a;">100%</div><div style="font-weight:800;">EPC Compliance</div><small>Regulatory guarantee</small></div>
+        <div class="card" style="text-align:center;"><div style="font-size: 2.8rem; font-weight: 900; color:#16a34a;">25</div><div style="font-weight:800;">Year Warranty</div><small>Performance guarantee</small></div>
+      </div>
 
-                <!-- Picture Slideshow - Commercial Solar Installations -->
-                <div class="mb-12 md:mb-16">
-                    <div class="slideshow-container">
-                        <!-- Slides will be dynamically inserted here -->
-                        <div id="slides-container"></div>
-                        
-                        <div class="slide-dots" id="slide-dots-container">
-                            <!-- Dots will be dynamically inserted here -->
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-center text-xs md:text-sm mt-3 md:mt-4 mobile-text-sm">
-                        Real commercial solar installations across South Africa - warehouses, factories, shopping centers, office buildings
-                    </p>
-                </div>
-
-                <!-- Main CTA -->
-                <div class="mb-12 md:mb-16">
-                    <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-3 md:gap-4 primary-gradient text-white px-6 py-4 md:px-8 md:py-6 lg:px-16 rounded-xl font-black text-base md:text-lg lg:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black mobile-full-width cta-button">
-                        <span class="text-xl md:text-2xl">📊</span>
-                        <span class="text-left">GET YOUR FREE COMMERCIAL ENERGY ASSESSMENT</span>
-                        <span class="group-hover:translate-x-3 transition-transform duration-300 hidden md:inline">→</span>
-                    </a>
-                    <p class="text-gray-700 text-base md:text-lg mt-4 md:mt-6 text-center mobile-text-sm">
-                        ⚡ See exactly how much you can save • Includes 80% savings guarantee analysis, ROI calculation, and custom financing proposal
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions Section -->
-    <section id="solutions" class="py-16 md:py-24 bg-gray-50 border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    Choose Your Path to<br>Commercial Energy Independence
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    Five proven commercial solar solutions, all delivering guaranteed 80% electricity savings for businesses nationwide.
-                </p>
-            </div>
-
-            <!-- Solutions Grid -->
-            <div class="grid lg:grid-cols-2 gap-6 md:gap-10 items-start">
-                <!-- Custom Solar Installation -->
-                <div class="solution-card card-hover">
-                    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-black flex items-center justify-center">
-                            <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-black">Custom Solar Installation</h3>
-                            <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Tailored systems for C&I applications</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Site-Specific Design</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Optimized for your building's architecture</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Load Analysis</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Detailed energy consumption assessment</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Tier-1 Equipment</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Premium components for maximum efficiency</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Optimal ROI Design</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">5-7 year payback period typical</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="border-t border-gray-200 pt-4 md:pt-6">
-                        <div class="text-center">
-                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-primary-500 mb-1 md:mb-2">Ideal For</div>
-                            <p class="text-gray-600 text-sm md:text-base">Businesses planning long-term operations<br>Those wanting full system ownership</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Prepaid Solar Installation -->
-                <div class="solution-card card-hover featured">
-                    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full primary-gradient flex items-center justify-center">
-                            <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-black">Prepaid Solar Installation</h3>
-                            <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Pay-as-you-go for C&I</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Zero Upfront Cost</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">No capital investment required</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Pay Per Use</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Only pay for the solar energy you use</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Fixed Rate Protection</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Lock in rates for 10-20 years</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-base md:text-lg">Maintenance Included</h4>
-                                <p class="text-gray-600 text-xs md:text-sm">Full system maintenance and monitoring</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="border-t border-gray-200 pt-4 md:pt-6">
-                        <div class="text-center">
-                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-primary-500 mb-1 md:mb-2">Ideal For</div>
-                            <p class="text-gray-600 text-sm md:text-base">Businesses wanting predictable costs<br>Those preferring flexible payment options</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Solutions -->
-            <div class="grid lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-10">
-                <!-- BESS Installation -->
-                <div class="solution-card card-hover">
-                    <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black flex items-center justify-center">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base md:text-xl font-black">BESS Installation</h3>
-                            <p class="text-gray-600 text-xs md:text-sm">Battery Energy Storage Systems</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm md:text-base">Lithium-ion technology with load shedding protection and energy arbitrage</p>
-                </div>
-
-                <!-- Energy Finance -->
-                <div class="solution-card card-hover">
-                    <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black flex items-center justify-center">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base md:text-xl font-black">Energy Finance</h3>
-                            <p class="text-gray-600 text-xs md:text-sm">Greenfield & Brownfield Funding</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm md:text-base">Complete project financing with 3-10 year terms and competitive rates</p>
-                </div>
-
-                <!-- EPC Compliance -->
-                <div class="solution-card card-hover">
-                    <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black flex items-center justify-center">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base md:text-xl font-black">EPC Compliance</h3>
-                            <p class="text-gray-600 text-xs md:text-sm">Full Regulatory Compliance</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm md:text-base">Municipal approvals, NERSA registration, COCs, and all documentation</p>
-                </div>
-            </div>
-
-            <!-- All Include -->
-            <div class="mt-12 md:mt-20 bg-black text-white p-6 md:p-10 rounded-2xl">
-                <h3 class="text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">
-                    All Solutions Include:
-                </h3>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <div class="text-center p-4 md:p-6">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">⚡</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">80% Savings</h4>
-                        <p class="text-white/80 text-sm md:text-base">Guaranteed electricity cost reduction</p>
-                    </div>
-                    
-                    <div class="text-center p-4 md:p-6">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🔧</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">EPC Services</h4>
-                        <p class="text-white/80 text-sm md:text-base">Engineering, procurement, construction</p>
-                    </div>
-                    
-                    <div class="text-center p-4 md:p-6">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🛡️</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Loadshedding Protection</h4>
-                        <p class="text-white/80 text-sm md:text-base">24/7 backup power solutions</p>
-                    </div>
-                    
-                    <div class="text-center p-4 md:p-6">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Monitoring</h4>
-                        <p class="text-white/80 text-sm md:text-base">Real-time energy tracking & reporting</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 md:py-24 bg-white border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    End-to-End Service Delivery
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    Complete project lifecycle management from concept to commissioning and beyond
-                </p>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">📋</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Feasibility Study</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Comprehensive site assessment, energy audit, and ROI analysis</p>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">📐</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">System Design</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Custom engineering design with 3D modeling and simulation</p>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">🔨</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Installation</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Professional installation with full testing and commissioning</p>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">🔄</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Maintenance</h3>
-                    <p class="text-gray-600 text-sm md:text-base">24/7 monitoring, preventive maintenance, and optimization</p>
-                </div>
-            </div>
-
-            <!-- Service Coverage -->
-            <div class="bg-gray-50 p-6 md:p-10 rounded-2xl border-2 border-black">
-                <h3 class="text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">Commercial Specializations</h3>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🏬</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Shopping Complexes</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Retail centers & malls</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🏭</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Warehouses</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Logistics & storage facilities</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🏢</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Manufacturing</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Industrial plants & factories</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">💼</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Office Parks</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Commercial buildings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guarantee Section -->
-    <section id="guarantee" class="py-16 md:py-24 bg-white border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    Our 80% Electricity Savings Guarantee
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    We're so confident in our commercial solar solutions that we guarantee at least 80% reduction on your electricity costs.
-                </p>
-            </div>
-
-            <div class="guarantee-highlight p-6 md:p-10 rounded-2xl border-2 border-primary-500 mb-12 md:mb-16">
-                <div class="text-center mb-8 md:mb-10">
-                    <div class="text-5xl md:text-6xl lg:text-8xl font-black text-primary-500 mb-3 md:mb-4">80%</div>
-                    <h3 class="text-2xl md:text-3xl font-black mb-3 md:mb-4">Minimum Cost Reduction Guaranteed</h3>
-                    <p class="text-base md:text-xl text-gray-700 mobile-text-lg">Achieved within your first billing cycle of operation</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-                    <div class="text-center">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">📅</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Immediate Results</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Savings visible on your next electricity bill</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">📊</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Transparent Monitoring</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Real-time tracking of energy production</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🤝</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Written Guarantee</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Contractually guaranteed performance</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- How It Works -->
-            <div class="bg-gray-50 p-6 md:p-10 rounded-2xl border-2 border-black">
-                <h3 class="text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">How the Guarantee Works</h3>
-                
-                <div class="grid md:grid-cols-4 gap-4 md:gap-6">
-                    <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">1</div>
-                        <h4 class="font-bold mb-1 md:mb-2 text-base md:text-lg">Energy Audit</h4>
-                        <p class="text-gray-600 text-xs md:text-sm">We analyze your current electricity usage</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">2</div>
-                        <h4 class="font-bold mb-1 md:mb-2 text-base md:text-lg">System Installation</h4>
-                        <p class="text-gray-600 text-xs md:text-sm">Professional installation of your chosen solution</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">3</div>
-                        <h4 class="font-bold mb-1 md:mb-2 text-base md:text-lg">Operation</h4>
-                        <p class="text-gray-600 text-xs md:text-sm">System runs and collects performance data</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">4</div>
-                        <h4 class="font-bold mb-1 md:mb-2 text-base md:text-lg">Verification</h4>
-                        <p class="text-gray-600 text-xs md:text-sm">Compare new bill with previous consumption</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nationwide Coverage -->
-    <section id="nationwide" class="py-16 md:py-24 bg-gray-50 border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    Serving Commercial Businesses Nationwide
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    We bring guaranteed solar savings to commercial and industrial clients across South Africa.
-                </p>
-            </div>
-
-            <!-- Service Areas Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-                <div class="solution-card card-hover">
-                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Gauteng Region</h3>
-                    <div class="space-y-1 md:space-y-2">
-                        <div class="service-area-item">Pretoria</div>
-                        <div class="service-area-item">Johannesburg</div>
-                        <div class="service-area-item">Sandton</div>
-                    </div>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Western Cape</h3>
-                    <div class="space-y-1 md:space-y-2">
-                        <div class="service-area-item">Cape Town</div>
-                        <div class="service-area-item">Stellenbosch</div>
-                        <div class="service-area-item">Paarl</div>
-                    </div>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">KwaZulu-Natal</h3>
-                    <div class="space-y-1 md:space-y-2">
-                        <div class="service-area-item">Durban</div>
-                        <div class="service-area-item">Pietermaritzburg</div>
-                        <div class="service-area-item">Ballito</div>
-                    </div>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Eastern Cape</h3>
-                    <div class="space-y-1 md:space-y-2">
-                        <div class="service-area-item">Port Elizabeth</div>
-                        <div class="service-area-item">East London</div>
-                        <div class="service-area-item">Grahamstown</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Simple Map Visualization -->
-            <div class="service-area-map mb-8 md:mb-12 flex items-center justify-center">
-                <div class="text-center p-4 md:p-8">
-                    <div class="text-4xl md:text-6xl mb-4 md:mb-6">🗺️</div>
-                    <h3 class="text-xl md:text-2xl font-black mb-3 md:mb-4">Nationwide Service Area</h3>
-                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Serving commercial businesses across all provinces</p>
-                    <div class="inline-flex flex-wrap gap-1 md:gap-2 justify-center">
-                        <span class="bg-primary-500 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">Gauteng</span>
-                        <span class="bg-primary-600 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">Western Cape</span>
-                        <span class="bg-primary-500 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">KwaZulu-Natal</span>
-                        <span class="bg-primary-600 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">Eastern Cape</span>
-                        <span class="bg-primary-500 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">Free State</span>
-                        <span class="bg-primary-600 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-bold">Mpumalanga</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Area CTA -->
-            <div class="text-center">
-                <a href="#audit" 
-                   class="inline-flex items-center justify-center gap-2 md:gap-3 bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black cta-button">
-                    <span>📍</span>
-                    <span>CHECK IF WE SERVE YOUR AREA</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Warranty Section -->
-    <section id="warranty" class="py-16 md:py-24 bg-white border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    25-Year Performance Warranties
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    Long-term reliability assurance with industry-leading warranty coverage for commercial applications.
-                </p>
-            </div>
-
-            <!-- Warranty Cards -->
-            <div class="grid md:grid-cols-2 gap-6 md:gap-10 mb-12 md:mb-16">
-                <div class="warranty-card p-6 md:p-10 card-hover">
-                    <div class="text-center mb-6 md:mb-8">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-500 mb-3 md:mb-4">25</div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-1 md:mb-2">Year Performance Warranty</h3>
-                        <p class="text-white/80 text-sm md:text-base">Guaranteed system performance over decades</p>
-                    </div>
-                    
-                    <div class="space-y-3 md:space-y-4">
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Panel Performance</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Minimum 80% output after 25 years</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Product Warranty</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Manufacturer defects coverage</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Workmanship Warranty</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Installation quality guarantee</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="warranty-card p-6 md:p-10 card-hover">
-                    <div class="text-center mb-6 md:mb-8">
-                        <div class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-500 mb-3 md:mb-4">10+</div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-1 md:mb-2">Year Inverter Warranty</h3>
-                        <p class="text-white/80 text-sm md:text-base">Extended coverage on critical components</p>
-                    </div>
-                    
-                    <div class="space-y-3 md:space-y-4">
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Inverter Protection</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Core system component coverage</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Battery Warranty</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Extended life and performance</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-2 md:gap-3">
-                            <span class="text-primary-500 text-lg md:text-xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-white text-base md:text-lg">Monitoring System</h4>
-                                <p class="text-white/80 text-xs md:text-sm">Performance tracking included</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Warranty Benefits -->
-            <div class="bg-gray-50 p-6 md:p-10 rounded-2xl border-2 border-black">
-                <h3 class="text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">Why Our Warranty Matters</h3>
-                
-                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🛡️</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Peace of Mind</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Long-term protection for your investment</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">📈</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Performance Assurance</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Guaranteed energy production over decades</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">💼</div>
-                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Value Retention</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Maintains system value for business assets</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Financing Section -->
-    <section id="financing" class="py-16 md:py-24 bg-gray-50 border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    Flexible Financing Solutions
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    Multiple funding options to make solar accessible for every commercial and industrial operation.
-                </p>
-            </div>
-
-            <!-- Financing Options -->
-            <div class="grid md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">💳</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Prepaid Solar</h3>
-                    <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Zero capital outlay, pay-as-you-go</p>
-                    <ul class="space-y-1 md:space-y-2 text-gray-600">
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">No upfront investment</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">Fixed rates for 10-20 years</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">Maintenance included</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">🏦</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Asset Financing</h3>
-                    <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Own your system with flexible terms</p>
-                    <ul class="space-y-1 md:space-y-2 text-gray-600">
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">3-10 year loan terms</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">Competitive interest rates</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">Immediate ownership benefits</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="solution-card card-hover">
-                    <div class="text-3xl md:text-4xl mb-3 md:mb-4">🌱</div>
-                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Project Finance</h3>
-                    <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Greenfield & brownfield funding</p>
-                    <ul class="space-y-1 md:space-y-2 text-gray-600">
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">New installations</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">System upgrades</span>
-                        </li>
-                        <li class="flex items-start gap-1 md:gap-2">
-                            <span class="text-primary-500">✓</span>
-                            <span class="text-sm md:text-base">Structured project finance</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Financial Advantage -->
-            <div class="bg-black text-white p-6 md:p-10 rounded-2xl">
-                <h3 class="text-2xl md:text-3xl font-black mb-4 md:mb-6 text-center">Financial Advantage Guarantee</h3>
-                <p class="text-base md:text-xl text-white/80 mb-6 md:mb-8 text-center max-w-3xl mx-auto">
-                    We guarantee your monthly solar payment will always be less than your electricity savings
-                </p>
-                <div class="text-center">
-                    <a href="https://wa.me/27766473499?text=Hi%20Commercial%20Solar%20Connector,%20I'd%20like%20to%20discuss%20financing%20options%20for%20my%20business" 
-                       target="_blank"
-                       class="inline-flex items-center justify-center gap-2 md:gap-3 bg-primary-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-primary-600 transition-colors shadow-md border-2 border-white cta-button">
-                        <span>💰</span>
-                        <span>GET CUSTOM FINANCING PROPOSAL</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Assessment Section -->
-    <section id="audit" class="py-16 md:py-24 bg-white border-b-2 border-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 section-heading">
-                    Get Your Free Commercial<br>Energy Assessment
-                </h2>
-                <p class="text-base md:text-xl text-gray-600 leading-relaxed mobile-text-lg">
-                    Discover exactly how much you can save with our guaranteed 80% electricity cost reduction.
-                </p>
-            </div>
-
-            <!-- Success Message (Hidden by default) -->
-            <div id="form-success" class="form-success mb-6 md:mb-8">
-                <div class="text-4xl md:text-6xl mb-3 md:mb-4">🎉</div>
-                <h3 class="text-2xl md:text-3xl font-black mb-3 md:mb-4">Thank You!</h3>
-                <p class="text-base md:text-xl mb-4 md:mb-6">Your free commercial energy assessment request has been submitted successfully.</p>
-                <p class="text-white/90 text-sm md:text-base">We will contact you within 24 hours with your personalized savings estimate.</p>
-            </div>
-
-            <!-- Form Container -->
-            <div id="audit-form-container" class="bg-white p-6 md:p-10 rounded-2xl border-2 border-black max-w-3xl mx-auto">
-                <h3 class="text-2xl md:text-3xl font-black mb-6 md:mb-8 text-center">What You'll Receive</h3>
-                
-                <div class="space-y-4 md:space-y-6 mb-8 md:mb-10">
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0">
-                            <span class="text-white font-bold text-sm md:text-base">1</span>
-                        </div>
-                        <div>
-                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Personalized Savings Estimate</h4>
-                            <p class="text-gray-600 text-sm md:text-base">See your exact 80%+ reduction potential</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0">
-                            <span class="text-white font-bold text-sm md:text-base">2</span>
-                        </div>
-                        <div>
-                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Solution Recommendation</h4>
-                            <p class="text-gray-600 text-sm md:text-base">Custom, prepaid, BESS - which is best for you?</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0">
-                            <span class="text-white font-bold text-sm md:text-base">3</span>
-                        </div>
-                        <div>
-                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Installation Timeline</h4>
-                            <p class="text-gray-600 text-sm md:text-base">When you can start saving with solar</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center flex-shrink-0">
-                            <span class="text-white font-bold text-sm md:text-base">4</span>
-                        </div>
-                        <div>
-                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Warranty Details</h4>
-                            <p class="text-gray-600 text-sm md:text-base">25-year performance guarantee explained</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <form id="audit-form" action="https://formspree.io/f/xjggrodb" method="POST" class="space-y-4 md:space-y-6">
-                    <div class="grid md:grid-cols-2 gap-4 md:gap-6">
-                        <div>
-                            <label class="block text-sm font-bold mb-1 md:mb-2">Your Name *</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="John Smith">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-1 md:mb-2">Phone Number *</label>
-                            <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="071 234 5678">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">Email Address *</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="john@example.com">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">Company Name *</label>
-                        <input type="text" name="company" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500" placeholder="Your Business Name">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">Business Type *</label>
-                        <select name="business_type" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500">
-                            <option value="">Select business type</option>
-                            <option value="Manufacturing">Manufacturing</option>
-                            <option value="Warehouse/Logistics">Warehouse/Logistics</option>
-                            <option value="Retail/Shopping Center">Retail/Shopping Center</option>
-                            <option value="Office Building">Office Building</option>
-                            <option value="Industrial Plant">Industrial Plant</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">City / Province *</label>
-                        <select name="area" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500">
-                            <option value="">Select your area</option>
-                            <option value="Gauteng">Gauteng</option>
-                            <option value="Western Cape">Western Cape</option>
-                            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
-                            <option value="Eastern Cape">Eastern Cape</option>
-                            <option value="Free State">Free State</option>
-                            <option value="Mpumalanga">Mpumalanga</option>
-                            <option value="Other">Other Province</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">Average Monthly Electricity Bill (R) *</label>
-                        <select name="bill_amount" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500">
-                            <option value="">Select your bill amount</option>
-                            <option value="R10,000 - R20,000">R10,000 - R20,000</option>
-                            <option value="R20,000 - R50,000">R20,000 - R50,000</option>
-                            <option value="R50,000 - R100,000">R50,000 - R100,000</option>
-                            <option value="R100,000 - R200,000">R100,000 - R200,000</option>
-                            <option value="R200,000+">R200,000+</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold mb-1 md:mb-2">Preferred Solution</label>
-                        <select name="preferred_solution" class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-primary-500">
-                            <option value="">Select preferred option</option>
-                            <option value="Custom Solar Installation">Custom Solar Installation</option>
-                            <option value="Prepaid Solar Installation">Prepaid Solar Installation</option>
-                            <option value="BESS with EPC">BESS with EPC</option>
-                            <option value="Not Sure - Need Advice">Not Sure - Need Advice</option>
-                        </select>
-                    </div>
-
-                    <!-- Hidden fields for Formspree -->
-                    <input type="hidden" name="_subject" value="New Free Commercial Energy Assessment Request - Commercial Solar Connector">
-                    <input type="hidden" name="_replyto" value="{{email}}">
-                    <input type="text" name="_gotcha" style="display:none">
-                    
-                    <button type="submit" class="w-full primary-gradient text-white py-3 md:py-4 rounded-xl font-black text-base md:text-lg lg:text-xl hover:shadow-xl transition-all duration-300 border-2 border-black cta-button">
-                        GET FREE COMMERCIAL ENERGY ASSESSMENT
-                    </button>
-                    
-                    <p class="text-center text-gray-600 text-xs md:text-sm">
-                        No obligation • 100% Free • Get your personalized report within 24 hours
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl lg:text-6xl font-black mb-6 md:mb-8 section-heading">
-                    Start Saving 80% on Your<br>Commercial Electricity Costs
-                </h2>
-                
-                <div class="grid md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
-                    <div class="benefit-card">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">⚡</div>
-                        <div class="font-bold text-base md:text-lg">Guaranteed Savings</div>
-                        <div class="text-gray-600 text-xs md:text-sm">80% electricity cost reduction</div>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🏢</div>
-                        <div class="font-bold text-base md:text-lg">Five Solutions</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Custom, prepaid, BESS, financing, EPC</div>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🛡️</div>
-                        <div class="font-bold text-base md:text-lg">25-Year Warranty</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Long-term performance guarantee</div>
-                    </div>
-                </div>
-                
-                <!-- Main CTA -->
-                <div class="mb-12 md:mb-16">
-                    <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-3 md:gap-4 primary-gradient text-white px-6 py-4 md:px-8 md:py-6 lg:px-20 rounded-xl font-black text-base md:text-lg lg:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black mobile-full-width cta-button">
-                        <span class="text-xl md:text-2xl">📊</span>
-                        <span class="text-left">GET FREE COMMERCIAL ASSESSMENT NOW</span>
-                        <span class="group-hover:translate-x-3 transition-transform duration-300 hidden md:inline">→</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
-                <div>
-                    <div class="text-2xl md:text-3xl font-black mb-4 md:mb-6 text-primary-500">
-                        Commercial Solar Connector
-                    </div>
-                    <p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        Comprehensive solar solutions for commercial and industrial applications with guaranteed 80% electricity savings nationwide.
-                    </p>
-                    <div class="space-y-2 md:space-y-3">
-                        <div class="flex items-center gap-2 md:gap-3">
-                            <span class="text-primary-500">📍</span>
-                            <span class="text-sm md:text-base">Serving Businesses Nationwide</span>
-                        </div>
-                        <div class="flex items-center gap-2 md:gap-3">
-                            <span class="text-primary-500">⚡</span>
-                            <span class="text-sm md:text-base">80% Electricity Savings Guarantee</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-base md:text-lg font-bold mb-4 md:mb-6 text-white">Quick Links</h4>
-                    <div class="grid gap-2 md:gap-3">
-                        <a href="#solutions" class="hover:text-primary-500 transition-colors text-sm md:text-base">Commercial Solutions</a>
-                        <a href="#services" class="hover:text-primary-500 transition-colors text-sm md:text-base">EPC Services</a>
-                        <a href="#financing" class="hover:text-primary-500 transition-colors text-sm md:text-base">Financing Options</a>
-                        <a href="#nationwide" class="hover:text-primary-500 transition-colors text-sm md:text-base">Nationwide Coverage</a>
-                        <a href="#warranty" class="hover:text-primary-500 transition-colors text-sm md:text-base">25-Year Warranty</a>
-                        <a href="#audit" class="hover:text-primary-500 transition-colors text-sm md:text-base">Free Assessment</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-base md:text-lg font-bold mb-4 md:mb-6 text-white">Our Solutions</h4>
-                    <div class="space-y-2 md:space-y-3">
-                        <div class="text-gray-300 text-sm md:text-base">Custom Solar Installation</div>
-                        <div class="text-gray-300 text-sm md:text-base">Prepaid Solar Solutions</div>
-                        <div class="text-gray-300 text-sm md:text-base">BESS with EPC</div>
-                        <div class="text-gray-300 text-sm md:text-base">Energy Finance</div>
-                        <div class="text-gray-300 text-sm md:text-base">Compliance Services</div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-base md:text-lg font-bold mb-4 md:mb-6 text-white">Contact & Assessment</h4>
-                    <p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        Get your free commercial energy assessment today.
-                    </p>
-                    <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-2 md:gap-3 bg-primary-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-bold hover:bg-primary-600 transition-colors shadow-md w-full cta-button">
-                        <span>📊</span>
-                        <span class="text-sm md:text-base">FREE COMMERCIAL ASSESSMENT</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="pt-8 md:pt-12 border-t border-gray-800 text-center">
-                <p class="text-white/80 text-xs md:text-sm">
-                    © 2024 Commercial Solar Connector | Comprehensive C&I Solar Solutions | 80% Electricity Savings Guaranteed | 
-                    Custom & Prepaid Solar Installation | BESS with EPC | Energy Finance Solutions | Complete EPC Compliance | 
-                    25-Year Performance Warranties | Nationwide Service Coverage
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Widget -->
-    <div class="whatsapp-widget">
-        <div class="whatsapp-pulse"></div>
-        <a href="https://wa.me/27766473499?text=Hi%20Commercial%20Solar%20Connector!%20I'm%20interested%20in%20your%2080%25%20electricity%20savings%20guarantee%20for%20commercial%20solar." 
-           target="_blank" 
-           class="whatsapp-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
-        </a>
+      <!-- Slideshow -->
+      <div class="slideshow" id="heroSlideshow">
+        <div class="slide-track" id="slideTrack"></div>
+        <div class="dots" id="dotsContainer"></div>
+      </div>
+      <p style="font-size:0.8rem; text-align:center; margin-top:0.8rem;">Real commercial solar installations – warehouses, factories, shopping centres, office buildings</p>
+      
+      <div style="margin: 2rem 0 1rem; text-align:center;">
+        <a href="#audit" class="btn-primary" style="display:inline-block; width:auto; padding:1rem 2.5rem;">📊 GET YOUR FREE COMMERCIAL ENERGY ASSESSMENT →</a>
+        <p style="margin-top:1rem; font-size:0.9rem;">Includes 80% savings analysis, ROI & custom financing proposal</p>
+      </div>
     </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu functionality
-        function openMobileMenu() {
-            document.getElementById('mobileMenu').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+  <!-- Solutions section -->
+  <section id="solutions" style="padding: 4rem 0; background: #fafafa; border-bottom: 2px solid black;">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:1rem;">Choose Your Path to <span class="text-primary">Energy Independence</span></h2>
+      <p style="text-align:center; max-width: 700px; margin:0 auto 2.5rem auto;">Five proven commercial solar solutions, all delivering guaranteed 80% electricity savings.</p>
+      
+      <div class="grid-2" style="margin-bottom: 2rem;">
+        <div class="card shadow-card">
+          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;"><div style="background:black; border-radius:50%; padding:0.7rem;"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><div><h3>Custom Solar Installation</h3><p>Tailored C&I systems</p></div></div>
+          <ul style="list-style:none; margin:1rem 0;"><li>✓ Site-specific design</li><li>✓ Load analysis & Tier-1 equipment</li><li>✓ 5-7 year payback</li></ul>
+          <div style="border-top:1px solid #ddd; padding-top:1rem; text-align:center;"><strong>Ideal For:</strong> Long-term ownership</div>
+        </div>
+        <div class="card card-featured shadow-card">
+          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;"><div style="background:#16a34a; border-radius:50%; padding:0.7rem;"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><h3>Prepaid Solar Installation</h3><p>Pay-as-you-go for C&I</p></div></div>
+          <ul><li>✓ Zero upfront cost</li><li>✓ Pay per use, fixed rates 10-20y</li><li>✓ Maintenance included</li></ul>
+          <div style="border-top:1px solid #ddd; padding-top:1rem; text-align:center;"><strong>Ideal For:</strong> Predictable costs & flexible payment</div>
+        </div>
+      </div>
+      <div class="grid-4" style="margin-top:1rem;">
+        <div class="card"><div style="font-size:2rem;">🔋</div><h3>BESS Installation</h3><p>Battery storage + load shedding protection</p></div>
+        <div class="card"><div style="font-size:2rem;">💰</div><h3>Energy Finance</h3><p>Greenfield & Brownfield funding</p></div>
+        <div class="card"><div style="font-size:2rem;">📜</div><h3>EPC Compliance</h3><p>Municipal approvals, NERSA, COCs</p></div>
+        <div class="card"><div style="font-size:2rem;">📱</div><h3>Smart Monitoring</h3><p>Real-time energy tracking</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Guarantee combined quickly -->
+  <section id="services" style="padding: 4rem 0; border-bottom: 2px solid black;">
+    <div class="container">
+      <h2 style="text-align:center;">End-to-End Service Delivery</h2>
+      <div class="grid-4" style="margin:2rem 0;">
+        <div class="card"><div style="font-size:2rem;">📋</div><h3>Feasibility Study</h3><p>Energy audit & ROI analysis</p></div>
+        <div class="card"><div style="font-size:2rem;">📐</div><h3>System Design</h3><p>3D modeling & simulation</p></div>
+        <div class="card"><div style="font-size:2rem;">🔨</div><h3>Installation</h3><p>Professional commissioning</p></div>
+        <div class="card"><div style="font-size:2rem;">🔄</div><h3>Maintenance</h3><p>24/7 monitoring & optimization</p></div>
+      </div>
+      
+      <div id="guarantee" style="background:#f0fdf4; border-radius:2rem; padding:2rem; margin: 2rem 0; border:2px solid #16a34a;">
+        <div style="text-align:center;"><span style="font-size:4rem; font-weight:900; color:#16a34a;">80%</span><h2 style="margin:0;">Minimum Cost Reduction Guaranteed</h2><p>Achieved within first billing cycle</p></div>
+        <div class="grid-4" style="margin-top:1.5rem;"><div>✅ Immediate Results</div><div>📊 Transparent Monitoring</div><div>🤝 Written Guarantee</div><div>📉 Bill Reduction Proof</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nationwide Coverage -->
+  <section id="nationwide" style="padding: 4rem 0; background:#fafafa; border-bottom:2px solid black;">
+    <div class="container">
+      <h2 style="text-align:center;">Serving Commercial Businesses Nationwide</h2>
+      <div class="grid-4" style="margin:2rem 0;">
+        <div class="card"><h3>📍 Gauteng</h3><p>Pretoria, Johannesburg, Sandton</p></div>
+        <div class="card"><h3>📍 Western Cape</h3><p>Cape Town, Stellenbosch, Paarl</p></div>
+        <div class="card"><h3>📍 KwaZulu-Natal</h3><p>Durban, Pietermaritzburg</p></div>
+        <div class="card"><h3>📍 Eastern Cape</h3><p>Port Elizabeth, East London</p></div>
+      </div>
+      <div style="background:#111; color:white; border-radius:1.5rem; padding:2rem; text-align:center;"><span style="font-size:2rem;">🗺️</span><p>All provinces covered – Free State, Mpumalanga, Limpopo, North West, Northern Cape</p></div>
+    </div>
+  </section>
+
+  <!-- Warranty & Financing -->
+  <section id="warranty" style="padding: 4rem 0; border-bottom:2px solid black;">
+    <div class="container">
+      <h2 style="text-align:center;">25-Year Performance Warranties</h2>
+      <div class="grid-2" style="margin:2rem 0;">
+        <div class="card" style="background:#111; color:white; border-color:#22c55e;"><div style="font-size:3rem; font-weight:900; color:#22c55e;">25</div><h3>Year Performance Warranty</h3><p>Panel output ≥80% after 25 years</p><p>✓ Workmanship guarantee</p></div>
+        <div class="card" style="background:#111; color:white;"><div style="font-size:3rem; font-weight:900; color:#22c55e;">10+</div><h3>Year Inverter & Battery Warranty</h3><p>Extended coverage + monitoring</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financing section -->
+  <section id="financing" style="padding: 4rem 0; background:#fafafa; border-bottom:2px solid black;">
+    <div class="container">
+      <h2 style="text-align:center;">Flexible Financing Solutions</h2>
+      <div class="grid-4" style="margin:2rem 0;">
+        <div class="card"><span style="font-size:2rem;">💳</span><h3>Prepaid Solar</h3><p>Zero upfront, pay-as-you-go</p></div>
+        <div class="card"><span style="font-size:2rem;">🏦</span><h3>Asset Financing</h3><p>3-10 year loan terms</p></div>
+        <div class="card"><span style="font-size:2rem;">🌱</span><h3>Project Finance</h3><p>Greenfield & upgrades</p></div>
+        <div class="card"><span style="font-size:2rem;">✅</span><h3>Cashflow Positive</h3><p>Guaranteed savings exceed payment</p></div>
+      </div>
+      <div style="background:black; color:white; border-radius:2rem; padding:2rem; text-align:center;"><p class="text-primary" style="font-weight:800;">Financial Advantage Guarantee: monthly solar payment less than your electricity savings</p><a href="https://wa.me/27766473499?text=Hi%20Commercial%20Solar%20Connector,%20I'd%20like%20financing%20options" target="_blank" style="display:inline-block; margin-top:1rem; background:#22c55e; padding:0.7rem 1.8rem; border-radius:40px; color:black; font-weight:800;">💰 Get Financing Proposal</a></div>
+    </div>
+  </section>
+
+  <!-- Free Assessment Form -->
+  <section id="audit" style="padding: 4rem 0;">
+    <div class="container">
+      <h2 style="text-align:center;">Get Your Free Commercial Energy Assessment</h2>
+      <p style="text-align:center; margin-bottom:2rem;">Discover your 80%+ savings potential, solution recommendation & warranty details.</p>
+      <div id="formSuccessMessage" style="display:none;" class="form-success-card"><span style="font-size:3rem;">🎉</span><h3>Thank You!</h3><p>Your free assessment request has been submitted. We'll contact you within 24h.</p></div>
+      <div id="formContainer" class="card" style="max-width:700px; margin:0 auto;">
+        <form id="assessmentForm" action="https://formspree.io/f/xjggrodb" method="POST">
+          <div style="display:flex; flex-direction:column; gap:1.2rem;">
+            <input type="text" name="name" placeholder="Full Name *" required>
+            <input type="tel" name="phone" placeholder="Phone Number *" required>
+            <input type="email" name="email" placeholder="Email Address *" required>
+            <input type="text" name="company" placeholder="Company Name *" required>
+            <select name="business_type" required><option value="">Business Type</option><option>Manufacturing</option><option>Warehouse/Logistics</option><option>Retail/Shopping Center</option><option>Office Building</option><option>Industrial Plant</option></select>
+            <select name="area" required><option value="">City / Province</option><option>Gauteng</option><option>Western Cape</option><option>KwaZulu-Natal</option><option>Eastern Cape</option><option>Free State</option><option>Other</option></select>
+            <select name="bill_amount" required><option value="">Avg. Monthly Bill (R)</option><option>R10k - R20k</option><option>R20k - R50k</option><option>R50k - R100k</option><option>R100k - R200k</option><option>R200k+</option></select>
+            <button type="submit" class="btn-primary" id="formSubmitBtn">GET FREE COMMERCIAL ENERGY ASSESSMENT</button>
+            <p style="font-size:0.75rem; text-align:center;">No obligation • Personalized report within 24h</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background:#000; color:white; padding:3rem 0; text-align:center;">
+    <div class="container"><h2>Start Saving 80% on Your Commercial Electricity Costs</h2><a href="#audit" class="btn-primary" style="display:inline-block; width:auto; margin-top:1.5rem; background:#22c55e;">📊 GET FREE ASSESSMENT NOW →</a></div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#0a0a0a; color:#ccc; padding:2rem 0;">
+    <div class="container"><div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem;"><div><strong class="text-primary">Commercial Solar Connector</strong><p>Guaranteed 80% savings · 25-year warranty · Nationwide C&I solar experts</p></div><div><a href="#solutions">Solutions</a> · <a href="#financing">Financing</a> · <a href="#audit">Free Audit</a></div></div><hr style="margin:1.5rem 0;"><p style="font-size:0.8rem;">© 2025 Commercial Solar Connector | Custom & Prepaid Solar | BESS with EPC | Energy Finance | EPC Compliance</p></div>
+  </footer>
+
+  <!-- WhatsApp widget -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/27766473499?text=Hi%20Commercial%20Solar%20Connector!%20I'm%20interested%20in%20your%2080%25%20electricity%20savings%20guarantee" target="_blank" class="wa-button">
+      <svg width="28" height="28" viewBox="0 0 448 512" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    // SLIDESHOW
+    const images = [
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide1.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide2.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide3.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide4.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide5.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide6.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide7.jpg',
+      'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide8.jpg'
+    ];
+    let slideIdx = 0;
+    const track = document.getElementById('slideTrack');
+    const dotsDiv = document.getElementById('dotsContainer');
+    images.forEach((src, i) => {
+      const slideDiv = document.createElement('div');
+      slideDiv.className = 'slide' + (i===0 ? ' active' : '');
+      slideDiv.style.backgroundImage = `url(${src})`;
+      track.appendChild(slideDiv);
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i===0 ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsDiv.appendChild(dot);
+    });
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      slides[slideIdx].classList.remove('active');
+      dots[slideIdx].classList.remove('active');
+      slideIdx = n;
+      if (slideIdx>=slides.length) slideIdx=0;
+      if(slideIdx<0) slideIdx=slides.length-1;
+      slides[slideIdx].classList.add('active');
+      dots[slideIdx].classList.add('active');
+    }
+    function nextSlide() { goToSlide(slideIdx+1); }
+    let interval = setInterval(nextSlide, 5000);
+    const slideshowDiv = document.querySelector('.slideshow');
+    slideshowDiv?.addEventListener('mouseenter',()=>clearInterval(interval));
+    slideshowDiv?.addEventListener('mouseleave',()=>{ interval = setInterval(nextSlide,5000); });
+    
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobilePanel = document.getElementById('mobileMenuPanel');
+    const overlay = document.getElementById('mobileOverlay');
+    const closeBtn = document.getElementById('closeMobileMenu');
+    function openMenu(){ mobilePanel.classList.add('open'); overlay.classList.add('active'); document.body.style.overflow='hidden'; }
+    function closeMenu(){ mobilePanel.classList.remove('open'); overlay.classList.remove('active'); document.body.style.overflow=''; }
+    menuToggle?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    overlay?.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-link, .mobile-menu-panel .cta-small').forEach(link => link.addEventListener('click', closeMenu));
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href === "#" || !href) return;
+        const target = document.querySelector(href);
+        if(target){
+          e.preventDefault();
+          const offset = 80;
+          window.scrollTo({top: target.offsetTop - offset, behavior: 'smooth'});
+          closeMenu();
         }
-        
-        function closeMobileMenu() {
-            document.getElementById('mobileMenu').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Mobile menu button event
-        document.querySelector('.mobile-menu-button').addEventListener('click', openMobileMenu);
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    const headerHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    closeMobileMenu();
-                }
-            });
-        });
-
-        // Picture Slideshow Functionality
-        const slideImages = [
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide1.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide2.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide3.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide4.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide5.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide6.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide7.jpg',
-            'https://raw.githubusercontent.com/Maribamedia/commercialsolar/main/slides/slide8.jpg'
-        ];
-
-        let slideIndex = 0;
-        const slidesContainer = document.getElementById('slides-container');
-        const dotsContainer = document.getElementById('slide-dots-container');
-        
-        // Initialize slideshow
-        function initializeSlideshow() {
-            // Create slides
-            slideImages.forEach((src, index) => {
-                const slide = document.createElement('div');
-                slide.className = 'slide';
-                slide.style.backgroundImage = `url('${src}')`;
-                slidesContainer.appendChild(slide);
-                
-                // Create dot
-                const dot = document.createElement('div');
-                dot.className = 'slide-dot';
-                if (index === 0) dot.classList.add('active');
-                dot.onclick = () => currentSlide(index);
-                dotsContainer.appendChild(dot);
-            });
-            
-            // Show first slide
-            showSlide(0);
-        }
-        
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.slide-dot');
-            
-            slideIndex = n;
-            if (slideIndex >= slides.length) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = slides.length - 1;
-            
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            slides[slideIndex].classList.add('active');
-            dots[slideIndex].classList.add('active');
-        }
-        
-        function currentSlide(n) {
-            showSlide(n);
-        }
-        
-        function nextSlide() {
-            showSlide(slideIndex + 1);
-        }
-        
-        // Auto-advance slides every 5 seconds (5000ms)
-        let slideInterval = setInterval(nextSlide, 5000);
-        
-        // Pause slideshow on hover
-        const slideshowContainer = document.querySelector('.slideshow-container');
-        slideshowContainer.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-        
-        slideshowContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 5000);
-        });
-        
-        // Initialize slideshow on page load
-        initializeSlideshow();
-
-        // Formspree Form Submission
-        document.getElementById('audit-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const formData = new FormData(form);
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            
-            // Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'SUBMITTING...';
-            submitButton.classList.add('opacity-50');
-            
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Show success message
-                    document.getElementById('form-success').classList.add('show');
-                    document.getElementById('audit-form-container').style.display = 'none';
-                    
-                    // Reset form
-                    form.reset();
-                    
-                    // Scroll to success message
-                    document.getElementById('form-success').scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                    
-                    // Send WhatsApp notification
-                    setTimeout(() => {
-                        const name = form.querySelector('[name="name"]').value || 'Customer';
-                        const phone = form.querySelector('[name="phone"]').value || '';
-                        const company = form.querySelector('[name="company"]').value || '';
-                        const businessType = form.querySelector('[name="business_type"]').value || '';
-                        
-                        const whatsappMessage = `New Lead from Commercial Solar Connector Website:%0A%0AName: ${name}%0APhone: ${phone}%0ACompany: ${company}%0ABusiness Type: ${businessType}%0A%0AThey've requested a free commercial energy assessment.`;
-                        
-                        // Optional: Send to admin WhatsApp
-                        // window.open(`https://wa.me/27766473499?text=${whatsappMessage}`, '_blank');
-                    }, 1000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
-                console.error('Form submission error:', error);
-            } finally {
-                // Re-enable button
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-                submitButton.classList.remove('opacity-50');
-            }
-        });
-
-        // Service area selection animation
-        document.querySelectorAll('.service-area-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
-                this.style.backgroundColor = '#f8f9fa';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-                this.style.backgroundColor = '';
-            });
-        });
-
-        // Animate cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe animated elements
-        document.querySelectorAll('.card-hover, .benefit-card, .solution-card').forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(element);
-        });
-
-        // Navbar scroll effect
-        let lastScroll = 0;
-        const navbar = document.querySelector('nav');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 100) {
-                navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-                navbar.style.transform = 'translateY(0)';
-                return;
-            }
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Preload slideshow images
-        document.addEventListener('DOMContentLoaded', function() {
-            slideImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
-            
-            // Initialize animations after load
-            setTimeout(() => {
-                document.querySelectorAll('.benefit-card, .solution-card').forEach((el, index) => {
-                    setTimeout(() => {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            }, 500);
-        });
-
-        // Guarantee counter animation
-        function animateCounter(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                element.textContent = Math.floor(progress * (end - start) + start) + '%';
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // Animate guarantee counter when in view
-        const guaranteeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = document.querySelector('.guarantee-highlight .text-primary-500');
-                    if (counter && !counter.dataset.animated) {
-                        counter.dataset.animated = 'true';
-                        animateCounter(counter, 0, 80, 2000);
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const guaranteeElement = document.querySelector('.guarantee-highlight');
-        if (guaranteeElement) {
-            guaranteeObserver.observe(guaranteeElement);
-        }
-
-        // Form validation
-        const form = document.getElementById('audit-form');
-        const inputs = form.querySelectorAll('input[required], select[required]');
-        
-        inputs.forEach(input => {
-            input.addEventListener('invalid', function(e) {
-                e.preventDefault();
-                this.classList.add('border-red-500');
-                
-                // Show custom error message
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'text-red-500 text-sm mt-1';
-                errorDiv.textContent = 'This field is required';
-                
-                if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('text-red-500')) {
-                    this.parentNode.appendChild(errorDiv);
-                }
-            });
-            
-            input.addEventListener('input', function() {
-                this.classList.remove('border-red-500');
-                const errorDiv = this.parentNode.querySelector('.text-red-500');
-                if (errorDiv) {
-                    errorDiv.remove();
-                }
-            });
-        });
-
-        // Touch device detection
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        
-        if (isTouchDevice) {
-            document.body.classList.add('touch-device');
-            
-            // Increase touch target sizes for mobile
-            document.querySelectorAll('button, a').forEach(el => {
-                if (!el.classList.contains('whatsapp-button')) {
-                    el.style.minHeight = '44px';
-                    el.style.minWidth = '44px';
-                }
-            });
-        }
-
-        // Handle viewport changes for mobile
-        function handleViewportChange() {
-            const isMobile = window.innerWidth < 768;
-            
-            if (isMobile) {
-                // Adjust featured card for mobile
-                const featuredCards = document.querySelectorAll('.solution-card.featured');
-                featuredCards.forEach(card => {
-                    card.style.marginTop = '0';
-                    card.style.marginBottom = '0';
-                });
-            }
-        }
-        
-        // Initial call
-        handleViewportChange();
-        
-        // Listen for resize
-        window.addEventListener('resize', handleViewportChange);
-    </script>
+      });
+    });
+    
+    // Form submission
+    const form = document.getElementById('assessmentForm');
+    const successDiv = document.getElementById('formSuccessMessage');
+    const formContainer = document.getElementById('formContainer');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('formSubmitBtn');
+      const original = btn.innerText;
+      btn.disabled = true;
+      btn.innerText = 'SUBMITTING...';
+      const formData = new FormData(form);
+      try {
+        const resp = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+        if(resp.ok) {
+          formContainer.style.display = 'none';
+          successDiv.style.display = 'block';
+          window.scrollTo({top: successDiv.offsetTop - 100, behavior: 'smooth'});
+        } else throw new Error();
+      } catch(err) { alert('Submission error. Please contact us directly.'); }
+      finally { btn.disabled = false; btn.innerText = original; }
+    });
+    
+    // Navbar hide on scroll
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', ()=>{
+      const current = window.scrollY;
+      if(current > 100 && current > lastScroll) navbar.style.transform = 'translateY(-100%)';
+      else navbar.style.transform = 'translateY(0)';
+      lastScroll = current;
+    });
+  </script>
 </body>
 </html>
