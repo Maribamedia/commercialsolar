@@ -3,240 +3,1322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Solar Connector | 80% Electricity Savings Guaranteed | Residential, Commercial & Community Solar</title>
-    <meta name="description" content="Guaranteed 80% electricity bill reduction for homes, businesses, shopping malls, and community schemes. Custom solar, PPA, BESS, financing & EPC compliance. 25-year warranty. Nationwide.">
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="Solar Connector | 80% Bill Reduction Guaranteed">
-    <meta property="og:description" content="Residential, commercial & community solar solutions with guaranteed 80% electricity savings. Custom, PPA, BESS, financing, EPC compliance.">
-    <meta property="og:image" content="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-159397.jpeg">
-    <meta property="og:url" content="https://solarconnector.co.za">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon (inline black/yellow SVG) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Cpath d='M50,20 L50,30 M50,70 L50,80 M30,50 L20,50 M80,50 L70,50 M35,35 L40,40 M65,35 L60,40 M35,65 L40,60 M65,65 L60,60' stroke='%23FFFFFF' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='50' r='15' fill='%23FFFFFF'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23000000'/%3E%3C/svg%3E">
-    
-    <!-- Google Fonts + Tailwind + Custom Overrides -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        solar: { yellow: '#F5B041', orange: '#E67E22', black: '#000000', white: '#FFFFFF', gray: '#F8F9FA' }
-                    },
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-in',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'guarantee-pulse': 'guaranteePulse 2s infinite',
-                        'whatsapp-ripple': 'whatsappPulse 2s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
-                        guaranteePulse: {
-                            '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(245, 176, 65, 0.6)' },
-                            '50%': { transform: 'scale(1.02)', boxShadow: '0 0 0 12px rgba(245, 176, 65, 0)' },
-                        },
-                        whatsappPulse: {
-                            '0%': { transform: 'scale(1)', opacity: '0.7' },
-                            '70%': { transform: 'scale(1.35)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '0' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        * { -webkit-tap-highlight-color: transparent; }
-        body { background: #FFFFFF; overflow-x: hidden; }
-        .glass-nav { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom: 2px solid #000; }
-        .card-hover { transition: all 0.3s cubic-bezier(0.2, 0, 0, 1); }
-        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15); }
-        .guarantee-badge { background: linear-gradient(135deg, #F5B041 0%, #E67E22 100%); color: #000; animation: guaranteePulse 2s infinite; }
-        .solar-gradient { background: linear-gradient(135deg, #F5B041 0%, #E67E22 100%); }
-        .benefit-card, .solution-card { border: 2px solid #000000; border-radius: 1rem; background: #FFFFFF; transition: all 0.2s ease; }
-        .benefit-card { padding: 1.25rem; }
-        .solution-card { padding: 1.5rem; height: 100%; }
-        .solution-card.featured { border-color: #F5B041; background: #FFFDF5; }
-        .warranty-dark { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); color: white; border-radius: 1rem; border: 2px solid #F5B041; }
-        .slideshow-container { position: relative; width: 100%; height: 280px; border-radius: 1rem; border: 2px solid #000; overflow: hidden; background: #e9ecef; }
-        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.9s ease-in-out; background-size: cover; background-position: center; background-repeat: no-repeat; }
-        .slide.active { opacity: 1; z-index: 2; }
-        .slide-dots { position: absolute; bottom: 16px; left: 0; right: 0; display: flex; justify-content: center; gap: 12px; z-index: 15; }
-        .slide-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,0,0,0.4); border: 1px solid white; cursor: pointer; transition: 0.2s; }
-        .slide-dot.active { background: #000000; transform: scale(1.3); border-color: #F5B041; }
-        .whatsapp-float { position: fixed; bottom: 22px; right: 22px; z-index: 9999; }
-        .wa-button { width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border: 2px solid #000; transition: transform 0.2s; }
-        .wa-button:hover { transform: scale(1.08); background: #128C7E; }
-        .wa-pulse { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: #25D366; animation: whatsappPulse 1.8s infinite; z-index: -1; }
-        @keyframes whatsappPulse { 0% { transform: scale(1); opacity: 0.7; } 70% { transform: scale(1.4); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
-        .form-success-card { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: 2px solid #000; border-radius: 1rem; }
-        .touch-target { min-height: 44px; min-width: 44px; }
-        @media (max-width: 640px) { .slideshow-container { height: 200px; } .benefit-card { padding: 1rem; } .solution-card { padding: 1.25rem; } .wa-button { width: 52px; height: 52px; } }
-        input, select, button { font-size: 16px; }
-        .mobile-menu-overlay { transition: opacity 0.2s ease; }
-    </style>
-</head>
-<body class="antialiased text-black">
+    <title>Solar Connector | Bespoke Funding for Commercial & Industrial Solar EPCs</title>
+    <meta name="description" content="Solar Connector connects EPCs to bespoke funding for commercial and industrial solar projects. Power Purchase Agreements, asset finance, and structured capital solutions.">
 
-    <!-- Sticky Navigation -->
-    <nav class="fixed w-full glass-nav z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <a href="#" class="flex items-center gap-2 md:gap-3 group">
-                    <div class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-black flex items-center justify-center">
-                        <svg class="w-6 h-6 text-solar-yellow" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 12H6V22H18V12H21L12 2Z"/></svg>
-                    </div>
-                    <div>
-                        <span class="text-lg md:text-2xl font-black tracking-tight">Solar Connector</span>
-                        <span class="hidden md:block text-xs text-gray-600 -mt-1">Residential | Commercial | Community</span>
-                    </div>
-                </a>
-                <div class="hidden lg:flex items-center gap-7">
-                    <a href="#solutions" class="text-sm font-bold hover:text-solar-orange transition">Solutions</a>
-                    <a href="#guarantee" class="text-sm font-bold hover:text-solar-orange transition">Guarantee</a>
-                    <a href="#areas" class="text-sm font-bold hover:text-solar-orange transition">Service Areas</a>
-                    <a href="#warranty" class="text-sm font-bold hover:text-solar-orange transition">Warranty</a>
-                    <a href="#partnership" class="text-sm font-bold hover:text-solar-orange transition">Partners</a>
+    <meta property="og:title" content="Solar Connector | Bespoke Funding for C&I Solar EPCs">
+    <meta property="og:description" content="Connecting EPCs to bespoke funding for commercial and industrial solar projects. PPA, asset finance, and structured capital.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%231e3a8a'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M28 74 L50 26 L72 74' stroke='url(%23g)' stroke-width='8' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <style>
+    :root {
+        --surface: #ffffff;
+        --surface-1: #f8fafc;
+        --surface-2: #f1f5f9;
+        --on-surface: #0a0f1c;
+        --on-surface-variant: #475569;
+        --on-surface-muted: #64748b;
+        --outline: #cbd5e1;
+        --outline-variant: #e2e8f0;
+        --primary: #1e3a8a;
+        --primary-hover: #1e40af;
+        --primary-container: #dbeafe;
+        --primary-fixed: #172554;
+        --accent: #f59e0b;
+        --accent-subtle: #fffbeb;
+        --max: 1280px;
+        --radius: 16px;
+        --radius-sm: 10px;
+        --radius-xs: 8px;
+        --section: 6.5rem;
+        --section-sm: 4.5rem;
+        --nav-height: 76px;
+        --transition-base: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+        --transition-fast: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+        --shadow-xs: 0 1px 2px rgba(10,15,28,0.04);
+        --shadow-sm: 0 1px 3px rgba(10,15,28,0.06), 0 1px 2px rgba(10,15,28,0.04);
+        --shadow-md: 0 4px 16px rgba(10,15,28,0.07), 0 1px 4px rgba(10,15,28,0.04);
+        --shadow-lg: 0 12px 40px rgba(10,15,28,0.09), 0 2px 8px rgba(10,15,28,0.04);
+        --shadow-xl: 0 24px 64px rgba(10,15,28,0.11), 0 4px 16px rgba(10,15,28,0.05);
+        --shadow-primary: 0 4px 20px rgba(30,58,138,0.2);
+        --shadow-primary-lg: 0 8px 32px rgba(30,58,138,0.28);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #ffffff; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { 
+        margin: 0; 
+        background: #ffffff; 
+        color: var(--on-surface); 
+        font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+        font-weight: 400; 
+        line-height: 1.6; 
+        -webkit-font-smoothing: antialiased; 
+        text-rendering: optimizeLegibility;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+    a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+    /* Navigation */
+    .nav { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        z-index: 50; 
+        border-bottom: 1px solid transparent; 
+        background: rgba(255,255,255,0.88); 
+        backdrop-filter: blur(18px); 
+        -webkit-backdrop-filter: blur(18px); 
+        transition: border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+    }
+    .nav.scrolled { 
+        border-bottom-color: var(--outline-variant); 
+        box-shadow: var(--shadow-sm); 
+        background: rgba(255,255,255,0.94); 
+    }
+    .nav-inner { 
+        height: var(--nav-height); 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 20px; 
+    }
+    .logo-lockup { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 10px; 
+        flex-shrink: 0; 
+    }
+    .logo-mark { 
+        flex: 0 0 auto; 
+        width: 36px; 
+        height: 36px; 
+    }
+    .wordmark { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-weight: 800; 
+        font-size: 1.05rem; 
+        letter-spacing: -0.015em; 
+        color: var(--primary); 
+        white-space: nowrap; 
+    }
+    .wordmark span { 
+        color: var(--on-surface-muted); 
+        font-weight: 600; 
+        font-size: 0.75rem; 
+        display: block; 
+        letter-spacing: 0.02em; 
+        margin-top: -2px; 
+    }
+    .nav-links { 
+        display: flex; 
+        align-items: center; 
+        gap: 0.35rem; 
+        color: var(--on-surface-variant); 
+        font-size: 0.9rem; 
+        font-weight: 500; 
+    }
+    .nav-links a:not(.button) { 
+        padding: 0.45rem 0.85rem; 
+        border-radius: 8px; 
+        transition: color var(--transition-fast), background var(--transition-fast); 
+        position: relative; 
+        white-space: nowrap; 
+    }
+    .nav-links a:not(.button):hover { 
+        color: var(--primary); 
+        background: rgba(30,58,138,0.05); 
+    }
+    .button { 
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 8px; 
+        min-height: 46px; 
+        padding: 0 1.6rem; 
+        border-radius: 999px; 
+        border: 1.5px solid transparent; 
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); 
+        color: #fff; 
+        font-weight: 600; 
+        font-size: 0.85rem; 
+        letter-spacing: 0.02em; 
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast); 
+        cursor: pointer; 
+        box-shadow: var(--shadow-primary); 
+        white-space: nowrap; 
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .button:hover { 
+        transform: translateY(-2px); 
+        box-shadow: var(--shadow-primary-lg); 
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); 
+    }
+    .button:active { transform: translateY(0) scale(0.98); }
+    .button.secondary { 
+        background: rgba(255,255,255,0.9); 
+        color: var(--primary); 
+        border: 1.5px solid var(--outline-variant); 
+        box-shadow: var(--shadow-xs); 
+        font-weight: 600; 
+    }
+    .button.secondary:hover { 
+        border-color: var(--primary); 
+        background: rgba(30,58,138,0.03); 
+        box-shadow: var(--shadow-md); 
+    }
+    .mobile-toggle { 
+        display: none; 
+        place-items: center; 
+        width: 42px; 
+        height: 42px; 
+        border-radius: 999px; 
+        border: 1.5px solid var(--outline-variant); 
+        background: rgba(255,255,255,0.9); 
+        color: var(--on-surface); 
+        cursor: pointer; 
+        transition: background var(--transition-fast), transform var(--transition-fast); 
+        flex-shrink: 0; 
+    }
+    .mobile-toggle:hover { background: var(--surface-2); }
+    .mobile-panel { 
+        display: none; 
+        padding: 16px 24px 24px; 
+        border-top: 1px solid var(--outline-variant); 
+        background: rgba(255,255,255,0.97); 
+        backdrop-filter: blur(16px); 
+    }
+    .mobile-panel.open { 
+        display: grid; 
+        gap: 6px; 
+        animation: slideDown 320ms cubic-bezier(0.22,1,0.36,1) forwards; 
+    }
+    @keyframes slideDown { 
+        from { opacity: 0; transform: translateY(-12px); } 
+        to { opacity: 1; transform: translateY(0); } 
+    }
+    .mobile-panel a { 
+        padding: 0.7rem 1rem; 
+        border-radius: var(--radius-xs); 
+        transition: background var(--transition-fast), color var(--transition-fast); 
+        color: var(--on-surface-variant); 
+        font-weight: 500; 
+        font-size: 0.95rem; 
+    }
+    .mobile-panel a:hover { background: rgba(30,58,138,0.05); color: var(--primary); }
+    .mobile-panel .button { width: 100%; margin-top: 6px; justify-content: center; }
+
+    /* Hero */
+    .hero { 
+        position: relative; 
+        min-height: 780px; 
+        display: grid; 
+        align-items: center; 
+        padding: 9rem 0 5rem; 
+        text-align: left; 
+        overflow: hidden; 
+        background: linear-gradient(160deg, #f0f4ff 0%, #ffffff 40%, #fffbf5 100%); 
+        isolation: isolate; 
+    }
+    .hero::before { 
+        content: ""; 
+        position: absolute; 
+        inset: 0; 
+        z-index: 0; 
+        background: 
+            linear-gradient(105deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 42%, rgba(255,255,255,0.45) 68%, rgba(255,255,255,0.12) 100%), 
+            url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80") center/cover; 
+        pointer-events: none; 
+    }
+    .hero::after { 
+        content: ""; 
+        position: absolute; 
+        inset: 0; 
+        z-index: 0; 
+        background: 
+            radial-gradient(circle at 18% 28%, rgba(30,58,138,0.07), transparent 32rem), 
+            radial-gradient(circle at 82% 18%, rgba(245,158,11,0.06), transparent 26rem); 
+        pointer-events: none; 
+    }
+    .hero-grid { 
+        position: relative; 
+        z-index: 2; 
+        display: grid; 
+        grid-template-columns: 1.1fr 0.9fr; 
+        gap: 4rem; 
+        align-items: center; 
+    }
+    .hero-content { 
+        max-width: 640px; 
+        padding: clamp(2rem, 4vw, 3rem); 
+        border: 1px solid rgba(30,58,138,0.08); 
+        border-radius: var(--radius); 
+        background: rgba(255,255,255,0.82); 
+        backdrop-filter: blur(20px); 
+        -webkit-backdrop-filter: blur(20px); 
+        box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255,255,255,0.5) inset; 
+        animation: fadeInUp 900ms cubic-bezier(0.22,1,0.36,1) forwards; 
+        opacity: 0; 
+        transform: translateY(28px); 
+    }
+    @keyframes fadeInUp { 
+        to { opacity: 1; transform: translateY(0); } 
+    }
+    .eyebrow { 
+        margin: 0 0 0.85rem; 
+        color: var(--primary); 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-size: 0.72rem; 
+        font-weight: 700; 
+        letter-spacing: 0.1em; 
+        text-transform: uppercase; 
+    }
+    h1, h2, h3, h4 { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        margin: 0; 
+        letter-spacing: -0.02em; 
+    }
+    h1 { 
+        color: var(--on-surface); 
+        font-size: clamp(2.4rem, 5vw, 3.6rem); 
+        line-height: 1.08; 
+        font-weight: 800; 
+    }
+    h1 span { 
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+    .lead { 
+        max-width: 560px; 
+        margin: 1.5rem 0 2.2rem; 
+        color: var(--on-surface-variant); 
+        font-size: clamp(0.95rem, 1.4vw, 1.08rem); 
+        line-height: 1.7; 
+        font-weight: 450; 
+    }
+    .hero-actions { 
+        display: flex; 
+        justify-content: flex-start; 
+        align-items: center; 
+        flex-wrap: wrap; 
+        gap: 0.85rem; 
+    }
+    .hero-note { 
+        display: flex; 
+        justify-content: flex-start; 
+        gap: 0.75rem; 
+        flex-wrap: wrap; 
+        margin-top: 1.75rem; 
+        color: var(--on-surface-muted); 
+        font-size: 0.85rem; 
+        font-weight: 450; 
+    }
+    .hero-note span.sep { color: var(--outline); }
+
+    /* Trust Bar */
+    .trust-bar { 
+        position: relative; 
+        z-index: 10; 
+        margin-top: -3rem; 
+        padding: 0 0 var(--section-sm); 
+    }
+    .trust-inner { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 1.25rem; 
+    }
+    .trust-card { 
+        padding: 1.8rem 1.5rem; 
+        border-radius: var(--radius); 
+        background: #fff; 
+        border: 1px solid var(--outline-variant); 
+        box-shadow: var(--shadow-md); 
+        text-align: center; 
+        transition: transform var(--transition-base), box-shadow var(--transition-base); 
+    }
+    .trust-card:hover { 
+        transform: translateY(-4px); 
+        box-shadow: var(--shadow-lg); 
+    }
+    .trust-card .stat { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-size: 2rem; 
+        font-weight: 800; 
+        color: var(--primary); 
+        line-height: 1; 
+        margin-bottom: 0.5rem; 
+    }
+    .trust-card .stat-label { 
+        font-size: 0.85rem; 
+        color: var(--on-surface-variant); 
+        font-weight: 500; 
+    }
+
+    /* Sections */
+    section { 
+        position: relative; 
+        padding: var(--section) 0; 
+        scroll-margin-top: 100px; 
+    }
+    .light-section { background: var(--surface-1); color: var(--on-surface); }
+    .light-section .section-kicker { color: var(--primary); }
+    .section-head { 
+        max-width: 800px; 
+        margin: 0 auto 3.5rem; 
+        text-align: center; 
+    }
+    .section-title { 
+        color: var(--on-surface); 
+        font-size: clamp(1.9rem, 4.5vw, 2.8rem); 
+        line-height: 1.12; 
+        font-weight: 800; 
+    }
+    .section-copy { 
+        max-width: 680px; 
+        margin: 1rem auto 0; 
+        color: var(--on-surface-variant); 
+        font-size: 1rem; 
+        line-height: 1.7; 
+        font-weight: 450; 
+    }
+
+    /* Cards */
+    .grid { display: grid; gap: 1.25rem; }
+    .steps { grid-template-columns: repeat(4, 1fr); }
+    .solutions { grid-template-columns: repeat(3, 1fr); }
+    .mini-grid { grid-template-columns: repeat(3, 1fr); }
+    .commit-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .card { 
+        border: 1px solid rgba(30,58,138,0.07); 
+        background: rgba(255,255,255,0.82); 
+        backdrop-filter: blur(16px); 
+        -webkit-backdrop-filter: blur(16px); 
+        box-shadow: var(--shadow-md), 0 0 0 1px rgba(255,255,255,0.5) inset; 
+        transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base); 
+        border-radius: var(--radius); 
+    }
+    .card:hover { 
+        transform: translateY(-5px); 
+        border-color: rgba(30,58,138,0.16); 
+        box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.5) inset; 
+    }
+    .step-card { 
+        min-height: 260px; 
+        position: relative; 
+        overflow: hidden; 
+        padding: 2rem; 
+    }
+    .number { 
+        position: absolute; 
+        right: 1rem; 
+        top: -0.4rem; 
+        color: rgba(30,58,138,0.06); 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-size: 5rem; 
+        font-weight: 800; 
+        line-height: 1; 
+        transition: color 400ms ease; 
+        pointer-events: none; 
+    }
+    .card:hover .number { color: rgba(30,58,138,0.13); }
+    .card h3, .card h4 { 
+        color: var(--on-surface); 
+        font-size: 1.15rem; 
+        line-height: 1.25; 
+        font-weight: 700; 
+        margin-bottom: 0.85rem; 
+    }
+    .card p { 
+        margin: 0; 
+        color: var(--on-surface-variant); 
+        line-height: 1.65; 
+        font-size: 0.93rem; 
+    }
+    .icon-box { 
+        display: inline-grid; 
+        place-items: center; 
+        width: 48px; 
+        height: 48px; 
+        margin-bottom: 1.25rem; 
+        border: 1px solid rgba(30,58,138,0.1); 
+        border-radius: 999px; 
+        background: rgba(30,58,138,0.04); 
+        color: var(--primary); 
+        transition: transform var(--transition-base), background var(--transition-base); 
+    }
+    .card:hover .icon-box { 
+        transform: scale(1.08) rotate(-3deg); 
+        background: rgba(30,58,138,0.08); 
+    }
+    .material-symbols-outlined { 
+        font-size: 1.1rem; 
+        line-height: 1.4; 
+        color: var(--primary); 
+        flex-shrink: 0; 
+    }
+
+    .solution-card { 
+        display: flex; 
+        flex-direction: column; 
+        min-height: 100%; 
+        padding: 2.2rem; 
+    }
+    .solution-card ul { 
+        display: grid; 
+        gap: 0.6rem; 
+        margin: 1.1rem 0 1.5rem; 
+        padding: 0; 
+        list-style: none; 
+        color: var(--on-surface-variant); 
+    }
+    .solution-card li { 
+        display: flex; 
+        gap: 0.5rem; 
+        align-items: flex-start; 
+        font-size: 0.9rem; 
+    }
+    .text-link { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 0.4rem; 
+        margin-top: auto; 
+        color: var(--primary); 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-size: 0.75rem; 
+        font-weight: 700; 
+        letter-spacing: 0.07em; 
+        text-transform: uppercase; 
+        transition: gap var(--transition-fast), color var(--transition-fast); 
+        position: relative; 
+        padding-bottom: 2px; 
+    }
+    .text-link::after { 
+        content: ""; 
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        width: 0; 
+        height: 1.5px; 
+        background: var(--primary); 
+        transition: width var(--transition-base); 
+        border-radius: 2px; 
+    }
+    .text-link:hover { gap: 0.6rem; }
+    .text-link:hover::after { width: 100%; }
+
+    /* Contrast Band */
+    .contrast-band { 
+        padding: var(--section) 0; 
+        background: linear-gradient(150deg, #1e3a8a 0%, #172554 100%); 
+        border-top: 1px solid rgba(255,255,255,0.08); 
+        border-bottom: 1px solid rgba(255,255,255,0.08); 
+        position: relative; 
+        overflow: hidden; 
+        isolation: isolate; 
+    }
+    .contrast-band::before { 
+        content: ""; 
+        position: absolute; 
+        inset: 0; 
+        z-index: 0; 
+        background: url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80") center/cover; 
+        opacity: 0.06; 
+        mix-blend-mode: luminosity; 
+    }
+    .contrast-band .section-kicker { color: rgba(255,255,255,0.7); }
+    .contrast-band .section-title { color: #ffffff; }
+    .contrast-band .section-copy { color: rgba(255,255,255,0.85); }
+    .pathway { 
+        display: grid; 
+        grid-template-columns: 0.85fr 1.15fr; 
+        gap: 3.5rem; 
+        align-items: center; 
+        position: relative; 
+        z-index: 1; 
+    }
+    .pathway .section-head { margin: 0; text-align: left; }
+    .pathway-flow { display: grid; gap: 0.85rem; }
+    .flow-card { 
+        display: grid; 
+        grid-template-columns: 50px 1fr; 
+        gap: 1rem; 
+        align-items: start; 
+        border-radius: var(--radius); 
+        padding: 1.3rem 1.5rem; 
+        background: rgba(255,255,255,0.08); 
+        border: 1px solid rgba(255,255,255,0.12); 
+        backdrop-filter: blur(8px); 
+        -webkit-backdrop-filter: blur(8px); 
+        transition: transform var(--transition-base), background var(--transition-base), border-color var(--transition-base); 
+    }
+    .flow-card:hover { 
+        transform: translateX(6px); 
+        background: rgba(255,255,255,0.13); 
+        border-color: rgba(255,255,255,0.22); 
+    }
+    .flow-card span { 
+        display: grid; 
+        place-items: center; 
+        width: 50px; 
+        height: 50px; 
+        border: 1px solid rgba(255,255,255,0.25); 
+        border-radius: 999px; 
+        background: rgba(255,255,255,0.1); 
+        color: #fff; 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-weight: 800; 
+        font-size: 0.85rem; 
+        flex-shrink: 0; 
+    }
+    .flow-card h3 { color: #fff; font-size: 1.08rem; margin-bottom: 0.3rem; font-weight: 700; }
+    .flow-card p { margin: 0; color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.55; }
+
+    /* Split Section */
+    .split-section { 
+        display: grid; 
+        grid-template-columns: 0.9fr 1.1fr; 
+        gap: 3.5rem; 
+        align-items: center; 
+    }
+    .commit-card { 
+        border-left: 3px solid var(--primary); 
+        padding: 1.8rem 2rem; 
+        background: var(--surface); 
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        box-shadow: var(--shadow-sm);
+    }
+    .commit-card h4 { 
+        font-size: 1.1rem; 
+        font-weight: 700; 
+        margin-bottom: 0.5rem; 
+        color: var(--on-surface); 
+    }
+    .commit-card p { 
+        font-size: 0.9rem; 
+        color: var(--on-surface-variant); 
+        line-height: 1.6; 
+    }
+
+    /* Contact */
+    .contact-card { 
+        max-width: 880px; 
+        margin: 0 auto; 
+        text-align: center; 
+        border-radius: var(--radius); 
+        padding: 3.5rem; 
+        overflow: hidden; 
+        background: rgba(255,255,255,0.9); 
+        border: 1px solid rgba(30,58,138,0.08); 
+        box-shadow: var(--shadow-xl); 
+    }
+
+    /* Form */
+    .form-grid { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.25rem; 
+        text-align: left; 
+        margin-top: 2rem; 
+    }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { 
+        font-size: 0.8rem; 
+        font-weight: 600; 
+        color: var(--on-surface); 
+        letter-spacing: 0.02em; 
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { 
+        padding: 0.85rem 1rem; 
+        border: 1.5px solid var(--outline-variant); 
+        border-radius: var(--radius-xs); 
+        background: var(--surface); 
+        color: var(--on-surface); 
+        font-family: 'Inter', sans-serif; 
+        font-size: 0.95rem; 
+        transition: border-color var(--transition-fast), box-shadow var(--transition-fast); 
+        outline: none; 
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { 
+        border-color: var(--primary); 
+        box-shadow: 0 0 0 3px rgba(30,58,138,0.08); 
+    }
+    .form-group input::placeholder { color: var(--on-surface-muted); opacity: 0.6; }
+    .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+
+    /* Footer */
+    .footer { 
+        border-top: 1px solid var(--outline-variant); 
+        background: var(--surface-1); 
+        padding: 4rem 0 2rem; 
+    }
+    .footer-top { 
+        display: grid; 
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr; 
+        gap: 2.5rem; 
+        margin-bottom: 2.5rem; 
+    }
+    .footer-col h4 { 
+        font-size: 0.8rem; 
+        font-weight: 700; 
+        text-transform: uppercase; 
+        letter-spacing: 0.08em; 
+        color: var(--on-surface); 
+        margin-bottom: 1.2rem; 
+    }
+    .footer-col a, .footer-col p { 
+        display: block; 
+        color: var(--on-surface-variant); 
+        font-size: 0.9rem; 
+        margin-bottom: 0.6rem; 
+        transition: color var(--transition-fast); 
+    }
+    .footer-col a:hover { color: var(--primary); }
+    .footer-bottom { 
+        border-top: 1px solid var(--outline-variant); 
+        padding-top: 2rem; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        flex-wrap: wrap; 
+        gap: 1rem; 
+    }
+    .footer-bottom p { 
+        font-size: 0.8rem; 
+        color: var(--on-surface-muted); 
+    }
+
+    /* WhatsApp */
+    .whatsapp { 
+        position: fixed; 
+        right: 1.5rem; 
+        bottom: 1.5rem; 
+        z-index: 60; 
+        display: grid; 
+        place-items: center; 
+        width: 56px; 
+        height: 56px; 
+        border-radius: 999px; 
+        background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%); 
+        box-shadow: var(--shadow-primary-lg); 
+        transition: transform var(--transition-base), box-shadow var(--transition-base); 
+        animation: floatIn 800ms cubic-bezier(0.22,1,0.36,1) 1.2s both; 
+    }
+    @keyframes floatIn { 
+        from { opacity: 0; transform: translateY(18px) scale(0.85); } 
+        to { opacity: 1; transform: translateY(0) scale(1); } 
+    }
+    .whatsapp:hover { 
+        transform: scale(1.08) rotate(-4deg); 
+        box-shadow: 0 14px 44px rgba(30,58,138,0.4); 
+    }
+    .whatsapp svg { width: 26px; height: 26px; fill: white; }
+
+    /* Reveal Animations */
+    .reveal { 
+        opacity: 0; 
+        transform: translateY(28px); 
+        transition: opacity 750ms cubic-bezier(0.22,1,0.36,1), transform 750ms cubic-bezier(0.22,1,0.36,1); 
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .slide-in-left { 
+        opacity: 0; 
+        transform: translateX(-36px); 
+        transition: opacity 800ms cubic-bezier(0.22,1,0.36,1), transform 800ms cubic-bezier(0.22,1,0.36,1); 
+    }
+    .slide-in-left.in-view { opacity: 1; transform: translateX(0); }
+
+    /* Glow Divider */
+    .glow-divider { 
+        width: min(var(--max), calc(100% - 48px)); 
+        height: 1px; 
+        margin: 0 auto; 
+        background: linear-gradient(90deg, transparent, rgba(30,58,138,0.12), transparent); 
+    }
+
+    /* Form Success */
+    .form-success { 
+        display: none; 
+        padding: 3rem; 
+        text-align: center; 
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); 
+        color: white; 
+        border-radius: var(--radius); 
+        box-shadow: var(--shadow-xl); 
+    }
+    .form-success.visible { display: block; animation: fadeInUp 500ms ease forwards; }
+    .form-success h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .form-success p { opacity: 0.9; font-size: 1rem; }
+
+    /* Responsive */
+    @media (prefers-reduced-motion: no-preference) {
+        .flow-card:nth-child(1) { transition-delay: 0ms; }
+        .flow-card:nth-child(2) { transition-delay: 90ms; }
+        .flow-card:nth-child(3) { transition-delay: 180ms; }
+        .steps .card:nth-child(1) { transition-delay: 0ms; }
+        .steps .card:nth-child(2) { transition-delay: 80ms; }
+        .steps .card:nth-child(3) { transition-delay: 160ms; }
+        .steps .card:nth-child(4) { transition-delay: 240ms; }
+    }
+
+    @media (max-width: 1120px) {
+        .nav-links a:not(.button) { display: none; }
+        .solutions { grid-template-columns: repeat(2, 1fr); }
+        .steps, .mini-grid, .trust-inner { grid-template-columns: repeat(2, 1fr); }
+        .pathway, .split-section { grid-template-columns: 1fr; gap: 2.5rem; }
+        .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .footer-top { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+        :root { --section: 5rem; --section-sm: 3.5rem; --nav-height: 68px; }
+        .wrap { width: min(100% - 32px, var(--max)); }
+        .nav-inner { height: var(--nav-height); gap: 10px; }
+        .wordmark { font-size: 0.9rem; }
+        .logo-mark { width: 30px; height: 30px; }
+        .nav-links { display: none; }
+        .mobile-toggle { display: grid; }
+        .hero { min-height: auto; padding-top: 7rem; padding-bottom: 4.5rem; text-align: center; }
+        .hero::before { background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.94)), url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80") center/cover; }
+        .hero-content { margin: 0 auto; width: 100%; padding: clamp(1.5rem, 5vw, 2.5rem); }
+        .hero-actions { justify-content: center; }
+        .hero-note { justify-content: center; }
+        .steps, .solutions, .mini-grid, .commit-grid { grid-template-columns: 1fr; }
+        .pathway { gap: 2rem; }
+        .contact-card { padding: 2rem; }
+        .form-grid { grid-template-columns: 1fr; }
+        .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+        .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 560px) {
+        h1 { font-size: clamp(2rem, 9vw, 2.6rem); line-height: 1.08; }
+        .wrap { width: min(100% - 22px, var(--max)); }
+        .nav-inner { height: 62px; }
+        .wordmark { font-size: 0.8rem; letter-spacing: 0; }
+        .logo-mark { width: 26px; height: 26px; }
+        .mobile-toggle { width: 38px; height: 38px; flex: 0 0 38px; }
+        .hero { padding-top: 6rem; }
+        .hero-content { padding: 1.2rem; }
+        .eyebrow { font-size: 0.62rem; }
+        .lead { margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+        .hero-actions { align-items: stretch; flex-direction: column; }
+        .hero-actions .button { width: 100%; justify-content: center; }
+        .hero-note { display: grid; justify-content: center; gap: 0.35rem; text-align: center; }
+        .hero-note span.sep { display: none; }
+        .card { padding: 1.4rem; }
+        .section-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+        .flow-card { grid-template-columns: 1fr; text-align: center; }
+        .flow-card span { margin: 0 auto; }
+        .section-kicker { font-size: 0.65rem; }
+        .trust-card { padding: 1.4rem 1rem; }
+        .trust-card .stat { font-size: 1.6rem; }
+        .contact-card { padding: 1.5rem; }
+        .footer { padding: 2.5rem 0 1.5rem; }
+        .whatsapp { width: 48px; height: 48px; right: 1rem; }
+        .whatsapp svg { width: 22px; height: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { 
+            animation-duration: 0.001ms !important; 
+            animation-iteration-count: 1 !important; 
+            scroll-behavior: auto !important; 
+            transition-duration: 0.001ms !important; 
+        }
+        .reveal, .slide-in-left, .hero-content { opacity: 1; transform: none; }
+    }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+        <a class="logo-lockup" href="#top" aria-label="Solar Connector home">
+            <svg class="logo-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#172554"/>
+                        <stop offset="52%" stop-color="#1e3a8a"/>
+                        <stop offset="100%" stop-color="#3b82f6"/>
+                    </linearGradient>
+                </defs>
+                <path d="M28 74 L50 26 L72 74" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+            </svg>
+            <div class="wordmark">
+                Solar Connector
+                <span>Connecting EPCs to Funding</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="#funding">Funding Models</a>
+            <a href="#process">Our Process</a>
+            <a href="#partners">Partners</a>
+            <a href="#about">About</a>
+            <a class="button" href="#contact">Fund Your Project</a>
+        </div>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="material-symbols-outlined" style="font-size:1.4rem;">menu</span>
+        </button>
+    </div>
+    <div id="mobile-menu" class="mobile-panel">
+        <a href="#funding">Funding Models</a>
+        <a href="#process">Our Process</a>
+        <a href="#partners">Partners</a>
+        <a href="#about">About</a>
+        <a class="button" href="#contact">Fund Your Project</a>
+    </div>
+</nav>
+
+<main id="top">
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Bespoke Capital for C&amp;I Solar</p>
+                <h1 class="slide-in-left">Connecting EPCs to <span>Bespoke Funding</span> for Commercial &amp; Industrial Solar</h1>
+                <p class="lead">We bridge the gap between proven EPCs and institutional capital. From Power Purchase Agreements to structured asset finance, we tailor funding solutions that de-risk projects and accelerate deployment across South Africa and beyond.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#contact">Fund Your Project</a>
+                    <a class="button secondary" href="#funding">Explore Funding Models</a>
                 </div>
-                <div class="flex items-center gap-2">
-                    <a href="#audit" class="bg-black text-white px-4 py-2.5 rounded-xl text-sm font-extrabold hover:bg-gray-900 border-2 border-black transition touch-target">⚡ FREE ASSESSMENT</a>
-                    <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 border-2 border-black rounded-xl bg-white flex items-center justify-center">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    </button>
+                <div class="hero-note">
+                    <span>PPA Structuring</span>
+                    <span class="sep">&bull;</span>
+                    <span>Asset Finance</span>
+                    <span class="sep">&bull;</span>
+                    <span>EPC Compliance</span>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true" style="position:relative;z-index:2;">
+                <div style="position:relative;width:100%;max-width:480px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xl);border:1px solid var(--outline-variant);margin-left:auto;">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Commercial solar installation" style="width:100%;height:360px;object-fit:cover;display:block;">
+                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,40,0.05) 0%,rgba(10,22,40,0.25) 100%);"></div>
+                    <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+                        <div style="background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);padding:16px 20px;border-radius:var(--radius-sm);border:1px solid rgba(30,58,138,0.08);">
+                            <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.9rem;color:var(--primary);margin-bottom:4px;">Project: 2.4 MW C&amp;I Rooftop</div>
+                            <div style="font-size:0.8rem;color:var(--on-surface-variant);">Funded via structured PPA &mdash; operational in 90 days</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Mobile Menu Drawer -->
-    <div id="mobileMenuOverlay" class="fixed inset-0 z-40 hidden lg:hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="closeMobileBg"></div>
-        <div class="absolute top-0 right-0 w-11/12 max-w-sm h-full bg-white shadow-2xl border-l-2 border-black p-6 flex flex-col">
-            <div class="flex justify-between items-center mb-8"><span class="text-2xl font-black">Menu</span><button id="closeMobileMenuBtn" class="w-10 h-10 border-2 border-black rounded-lg text-xl">✕</button></div>
-            <div class="space-y-4 flex-1"><a href="#solutions" class="mobile-nav-link block py-3 px-4 border-2 border-black rounded-xl font-bold text-center">⚡ Solutions</a><a href="#guarantee" class="mobile-nav-link block py-3 px-4 border-2 border-black rounded-xl font-bold text-center">🔒 Guarantee</a><a href="#areas" class="mobile-nav-link block py-3 px-4 border-2 border-black rounded-xl font-bold text-center">📍 Service Areas</a><a href="#warranty" class="mobile-nav-link block py-3 px-4 border-2 border-black rounded-xl font-bold text-center">🛡️ Warranty</a><a href="#partnership" class="mobile-nav-link block py-3 px-4 border-2 border-black rounded-xl font-bold text-center">🤝 Partners</a></div>
-            <div class="pt-6 mt-6 border-t-2 border-black"><a href="#audit" class="mobile-nav-link block w-full py-3 bg-black text-white rounded-xl font-black text-center">📊 FREE ASSESSMENT</a></div>
+    <div class="trust-bar">
+        <div class="wrap trust-inner reveal">
+            <div class="trust-card">
+                <div class="stat">R2B+</div>
+                <div class="stat-label">Funding Pipeline</div>
+            </div>
+            <div class="trust-card">
+                <div class="stat">50+</div>
+                <div class="stat-label">EPC Partners</div>
+            </div>
+            <div class="trust-card">
+                <div class="stat">90 Days</div>
+                <div class="stat-label">Avg. Deployment</div>
+            </div>
+            <div class="trust-card">
+                <div class="stat">25yr</div>
+                <div class="stat-label">Warranty Backing</div>
+            </div>
         </div>
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="pt-24 md:pt-32 pb-12 md:pb-20 bg-white border-b-2 border-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-5xl mx-auto text-center md:text-left">
-                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full guarantee-badge mb-6 mx-auto md:mx-0"><span class="w-2 h-2 rounded-full bg-black animate-ping"></span><span class="text-xs md:text-sm font-black uppercase tracking-wide">80% ELECTRICITY BILL REDUCTION GUARANTEED</span></div>
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight">Solar Solutions <span class="text-solar-orange">For Homes, Business & Community Schemes</span></h1>
-                    <p class="text-lg md:text-2xl text-gray-800 mb-8 leading-relaxed">Guaranteed 80% electricity savings within 30 days. Custom installations, PPA, BESS, financing & full EPC compliance backed by 25-year warranty.</p>
-                    
-                    <!-- Benefit stats grid -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
-                        <div class="benefit-card text-center"><div class="text-4xl font-black text-solar-orange">80%+</div><div class="font-bold">Bill Reduction</div><div class="text-xs text-gray-600">Guaranteed min savings</div></div>
-                        <div class="benefit-card text-center"><div class="text-4xl font-black text-solar-orange">R0</div><div class="font-bold">Upfront Options</div><div class="text-xs text-gray-600">PPA – zero capital outlay</div></div>
-                        <div class="benefit-card text-center"><div class="text-4xl font-black text-solar-orange">30</div><div class="font-bold">Days</div><div class="text-xs text-gray-600">To achieve savings</div></div>
-                        <div class="benefit-card text-center"><div class="text-4xl font-black text-solar-orange">25</div><div class="font-bold">Year Warranty</div><div class="text-xs text-gray-600">Performance guaranteed</div></div>
-                    </div>
+    <section class="light-section" id="process">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <p class="section-kicker">How We Work</p>
+                <h2 class="section-title">From EPC Briefing to Funded Project</h2>
+                <p class="section-copy">A streamlined, transparent process designed to move qualified commercial and industrial solar projects from concept to capital deployment with institutional rigour.</p>
+            </div>
+            <div class="grid steps">
+                <article class="card step-card reveal">
+                    <div class="number">1</div>
+                    <span class="icon-box"><span class="material-symbols-outlined">assignment</span></span>
+                    <h3>Project Assessment</h3>
+                    <p>We review your EPC proposal, site data, and offtake agreements. Our team validates technical feasibility and commercial viability against funding criteria.</p>
+                </article>
+                <article class="card step-card reveal">
+                    <div class="number">2</div>
+                    <span class="icon-box"><span class="material-symbols-outlined">account_balance</span></span>
+                    <h3>Funding Structuring</h3>
+                    <p>We match your project to the optimal capital stack — PPA, asset finance, or blended structures — negotiating terms that protect all stakeholders.</p>
+                </article>
+                <article class="card step-card reveal">
+                    <div class="number">3</div>
+                    <span class="icon-box"><span class="material-symbols-outlined">verified</span></span>
+                    <h3>Due Diligence</h3>
+                    <p>Institutional-grade legal, technical, and financial review. We coordinate EPC compliance, NERSA approvals, and grid connection agreements.</p>
+                </article>
+                <article class="card step-card reveal">
+                    <div class="number">4</div>
+                    <span class="icon-box"><span class="material-symbols-outlined">payments</span></span>
+                    <h3>Capital Deployment</h3>
+                    <p>Funds are released in tranches aligned to construction milestones. Your EPC maintains cash flow while the offtaker benefits from immediate savings.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Slideshow (fully responsive) -->
-                    <div class="slideshow-container mb-10 shadow-xl">
-                        <div class="slide active" style="background-image: url('https://images.pexels.com/photos/147393/pexels-photo-147393.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide" style="background-image: url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-159397.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide" style="background-image: url('https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide" style="background-image: url('https://images.pexels.com/photos/11063093/pexels-photo-11063093.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide" style="background-image: url('https://images.pexels.com/photos/209791/pexels-photo-209791.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide" style="background-image: url('https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-                        <div class="slide-dots" id="slideDots"></div>
+    <section class="contrast-band" id="funding">
+        <div class="wrap pathway">
+            <div class="section-head reveal">
+                <p class="section-kicker">Capital Solutions</p>
+                <h2 class="section-title">Funding Models Engineered for C&amp;I Solar</h2>
+                <p class="section-copy">Every commercial and industrial project has unique capital requirements. We structure bespoke funding that aligns with your offtake profile, EPC timeline, and risk appetite.</p>
+            </div>
+            <div class="pathway-flow">
+                <article class="flow-card reveal">
+                    <span>01</span>
+                    <div>
+                        <h3>Power Purchase Agreement (PPA)</h3>
+                        <p>Zero-Capex model for offtakers. We structure long-term electricity contracts where the funder owns the asset and sells power at a discount to grid tariffs. EPCs get paid upfront.</p>
                     </div>
-                    
-                    <div class="text-center"><a href="#audit" class="inline-flex items-center gap-3 solar-gradient text-black px-8 py-4 rounded-xl font-black text-lg hover:scale-105 transition border-2 border-black shadow-md">📊 GET FREE SAVINGS ASSESSMENT →</a><p class="text-gray-700 mt-4 text-sm">See exactly how much you can save • No obligation • 100% Free</p></div>
+                </article>
+                <article class="flow-card reveal">
+                    <span>02</span>
+                    <div>
+                        <h3>Asset Finance &amp; Term Lending</h3>
+                        <p>Traditional asset-backed lending for property owners who wish to own their systems. Competitive rates, flexible tenors up to 15 years, and full EPC milestone-based drawdowns.</p>
+                    </div>
+                </article>
+                <article class="flow-card reveal">
+                    <span>03</span>
+                    <div>
+                        <h3>Blended &amp; Structured Capital</h3>
+                        <p>Complex projects requiring layered capital — senior debt, mezzanine, and equity. Ideal for shopping malls, industrial parks, and multi-site community schemes.</p>
+                    </div>
+                </article>
+                <article class="flow-card reveal">
+                    <span>04</span>
+                    <div>
+                        <h3>EPC Working Capital Facilities</h3>
+                        <p>Short-term liquidity for EPCs to procure panels, inverters, and balance of system components while awaiting milestone payments or grid connection.</p>
+                    </div>
+                </article>
+                <article class="flow-card reveal">
+                    <span>05</span>
+                    <div>
+                        <h3>Green Bond &amp; ESG-Linked Finance</h3>
+                        <p>Access to institutional green capital pools and sustainability-linked pricing. Lower cost of capital for projects with verified carbon reduction metrics.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <p class="section-kicker">Why Solar Connector</p>
+                <h2 class="section-title">The EPC Funding Partner</h2>
+                <p class="section-copy">We do not install panels. We do not sell inverters. We exist solely to connect proven EPCs with the right capital, structured the right way, so that more commercial and industrial solar gets built.</p>
+            </div>
+            <div class="split-section">
+                <div class="reveal">
+                    <div style="position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--outline-variant);">
+                        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1200&q=80" alt="Solar engineering team" style="width:100%;height:400px;object-fit:cover;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,22,40,0.6) 100%);"></div>
+                        <div style="position:absolute;bottom:24px;left:24px;right:24px;">
+                            <div style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;margin-bottom:4px;">In Partnership With</div>
+                            <div style="color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;">Urban Holdings Solar &amp; Jaltech Financial Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="commit-grid reveal">
+                    <div class="commit-card">
+                        <h4>Deep EPC Understanding</h4>
+                        <p>We speak the language of construction timelines, grid connection queues, and balance-of-system procurement. Our structuring reflects real-world EPC cash flow cycles.</p>
+                    </div>
+                    <div class="commit-card">
+                        <h4>Institutional-Grade Compliance</h4>
+                        <p>Every funding package includes full EPC compliance, NERSA registration, municipal approvals, and grid connection agreements as standard.</p>
+                    </div>
+                    <div class="commit-card">
+                        <h4>Offtaker Credit Assessment</h4>
+                        <p>We conduct independent credit analysis on your offtaker — whether a shopping mall, factory, or body corporate — to ensure bankable revenue streams.</p>
+                    </div>
+                    <div class="commit-card">
+                        <h4>Transparent Fee Structure</h4>
+                        <p>No hidden costs. Our success fee is disclosed upfront and only payable on capital deployment. EPCs retain full control of their project margins.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Solutions Section (Tailored) -->
-        <section id="solutions" class="py-16 bg-gray-50 border-b-2 border-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12"><h2 class="text-3xl md:text-5xl font-black mb-4">Tailored Solar for Every Need</h2><p class="text-xl text-gray-600">Custom, PPA, BESS, financing & full EPC compliance – all with our 80% savings guarantee.</p></div>
-                
-                <!-- Residential -->
-                <div class="mb-16"><h3 class="text-2xl md:text-3xl font-black mb-6 text-center">🏠 Residential (Gauteng)</h3><div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"><div class="solution-card card-hover"><div class="flex items-center gap-3 mb-4"><div class="w-12 h-12 rounded-full bg-black flex items-center justify-center"><span class="text-white text-xl">🏡</span></div><h4 class="text-2xl font-black">Custom Solar</h4></div><ul class="space-y-2 mb-4"><li>✓ Full ownership, tailored design</li><li>✓ Property value increase</li><li>✓ 25-year performance warranty</li></ul><p class="text-sm text-gray-600">Ideal for homeowners seeking long-term ownership & ROI.</p></div><div class="solution-card featured card-hover"><div class="flex items-center gap-3 mb-4"><div class="w-12 h-12 rounded-full solar-gradient flex items-center justify-center"><span class="text-black text-xl">⚡</span></div><h4 class="text-2xl font-black">Power Purchase Agreement</h4></div><ul class="space-y-2 mb-4"><li>✓ Zero upfront cost – fully funded</li><li>✓ Pay lower tariff than municipal rates</li><li>✓ Maintenance & monitoring included</li></ul><p class="text-sm text-gray-600">Immediate savings without capital outlay.</p></div></div></div>
+    <div class="glow-divider"></div>
 
-                <!-- Commercial & Industrial + Malls -->
-                <div class="mb-16"><h3 class="text-2xl md:text-3xl font-black mb-6 text-center">🏭 Commercial, Shopping Malls & Complexes</h3><div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"><div class="solution-card text-center"><div class="text-3xl mb-2">🏢</div><h4 class="font-black text-lg">Custom C&I</h4><p class="text-sm">Engineered for malls, offices, warehouses. Max ROI.</p></div><div class="solution-card text-center"><div class="text-3xl mb-2">📄</div><h4 class="font-black text-lg">PPA for Business</h4><p class="text-sm">No capital, fixed rate, maintenance included.</p></div><div class="solution-card text-center"><div class="text-3xl mb-2">🔋</div><h4 class="font-black text-lg">BESS</h4><p class="text-sm">Battery storage for loadshedding protection & arbitrage.</p></div><div class="solution-card text-center"><div class="text-3xl mb-2">💰</div><h4 class="font-black text-lg">Energy Finance</h4><p class="text-sm">Asset/project finance for large properties.</p></div><div class="solution-card text-center"><div class="text-3xl mb-2">✅</div><h4 class="font-black text-lg">EPC Compliance</h4><p class="text-sm">Engineering, municipal approvals, NERSA, COCs.</p></div></div></div>
-
-                <!-- Community Schemes -->
-                <div><h3 class="text-2xl md:text-3xl font-black mb-6 text-center">🏘️ Community Schemes (Sectional Title / HOA)</h3><div class="grid md:grid-cols-3 gap-6"><div class="solution-card featured"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full solar-gradient flex items-center justify-center"><span class="text-black">🤝</span></div><h4 class="text-xl font-black">PPA for Schemes</h4></div><p class="text-sm">Fully funded by partners – zero scheme Capex. Lower tariff than council, full maintenance & real-time monitoring. Optional carport structures.</p><div class="mt-3 text-xs font-bold text-solar-orange">⭐ In partnership with Urban Holdings Solar</div></div><div class="solution-card"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-black flex items-center justify-center"><span class="text-white">🔋</span></div><h4 class="text-xl font-black">Battery Backup</h4></div><p class="text-sm">Add energy security + additional savings.</p></div><div class="solution-card"><div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 rounded-full bg-black flex items-center justify-center"><span class="text-white">🏘️</span></div><h4 class="text-xl font-black">Custom Installation</h4></div><p class="text-sm">Ownership option for schemes preferring full system control.</p></div></div></div>
-
-                <div class="mt-12 bg-black text-white p-6 rounded-2xl border-2 border-solar-yellow"><h3 class="text-2xl font-black text-center mb-6">✓ All Solutions Include</h3><div class="grid grid-cols-2 md:grid-cols-4 gap-5 text-center"><div><div class="text-3xl">⚡</div><div class="font-semibold">80% Savings Guarantee</div></div><div><div class="text-3xl">🔧</div><div class="font-semibold">Pro Installation</div></div><div><div class="text-3xl">🛡️</div><div class="font-semibold">Loadshedding Protection</div></div><div><div class="text-3xl">📱</div><div class="font-semibold">Real-time Monitoring</div></div></div></div>
+    <section class="light-section" id="partners">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <p class="section-kicker">Ecosystem</p>
+                <h2 class="section-title">Our Funding &amp; EPC Network</h2>
+                <p class="section-copy">We maintain active partnerships with regulated funders, verified EPCs, and technical consultants to ensure every project has the right expertise and capital behind it.</p>
             </div>
-        </section>
-
-        <!-- Guarantee Spotlight -->
-        <section id="guarantee" class="py-16 bg-white border-b-2 border-black">
-            <div class="max-w-5xl mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-5xl font-black mb-5">80% Electricity Bill Reduction Guarantee</h2>
-                <p class="text-xl text-gray-700 mb-8">We guarantee at least 80% savings within your first 30 days of operation. Written performance assurance.</p>
-                <div class="solar-gradient p-8 rounded-2xl border-2 border-black mb-12"><div class="text-7xl font-black text-black">80%</div><h3 class="text-2xl font-black mt-2">Minimum Savings Guaranteed</h3><p class="text-black/80">Achieved within 30 days – verified on your municipal bill.</p></div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6"><div><div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-3 text-xl font-black">1</div><h4 class="font-bold">Free Audit</h4><p class="text-sm">Analyze your consumption</p></div><div><div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-3 text-xl font-black">2</div><h4 class="font-bold">Installation</h4><p class="text-sm">Professional setup</p></div><div><div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-3 text-xl font-black">3</div><h4 class="font-bold">30 Days</h4><p class="text-sm">Performance tracking</p></div><div><div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-3 text-xl font-black">4</div><h4 class="font-bold">Verification</h4><p class="text-sm">Savings on your bill</p></div></div>
+            <div class="grid solutions">
+                <article class="card solution-card reveal">
+                    <span class="icon-box"><span class="material-symbols-outlined">corporate_fare</span></span>
+                    <h3>Institutional Funders</h3>
+                    <p>Direct relationships with development finance institutions, private credit funds, and green bond issuers active in the African renewable energy sector.</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">check</span>Jaltech Financial Solutions</li>
+                        <li><span class="material-symbols-outlined">check</span>Specialised renewable credit funds</li>
+                        <li><span class="material-symbols-outlined">check</span>Green bond &amp; ESG capital pools</li>
+                    </ul>
+                </article>
+                <article class="card solution-card reveal">
+                    <span class="icon-box"><span class="material-symbols-outlined">engineering</span></span>
+                    <h3>Verified EPC Network</h3>
+                    <p>We work exclusively with EPCs that have demonstrable track records, SAPVIA membership, and proven commissioning history on C&amp;I projects.</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">check</span>Urban Holdings Solar</li>
+                        <li><span class="material-symbols-outlined">check</span>SAPVIA-accredited partners</li>
+                        <li><span class="material-symbols-outlined">check</span>500+ successful installations</li>
+                    </ul>
+                </article>
+                <article class="card solution-card reveal">
+                    <span class="icon-box"><span class="material-symbols-outlined">gavel</span></span>
+                    <h3>Technical &amp; Legal Partners</h3>
+                    <p>Independent engineering consultants, insurance underwriters, and energy law specialists who de-risk projects before capital is committed.</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">check</span>Independent technical review</li>
+                        <li><span class="material-symbols-outlined">check</span>Performance insurance &amp; warranties</li>
+                        <li><span class="material-symbols-outlined">check</span>Energy-specialist legal counsel</li>
+                    </ul>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Service Areas -->
-        <section id="areas" class="py-16 bg-gray-50 border-b-2 border-black">
-            <div class="max-w-7xl mx-auto px-4 text-center"><h2 class="text-3xl md:text-5xl font-black mb-6">Service Areas</h2><div class="grid md:grid-cols-2 gap-8 mt-6"><div class="bg-white p-6 rounded-xl border-2 border-black"><h3 class="text-2xl font-bold mb-3">🏡 Residential</h3><p class="mb-3 font-semibold">Gauteng only:</p><div class="flex flex-wrap gap-2 justify-center"><span class="bg-solar-yellow px-4 py-1.5 rounded-full text-sm font-bold">Pretoria</span><span class="bg-solar-orange px-4 py-1.5 rounded-full text-sm font-bold">Centurion</span><span class="bg-solar-yellow px-4 py-1.5 rounded-full">Midrand</span><span class="bg-solar-orange px-4 py-1.5 rounded-full">Fourways</span><span class="bg-solar-yellow px-4 py-1.5 rounded-full">Sandton</span><span class="bg-solar-orange px-4 py-1.5 rounded-full">JHB</span><span class="bg-solar-yellow px-4 py-1.5 rounded-full">Randburg</span><span class="bg-solar-orange px-4 py-1.5 rounded-full">Roodepoort</span></div></div><div class="bg-white p-6 rounded-xl border-2 border-black"><h3 class="text-2xl font-bold mb-3">🏢 Commercial & Community</h3><p class="mb-3">Nationwide coverage for malls, complexes, schemes:</p><div class="flex flex-wrap gap-2 justify-center"><span class="bg-solar-yellow px-3 py-1 rounded-full">Gauteng</span><span class="bg-solar-orange px-3 py-1 rounded-full">Western Cape</span><span class="bg-solar-yellow px-3 py-1 rounded-full">KZN</span><span class="bg-solar-orange px-3 py-1 rounded-full">Eastern Cape</span><span class="bg-solar-yellow px-3 py-1 rounded-full">Free State</span><span class="bg-solar-orange px-3 py-1 rounded-full">Mpumalanga</span><span class="bg-solar-yellow px-3 py-1 rounded-full">Limpopo</span><span class="bg-solar-orange px-3 py-1 rounded-full">North West</span></div></div></div></div>
-        </section>
+    <section id="contact">
+        <div class="wrap">
+            <article class="card contact-card reveal">
+                <p class="section-kicker">Start the Conversation</p>
+                <h2 class="section-title">Submit Your Project for Funding Review</h2>
+                <p class="section-copy">Tell us about your commercial or industrial solar project. Our team will assess funding eligibility, structure options, and revert within 48 hours with preliminary terms.</p>
 
-        <!-- 25-Year Warranty -->
-        <section id="warranty" class="py-16 bg-white border-b-2 border-black">
-            <div class="max-w-6xl mx-auto px-4"><h2 class="text-3xl md:text-5xl font-black text-center mb-8">25-Year Performance Warranties</h2><div class="grid md:grid-cols-2 gap-8 mb-10"><div class="warranty-dark p-8"><div class="text-5xl font-black text-solar-yellow">25</div><h3 class="text-2xl font-bold mt-2">Year Performance Warranty</h3><ul class="mt-4 space-y-2"><li>✓ Panel output ≥80% after 25 years</li><li>✓ Product & workmanship coverage</li></ul></div><div class="warranty-dark p-8"><div class="text-5xl font-black text-solar-yellow">10+</div><h3 class="text-2xl font-bold mt-2">Year Inverter Warranty</h3><ul class="mt-4 space-y-2"><li>✓ Extended inverter protection</li><li>✓ Battery & monitoring included</li></ul></div></div><div class="bg-gray-100 p-6 rounded-2xl border-2 border-black text-center"><h3 class="text-2xl font-black mb-2">Peace of Mind for Decades</h3><p>Long-term performance assurance protects your investment and property value.</p></div></div>
-        </section>
+                <div id="formSuccess" class="form-success">
+                    <span class="material-symbols-outlined" style="font-size:3rem;color:white;margin-bottom:1rem;">check_circle</span>
+                    <h3>Project Submitted</h3>
+                    <p>Our funding team will review your submission and contact you within 48 hours with preliminary structuring options.</p>
+                </div>
 
-        <!-- Partnership & Urban Holdings -->
-        <section id="partnership" class="py-16 bg-gray-50 border-b-2 border-black">
-            <div class="max-w-7xl mx-auto px-4"><div class="text-center mb-10"><h2 class="text-3xl md:text-5xl font-black mb-4">Proud Partners in Solar Excellence</h2><p class="text-xl text-gray-600">Delivering innovative, fully funded solar solutions for all property types.</p></div><div class="bg-white p-6 md:p-8 rounded-2xl border-2 border-black mb-12"><h3 class="text-2xl font-bold mb-3">Urban Holdings Solar & Jaltech</h3><p class="text-gray-700 mb-4">Urban Holdings Solar is committed to transforming the energy landscape with innovative solar solutions for residential, commercial, and community schemes. Through strong partnerships with trusted funders like <span class="font-bold">Jaltech Financial Solutions</span> and world-leading suppliers, they deliver high-quality systems at competitive prices. With over 500 successful installations, their holistic approach ensures cost-effective, reliable energy independence.</p><p class="text-gray-700">Their fully funded PPA model offers zero upfront cost, lower energy tariffs than Eskom, and includes full maintenance and real-time monitoring – making solar accessible for community schemes, shopping malls, and business complexes nationwide.</p></div><div class="grid sm:grid-cols-3 gap-6 text-center"><div class="border-2 border-black rounded-xl p-5 bg-white"><div class="text-4xl mb-2">🏆</div><h4 class="font-black text-xl">500+</h4><p>Successful installations</p></div><div class="border-2 border-black rounded-xl p-5 bg-white"><div class="text-4xl mb-2">🤝</div><h4 class="font-black text-xl">Jaltech Partnership</h4><p>Fully funded PPA solutions</p></div><div class="border-2 border-black rounded-xl p-5 bg-white"><div class="text-4xl mb-2">📉</div><h4 class="font-black text-xl">Up to 80% Savings</h4><p>Guaranteed reduction</p></div></div></div>
-        </section>
+                <form id="projectForm" action="https://formspree.io/f/mrezgkvv" method="POST" class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company / EPC Name *</label>
+                        <input type="text" id="company" name="company" required placeholder="Registered company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@company.co.za">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+27 XX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="project_type">Project Type *</label>
+                        <select id="project_type" name="project_type" required>
+                            <option value="">Select project type</option>
+                            <option value="ppa">Power Purchase Agreement (PPA)</option>
+                            <option value="asset">Asset Finance / Term Loan</option>
+                            <option value="blended">Blended / Structured Capital</option>
+                            <option value="working">EPC Working Capital</option>
+                            <option value="green">Green Bond / ESG Finance</option>
+                            <option value="unsure">Unsure — advise me</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="capacity">Project Capacity (kWp) *</label>
+                        <select id="capacity" name="capacity" required>
+                            <option value="">Select capacity range</option>
+                            <option value="100-500">100 kWp – 500 kWp</option>
+                            <option value="500-1000">500 kWp – 1 MWp</option>
+                            <option value="1000-5000">1 MWp – 5 MWp</option>
+                            <option value="5000+">5 MWp+</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" name="details" rows="3" placeholder="Brief description: site location, offtaker type, current grid connection status, EPC experience..."></textarea>
+                    </div>
+                    <div class="form-group full" style="text-align:center;margin-top:0.5rem;">
+                        <input type="hidden" name="_subject" value="New Solar Project Funding Request - Solar Connector">
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button type="submit" class="button" style="min-height:52px;padding:0 2.5rem;font-size:0.95rem;">
+                            <span class="material-symbols-outlined" style="color:white;font-size:1.1rem;">send</span>
+                            Submit for Funding Review
+                        </button>
+                        <p style="font-size:0.8rem;color:var(--on-surface-muted);margin-top:0.75rem;">No obligation. Response within 48 hours. All submissions are treated as strictly confidential.</p>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </section>
+</main>
 
-        <!-- Free Assessment Form -->
-        <section id="audit" class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4"><div class="text-center mb-10"><h2 class="text-3xl md:text-5xl font-black mb-4">Get Your Free Savings Assessment</h2><p class="text-xl text-gray-600">Discover your guaranteed 80% electricity reduction potential.</p></div><div id="formSuccessMsg" class="hidden form-success-card p-6 mb-6 text-center"><div class="text-4xl">🎉</div><h3 class="text-2xl font-black">Thank You!</h3><p>We'll contact you within 24 hours with your personalized savings estimate.</p></div><div id="formContainer" class="bg-white p-6 md:p-8 rounded-2xl border-2 border-black shadow-lg"><form id="solarForm" action="https://formspree.io/f/mrezgkvv" method="POST" class="space-y-5"><div class="grid md:grid-cols-2 gap-4"><div><label class="block font-black mb-1">Full Name *</label><input type="text" name="name" required class="w-full p-3 border-2 border-black rounded-lg"></div><div><label class="block font-black mb-1">Phone *</label><input type="tel" name="phone" required class="w-full p-3 border-2 border-black rounded-lg"></div></div><div><label class="block font-black mb-1">Email *</label><input type="email" name="email" required class="w-full p-3 border-2 border-black rounded-lg"></div><div><label class="block font-black mb-1">Property / Organisation Type *</label><select name="customer_type" required class="w-full p-3 border-2 border-black rounded-lg"><option value="">Select</option><option>Residential Homeowner</option><option>Commercial Business (incl. Shopping Mall/Complex)</option><option>Community Scheme (Body Corporate/HOA)</option></select></div><div><label class="block font-black mb-1">Area (Suburb/City/Province) *</label><input type="text" name="area" placeholder="e.g., Sandton, Gauteng" required class="w-full p-3 border-2 border-black rounded-lg"></div><div><label class="block font-black mb-1">Average Monthly Electricity Bill (R) *</label><select name="bill_amount" required class="w-full p-3 border-2 border-black rounded-lg"><option value="">Select</option><option>R2,000 - R3,000</option><option>R3,000 - R4,000</option><option>R4,000 - R5,000</option><option>R5,000 - R7,000</option><option>R7,000 - R10,000</option><option>R10,000 - R20,000</option><option>R20,000+</option></select></div><div><label class="block font-black mb-1">Preferred Solution (optional)</label><select name="preferred_solution"><option value="">Not sure yet</option><option>Custom Solar Installation</option><option>Power Purchase Agreement (PPA)</option><option>Battery Energy Storage (BESS)</option><option>Energy Finance</option><option>EPC Compliance</option></select></div><input type="hidden" name="_subject" value="New Solar Assessment - Solar Connector"><input type="text" name="_gotcha" style="display:none"><button type="submit" class="w-full solar-gradient text-black py-4 rounded-xl font-black text-lg border-2 border-black transition-all">📊 GET FREE ASSESSMENT</button><p class="text-center text-gray-500 text-sm">No obligation • 100% Free • Response within 24h</p></form></div></div>
-        </section>
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-col">
+                <a class="logo-lockup" href="#top" aria-label="Solar Connector home" style="margin-bottom:1rem;">
+                    <svg class="logo-mark" width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                        <path d="M28 74 L50 26 L72 74" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="wordmark" style="font-size:0.95rem;">Solar Connector</span>
+                </a>
+                <p style="font-size:0.85rem;color:var(--on-surface-variant);line-height:1.6;">Connecting proven EPCs to bespoke funding for commercial and industrial solar projects across South Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Funding</h4>
+                <a href="#funding">PPA Structuring</a>
+                <a href="#funding">Asset Finance</a>
+                <a href="#funding">Blended Capital</a>
+                <a href="#funding">Working Capital</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#process">Our Process</a>
+                <a href="#partners">Partners</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>+27 76 647 3499</p>
+                <p>victor@maribamedia.co.za</p>
+                <p style="margin-top:1rem;font-size:0.8rem;color:var(--on-surface-muted);">In partnership with Urban Holdings Solar &amp; Jaltech Financial Solutions</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Solar Connector. All rights reserved.</p>
+            <p>SAPVIA Member &bull; POPIA Compliant</p>
+        </div>
+    </div>
+</footer>
 
-        <!-- Final CTA -->
-        <section class="py-12 md:py-16 bg-white border-t-2 border-black"><div class="max-w-5xl mx-auto px-4 text-center"><h2 class="text-3xl md:text-5xl font-black mb-5">Start Saving 80% on Your Electricity Bill Within 30 Days</h2><div class="flex flex-wrap justify-center gap-4 mb-8"><span class="benefit-card text-sm font-bold">⚡ Guaranteed Savings</span><span class="benefit-card text-sm font-bold">🏠🏭🏘️ All Sectors</span><span class="benefit-card text-sm font-bold">🛡️ 25-Year Warranty</span></div><a href="#audit" class="inline-flex solar-gradient text-black px-10 py-4 rounded-xl font-black text-xl border-2 border-black shadow-md hover:scale-105 transition">📊 GET FREE ASSESSMENT NOW →</a></div></section>
-    </main>
+<a class="whatsapp" href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20have%20a%20C%26I%20solar%20project%20for%20funding%20review." target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.062c-3.411 0-6.188 2.777-6.188 6.189 0 1.21.377 2.336 1.019 3.273l-.656 2.393 2.45-.64c.905.515 1.95.815 3.064.815 3.411 0 6.188-2.777 6.188-6.189 0-3.412-2.777-6.189-6.188-6.189zM15.523 14.854c-.216.608-1.246 1.107-1.712 1.147-.466.04-1.045.205-3.045-.63-2.001-.837-3.214-2.883-3.314-3.018-.1-.135-.853-1.134-.853-2.162 0-1.028.535-1.534.724-1.737.189-.203.411-.253.548-.253.136 0 .273 0 .393.006.126.006.297-.047.466.36.17.406.58 1.414.631 1.516.051.101.085.22.017.356-.068.135-.102.22-.203.339-.101.118-.213.265-.304.356-.101.101-.203.21-.085.412.119.202.527.871 1.131 1.408.777.691 1.43.906 1.633 1.008.203.101.321.085.44-.051.118-.135.514-.601.65-.806.135-.203.271-.169.456-.101.186.068 1.177.555 1.38.657.203.101.339.152.389.237.05.084.05.49-.166 1.098z"/></svg>
+</a>
 
-    <footer class="bg-black text-white py-12"><div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8"><div><div class="text-2xl font-black text-solar-yellow">Solar Connector</div><p class="text-gray-300 text-sm mt-2">Residential, Commercial & Community solar with 80% savings guarantee.</p></div><div><h4 class="font-bold mb-3">Quick Links</h4><div class="space-y-1"><a href="#solutions" class="hover:text-solar-yellow block text-sm">Solutions</a><a href="#guarantee" class="hover:text-solar-yellow block text-sm">Guarantee</a><a href="#areas" class="hover:text-solar-yellow block text-sm">Service Areas</a><a href="#warranty" class="hover:text-solar-yellow block text-sm">Warranty</a></div></div><div><h4 class="font-bold mb-3">Solutions</h4><div class="space-y-1 text-sm"><div>Custom Solar</div><div>PPA</div><div>BESS & Financing</div><div>EPC Compliance</div></div></div><div><h4 class="font-bold mb-3">Contact</h4><p class="text-sm">📞 +27 76 647 3499</p><p class="text-sm">✉️ victor@maribamedia.co.za</p><a href="#audit" class="inline-block mt-3 bg-solar-yellow text-black px-4 py-2 rounded-lg font-bold text-sm">FREE ASSESSMENT</a></div></div><div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs text-white/50">© 2026 Solar Connector | 80% Electricity Savings Guaranteed | In partnership with Urban Holdings Solar & Jaltech Financial Solutions | SAPVIA member</div></footer>
+<script>
+(function(){
+    // Mobile menu
+    var toggle = document.querySelector(".mobile-toggle");
+    var panel = document.getElementById("mobile-menu");
+    if(toggle && panel){
+        toggle.addEventListener("click", function(){
+            var open = panel.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(open));
+            var icon = toggle.querySelector(".material-symbols-outlined");
+            if(icon) icon.textContent = open ? "close" : "menu";
+        });
+        panel.querySelectorAll("a").forEach(function(link){
+            link.addEventListener("click", function(){
+                panel.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
+                var icon = toggle.querySelector(".material-symbols-outlined");
+                if(icon) icon.textContent = "menu";
+            });
+        });
+    }
 
-    <!-- WhatsApp Widget -->
-    <div class="whatsapp-float"><div class="wa-pulse"></div><a href="https://wa.me/27766473499?text=Hi%20Solar%20Connector!%20I'm%20interested%20in%20the%2080%25%20savings%20guarantee." target="_blank" class="wa-button" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 448 512" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a></div>
+    // Scroll reveal
+    var revealItems = document.querySelectorAll(".reveal, .slide-in-left");
+    if("IntersectionObserver" in window){
+        var revealObserver = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if(entry.isIntersecting){
+                    entry.target.classList.add("in-view");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.1, rootMargin: "0px 0px -40px 0px"});
+        revealItems.forEach(function(item){ revealObserver.observe(item); });
+    } else {
+        revealItems.forEach(function(item){ item.classList.add("in-view"); });
+    }
 
-    <script>
-        // ----- SLIDESHOW LOGIC -----
-        let slides = document.querySelectorAll('.slide');
-        let dotsContainer = document.getElementById('slideDots');
-        let slideIndex = 0, slideInterval;
-        function buildDots() { if(!dotsContainer) return; dotsContainer.innerHTML = ''; slides.forEach((_, i) => { let dot = document.createElement('div'); dot.classList.add('slide-dot'); if(i===0) dot.classList.add('active'); dot.addEventListener('click', () => { clearInterval(slideInterval); showSlide(i); startAutoSlide(); }); dotsContainer.appendChild(dot); }); }
-        function updateDotsAndSlides() { let dots = document.querySelectorAll('.slide-dot'); slides.forEach((s, idx) => { s.classList.toggle('active', idx === slideIndex); if(dots[idx]) dots[idx].classList.toggle('active', idx === slideIndex); }); }
-        function showSlide(index) { if(index >= slides.length) slideIndex = 0; else if(index < 0) slideIndex = slides.length-1; else slideIndex = index; updateDotsAndSlides(); }
-        function nextSlide() { showSlide(slideIndex+1); }
-        function startAutoSlide() { if(slideInterval) clearInterval(slideInterval); slideInterval = setInterval(() => { nextSlide(); }, 5000); }
-        if(slides.length) { buildDots(); showSlide(0); startAutoSlide(); const container = document.querySelector('.slideshow-container'); if(container){ container.addEventListener('mouseenter', ()=>clearInterval(slideInterval)); container.addEventListener('mouseleave', startAutoSlide); } }
-        // ----- MOBILE MENU -----
-        const mobileBtn = document.getElementById('mobileMenuBtn'), overlay = document.getElementById('mobileMenuOverlay'), closeBg = document.getElementById('closeMobileBg'), closeBtn = document.getElementById('closeMobileMenuBtn');
-        function closeMobileMenu() { overlay.classList.add('hidden'); document.body.style.overflow = 'auto'; }
-        function openMobileMenu() { overlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-        if(mobileBtn) mobileBtn.addEventListener('click', openMobileMenu);
-        if(closeBg) closeBg.addEventListener('click', closeMobileMenu);
-        if(closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
-        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMobileMenu));
-        // ----- SMOOTH SCROLL WITH OFFSET -----
-        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => { anchor.addEventListener('click', function(e) { const targetId = this.getAttribute('href'); if(targetId === '#') return; const target = document.querySelector(targetId); if(target){ e.preventDefault(); const offset = document.querySelector('nav').offsetHeight + 16; window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' }); closeMobileMenu(); } }); });
-        // ----- FORM SUBMIT (Formspree) -----
-        const form = document.getElementById('solarForm'), successDiv = document.getElementById('formSuccessMsg'), formContainer = document.getElementById('formContainer');
-        if(form) { form.addEventListener('submit', async (e) => { e.preventDefault(); const btn = form.querySelector('button[type="submit"]'); const originalText = btn.innerText; btn.disabled = true; btn.innerText = 'SUBMITTING...'; const fd = new FormData(form); try { const resp = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } }); if(resp.ok) { if(successDiv) successDiv.classList.remove('hidden'); if(formContainer) formContainer.style.display = 'none'; form.reset(); successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else throw new Error('Form error'); } catch(err) { alert('Submission error. Please try again or contact us directly.'); } finally { btn.disabled = false; btn.innerText = originalText; } }); }
-    </script>
+    // Nav scroll state
+    var nav = document.querySelector(".nav");
+    var scrollHandler = function(){
+        if(window.scrollY > 15) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+    };
+    window.addEventListener("scroll", scrollHandler, {passive: true});
+    scrollHandler();
+
+    // Smooth scroll with offset
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+        anchor.addEventListener("click", function(e){
+            var targetId = this.getAttribute("href");
+            if(targetId === "#") return;
+            var target = document.querySelector(targetId);
+            if(target){
+                e.preventDefault();
+                var offset = document.querySelector(".nav").offsetHeight + 16;
+                window.scrollTo({ top: target.offsetTop - offset, behavior: "smooth" });
+            }
+        });
+    });
+
+    // Form handling
+    var form = document.getElementById("projectForm");
+    var successDiv = document.getElementById("formSuccess");
+    if(form){
+        form.addEventListener("submit", async function(e){
+            e.preventDefault();
+            var btn = form.querySelector('button[type="submit"]');
+            var originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined" style="color:white;font-size:1.1rem;">hourglass_top</span> Submitting...';
+            var fd = new FormData(form);
+            try {
+                var resp = await fetch(form.action, { method: "POST", body: fd, headers: { "Accept": "application/json" }});
+                if(resp.ok){
+                    form.style.display = "none";
+                    successDiv.classList.add("visible");
+                    successDiv.scrollIntoView({ behavior: "smooth", block: "center" });
+                    form.reset();
+                } else {
+                    throw new Error("Form error");
+                }
+            } catch(err) {
+                alert("Submission error. Please try again or contact us directly at victor@maribamedia.co.za");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        });
+    }
+})();
+</script>
+
 </body>
 </html>
